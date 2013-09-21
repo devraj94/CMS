@@ -1,0 +1,20 @@
+body {
+		
+		background-color: rgba(17, 20, 17, 0.5);
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	
+	#home_button, #discussion_button, #profile_button
+	{
+		-webkit-border-radius:15px;/*safari and Chrome*/
+		-moz-border-radius:15px; /*Mozilla*/
+		-o-box-border-radius:15px; /*Opera*/
+		-ms-box-border-radius:15px; /*Ms IE*/
+		border-radius:15px; /*W3C*/
+		background-image:-webkit-linear-gradient(top,#ffffff 0%,#3e9ad2 100%);
+		background-image:-moz-linear-gradient(top,#ffffff 0%,#3e9ad2 100%);
+		background-image:-o-linear-gradient(top,#ffffff 0%,#3e9ad2 100%);
+		background-image:-ms-linear-gradient(top,#ffffff 0%,#3e9ad2 100%);
+		background-image:linear-gradient(top,#ffffff 0%,#3e9ad2 100%);
+	}

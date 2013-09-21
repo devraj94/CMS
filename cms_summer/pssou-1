@@ -1,0 +1,2047 @@
+CREATE DATABASE  IF NOT EXISTS `pssou-1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `pssou-1`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: localhost    Database: pssou-1
+-- ------------------------------------------------------
+-- Server version	5.5.24-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `study_centre`
+--
+
+DROP TABLE IF EXISTS `study_centre`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `study_centre` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `regional_centre` varchar(30) NOT NULL DEFAULT '',
+  `study_centre_code` varchar(30) NOT NULL DEFAULT '',
+  `study_centre_name` varchar(60) NOT NULL DEFAULT '',
+  `study_centre_address` varchar(150) NOT NULL DEFAULT '',
+  `study_centre_head` varchar(60) NOT NULL DEFAULT '',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  `district` varchar(40) NOT NULL DEFAULT '',
+  `contact_no` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `study_centre_code` (`study_centre_code`),
+  UNIQUE KEY `study_centre_code_2` (`study_centre_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `study_centre`
+--
+
+LOCK TABLES `study_centre` WRITE;
+/*!40000 ALTER TABLE `study_centre` DISABLE KEYS */;
+INSERT INTO `study_centre` VALUES (15,'R001','RA03','Kanker','Pt. Sundarlal sharma (Open) University  Study Center,, Govt. H. S. School  Near B.R.C. bhavan Narhardev Kanker, Distt  Kanker (C.G.)','Kanker','Active','Shree Domar singh','9826982056'),(14,'R001','RA02','Katekanyan','Pt. Sundarlal sharma (Open) University  StudyCenter, Govt. H. S. School  Katekanyaan, Distt Dantewada (C.G.)',' Shree Maan Singh  Bharti','Active','Dantewada','07867229472'),(13,'R001','RA01','Bhanpuri Nksingh','Pt. Sundarlal sharma (Open) University  StudyCenter,  Village  &  P.O.    Bhanpuri,  Tahsil-Jagdalpur, Distt - Bastar (C.G.)','Shree Vijay Tiwari','Active','Bastar','9425594252'),(16,'R003','RA04','Takhatpur','Pt. Sundarlal sharma (Open) University StudyCenter, B.M.Tech. School, In Front of Govt.J.M.P. School Takhatpur, Distt  Bilaspur (C.G.)','Shree Sharad Datt Bhatt','Active','Bilaspur','07752226026'),(17,'R003','RA05','Seepat','Pt. Sundarlal sharma (Open) University StudyCenter, Govt. Arts Collage Seepat, Distt -Bilaspur (C.G.)','Shree Ashutosh Pandey','Active','Bilaspur','9425574223'),(18,'R003','RA06','Chakarbhata','Pt. Sundarlal sharma (Open) University StudyCenter, Govt. Girls Primary School, BesideNagar Panchayat Office Chakarbhata, Distt -Bilaspur (C.G.)','Shree Dharmendra Pandey','Active','Bilaspur','9827179399'),(19,'R003','RA07','Masturi','Pt. Sundarlal sharma (Open) University StudyCenter, Campus of B.E.O. Office, Masturi, Distt- Bilaspur (C.G.)','Shree Satyendra Singh Chandel','Active','Bilaspur',''),(20,'R003','RA08','Marvahi','Pt. Sundarlal sharma (Open) University StudyCenter, Govt. Boys H. S. School Marvahi, Distt- Bilaspur (C.G.)','Shree Santosh Kumar Pandey','Active','Bilaspur','9425544459'),(21,'R003','RA09','Mungeli','Pt. Sundarlal sharma (Open) University StudyCenter, Old Bus Stand, Near State Bank OfIndia Mungeli, Distt - Bilaspur (C.G.)','Shree Amit Kumar Pathak','Active','Bilaspur','9300482346'),(22,'R003','RA10','Sarganv','Pt. Sundarlal sharma (Open) University StudyCenter, Sachivalaya Bhavan Sarganv, Distt -Bilaspur (C.G.)','Shree Lupchand Dhritlahre','Active','Bilaspur','9300321361'),(23,'R001','RA11','Raipur','Pt. Sundarlal sharma (Open) University StudyCenter, sector 2C/1/30/11 Near hanumanTimber, Devendra Nagar  Raipur (C.G.)','Shree Dharmendra Pankaj sharma','Active','Raipur','9826111477'),(24,'R001','RA12','Baloda Bazar','Pt. Sundarlal sharma (Open) University StudyCenter, Durga devi Correspondence Course,Higher Secondary School road, baloda bazaar','Shree Promod kumar mishra','Active','Raipur','9826160112'),(25,'R001','RA14','Razim','Pt. Sundarlal sharma (Open) University StudyCenter, Janapad Panchayat Office,Finageshwar, Distt - Raipur (C.G.)','Shree Vikas Kumar Tiwari','Active','Raipur','9826122739'),(26,'R001','RA15','Kasdol','Pt. Sundarlal sharma (Open) University StudyCenter, Guru Ghasidas Govt. H.S. SchoolKasdol, Distt  Raipur (C.G.)','Shree Chudamani Sahu','Active','Raipur','9424155791 ,07819281012'),(27,'R001','RA16','Abhanpur','Pt. Sundarlal sharma (Open) University StudyCenter, Nadi, House of Vaidya ShreeBhanwarlal, Sadar Road, Navapara, NavaparaRazim Distt  Raipur ','Shree Vinay Kumar Tiwari','Active','Raipur','9826122739'),(28,'R001','RA17','Simaga','Pt. Sundarlal sharma (Open) University StudyCenter, in front of Bolck Office, Purana NakaTilda Road Simga Distt  Raipur (C.G.)','Shree Govind Narayan Singh Dahire','Active','Raipur','9826767115 ,9300639634'),(29,'B002','RA18','Bhanpuri','Pt. Sundarlal sharma (Open) University StudyCenter, Village & P.O.  Bhanpuri, Tahsil-Jagdalpur, Distt - Bastar (C.G.)','Shree Vijay Tiwari','Active','Bastar','9425594252'),(30,'B002','RA19','Lohandiguda','Pt. Sundarlal sharma (Open) University StudyCenter, C/O  Shree kamal Lochan Netam, inFront of Post Office, Lohandigunda, Distt Bastar (C.G','Shree Omaprakash Malla','Active','Bastar','07787282614'),(31,'R002','RA20','Bhayathan','Pt. Sundarlal sharma (Open) University StudyCenter, janapad Office Campus Bhaiyathan,Distt  Sarguja (C.G.)','Shree Nilbhaskar Singh','Active','Sarguja','07775233096'),(32,'R002','RA21','Ambikapur','Pt. Sundarlal sharma (Open) University StudyCenter, Old District Education OfficerÃ¢â‚¬â„¢s OfficeCampus Ambikapur,Distt - Sarguja (C.G.)','Shree Rajkumar Jaiswal','Active','Sarguja','9826633280'),(33,'R002','RA22','Odagi','Pt. Sundarlal sharma (Open) University StudyCenter, Sub Tahsil Office Odagi , Distt - Sarguja(C.G.)','Shree Sanjay dev Pandey','Active','Sarguja','07773238047'),(34,'D1','S086','Centre','ADD','Head Off','Active','Dist',''),(35,'R003','BI01','Bilaspur','Bilaspur','Bilaspur','Active','Bilaspur','9649946160'),(36,'R002','AM01','Ambikapuri','Ambikapuri','Ambikapuri','Active','Ambikapuri','9649946160');
+/*!40000 ALTER TABLE `study_centre` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_period_details`
+--
+
+DROP TABLE IF EXISTS `user_period_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_period_details` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `ack_no` varchar(30) NOT NULL,
+  `rollno` varchar(30) NOT NULL,
+  `course_code` varchar(20) NOT NULL,
+  `student_name` varchar(100) NOT NULL,
+  `period` varchar(3) NOT NULL,
+  `assignment_current_status` varchar(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `ack_no` (`ack_no`,`rollno`,`course_code`,`period`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_period_details`
+--
+
+LOCK TABLES `user_period_details` WRITE;
+/*!40000 ALTER TABLE `user_period_details` DISABLE KEYS */;
+INSERT INTO `user_period_details` VALUES (1,'1350555002','','BSCB','Narendra K Singh','1',''),(5,'1350967733','','BAH','Narendra K Singh','1','99');
+/*!40000 ALTER TABLE `user_period_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_practical_re_exam`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_practical_re_exam`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_practical_re_exam` (
+  `tblid` int(5) NOT NULL DEFAULT '0',
+  `ack_no` varchar(20) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `period_name` varchar(5) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail','Absent') NOT NULL DEFAULT 'Pass'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_practical_re_exam`
+--
+
+LOCK TABLES `student_exam_marks_practical_re_exam` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_practical_re_exam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_practical_re_exam` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `course`
+--
+
+DROP TABLE IF EXISTS `course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `course` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `course_name` varchar(60) NOT NULL DEFAULT '',
+  `short_name` varchar(10) NOT NULL DEFAULT '',
+  `course_type` varchar(20) NOT NULL DEFAULT '',
+  `duration` varchar(10) NOT NULL DEFAULT '',
+  `eligibility` varchar(20) NOT NULL DEFAULT '',
+  `short_desc` text NOT NULL,
+  `department` varchar(20) NOT NULL DEFAULT '',
+  `fees` int(10) NOT NULL DEFAULT '0',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  `brochure` varchar(80) NOT NULL DEFAULT '',
+  `total_period` tinyint(2) NOT NULL DEFAULT '0',
+  `course` enum('B.Ed','Non B.Ed') NOT NULL DEFAULT 'Non B.Ed',
+  `entrance` enum('YES','NO') NOT NULL DEFAULT 'YES',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `course_code` (`course_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course`
+--
+
+LOCK TABLES `course` WRITE;
+/*!40000 ALTER TABLE `course` DISABLE KEYS */;
+INSERT INTO `course` VALUES (2,'BAH','BA Hindi','BA Hindi','Yearly','3 Year','10+2 or Equivalent','','Hindi',1500,'Active','',6,'Non B.Ed','NO'),(3,'BPP','Bachelor Pre Preparatory Course','BPP','Certificate','6 Month','Literate person abov','','BPP',1500,'Active','',1,'Non B.Ed','NO'),(4,'DCA','Diploma in Computer Applications','DCA','Yearly','1 Year','10+2 or Equivalent','','Department of Comput',6000,'Active','',2,'Non B.Ed','NO'),(5,'DY','Diploma in Yoga','Diploma in','Yearly','1 Year','10+2 or Equivalent','','Department of Ayurve',3000,'Active','',2,'Non B.Ed','NO'),(6,'DJV','Diploma in Jyotish and Vaastushashtra','Diploma in','Yearly','1 Year','10+2 or Equivalent','','Department of Jyotis',2900,'Active','',2,'Non B.Ed','NO'),(7,'DAK','Diploma in Ayurvedic Knowledge','Diploma in','Yearly','1 Year','10+2 or Equivalent','','Department of Ayurve',3500,'Active','',2,'Non B.Ed','NO'),(8,'DHM','Diploma in Herbal Medicine','Diploma in','Yearly','1 Year','10+2 or Equivalent','','Department of Herbal',4500,'Active','',2,'Non B.Ed','NO'),(9,'BSCB','B Sc Bio','B Sc Bio','Yearly','3 Year','10+2 or Equivalent','','Science',1800,'Active','',6,'Non B.Ed','NO');
+/*!40000 ALTER TABLE `course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_centre`
+--
+
+DROP TABLE IF EXISTS `master_centre`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_centre` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `centre_code` varchar(10) NOT NULL DEFAULT '',
+  `centre_name` varchar(30) NOT NULL DEFAULT '',
+  `centre_location` varchar(20) NOT NULL DEFAULT '',
+  `centre_type` varchar(20) NOT NULL DEFAULT '',
+  `centre_short_desc` text NOT NULL,
+  `regional_code` int(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_centre`
+--
+
+LOCK TABLES `master_centre` WRITE;
+/*!40000 ALTER TABLE `master_centre` DISABLE KEYS */;
+/*!40000 ALTER TABLE `master_centre` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `submenu_hin`
+--
+
+DROP TABLE IF EXISTS `submenu_hin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `submenu_hin` (
+  `submenuid` int(4) NOT NULL AUTO_INCREMENT,
+  `submenuname` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `menuid` int(4) NOT NULL DEFAULT '0',
+  `path` varchar(200) NOT NULL,
+  `active` varchar(3) NOT NULL DEFAULT 'YES',
+  `showleft` varchar(3) NOT NULL DEFAULT 'YES',
+  PRIMARY KEY (`submenuid`),
+  UNIQUE KEY `submenuname` (`submenuname`,`menuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `submenu_hin`
+--
+
+LOCK TABLES `submenu_hin` WRITE;
+/*!40000 ALTER TABLE `submenu_hin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `submenu_hin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `program_type`
+--
+
+DROP TABLE IF EXISTS `program_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `program_type` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `pt_code` varchar(4) NOT NULL DEFAULT '',
+  `pt_name` varchar(100) NOT NULL DEFAULT '',
+  `status` varchar(45) DEFAULT '',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `pt_code` (`pt_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `program_type`
+--
+
+LOCK TABLES `program_type` WRITE;
+/*!40000 ALTER TABLE `program_type` DISABLE KEYS */;
+INSERT INTO `program_type` VALUES (34,'CERF','Certificate','Active'),(33,'YEAR','Year','Active'),(35,'SEM','Semester','Active'),(38,'DIP','Diploma','');
+/*!40000 ALTER TABLE `program_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `menu`
+--
+
+DROP TABLE IF EXISTS `menu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `menu` (
+  `menuid` int(4) NOT NULL AUTO_INCREMENT,
+  `menuname` varchar(35) NOT NULL,
+  `path` varchar(200) NOT NULL,
+  `sortorder` tinyint(2) NOT NULL DEFAULT '0',
+  `active` varchar(3) NOT NULL DEFAULT 'YES',
+  PRIMARY KEY (`menuid`),
+  UNIQUE KEY `menuname` (`menuname`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `menu`
+--
+
+LOCK TABLES `menu` WRITE;
+/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` VALUES (1,'Masters','#',1,'YES'),(2,'Phd. Process','phd_process.php',2,'YES'),(3,'New Registration','registration.php',3,'YES'),(4,'Entrance Examination Process','entrance_exam_process.php',4,'YES'),(5,'Regular Exam Process','regular_exam_process.php',5,'YES'),(6,'Study Material','study_material.php',6,'YES'),(7,'Assignment Process','assignment_process.php',9,'YES'),(8,'BPP Process','bpp_process.php',8,'YES'),(9,'DownLoad Forms','download_forms.php',9,'YES'),(10,'Course Subject / Assignments','subject_page.php',10,'YES'),(11,'Migration Process','migration_process.php',11,'YES'),(12,'Degree Process','degree_process.php',12,'YES'),(13,'Group/User Managerment','users.php',13,'YES'),(14,'Examination Schedule','exam_details.php',14,'YES'),(15,'Student Examination Marks','student_exam_marks.php',15,'YES'),(16,'Re-Examination','re_examination.php',16,'YES'),(17,'Re-evaluation','Re_Evaluation.php',17,'YES'),(18,'Re Totaling','Re_Totaling.php',18,'YES'),(19,'Logout','logout.php',19,'YES');
+/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_assignment_re_exam`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_assignment_re_exam`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_assignment_re_exam` (
+  `tblid` int(5) NOT NULL DEFAULT '0',
+  `ack_no` varchar(20) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `period_name` varchar(5) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail') NOT NULL DEFAULT 'Pass'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_assignment_re_exam`
+--
+
+LOCK TABLES `student_exam_marks_assignment_re_exam` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_assignment_re_exam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_assignment_re_exam` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `re_examination`
+--
+
+DROP TABLE IF EXISTS `re_examination`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `re_examination` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `subject_code` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `post_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` enum('1','2','3') NOT NULL DEFAULT '1',
+  `myphoto` blob NOT NULL,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `session_year` int(4) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `re_examination`
+--
+
+LOCK TABLES `re_examination` WRITE;
+/*!40000 ALTER TABLE `re_examination` DISABLE KEYS */;
+/*!40000 ALTER TABLE `re_examination` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subject_table`
+--
+
+DROP TABLE IF EXISTS `subject_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subject_table` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `period_name` varchar(20) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `subject_name` varchar(60) NOT NULL DEFAULT '',
+  `details` text NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `subject_code` (`subject_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subject_table`
+--
+
+LOCK TABLES `subject_table` WRITE;
+/*!40000 ALTER TABLE `subject_table` DISABLE KEYS */;
+INSERT INTO `subject_table` VALUES (4,'BSCB','1','BSC01','Mathe','svds');
+/*!40000 ALTER TABLE `subject_table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `regional_centre`
+--
+
+DROP TABLE IF EXISTS `regional_centre`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `regional_centre` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `centre_code` varchar(30) NOT NULL DEFAULT '',
+  `centre_name` varchar(60) NOT NULL DEFAULT '',
+  `centre_address` varchar(150) NOT NULL DEFAULT '',
+  `centre_head` varchar(60) NOT NULL DEFAULT '',
+  `district` varchar(40) NOT NULL DEFAULT '',
+  `contact_no` varchar(100) NOT NULL DEFAULT '',
+  `status` varchar(15) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `regional_centre`
+--
+
+LOCK TABLES `regional_centre` WRITE;
+/*!40000 ALTER TABLE `regional_centre` DISABLE KEYS */;
+INSERT INTO `regional_centre` VALUES (10,'B002','Bastar','Govt. P.G. College, Jagadalpur, Distt-Bastar','Shree M Ali','Bastar','9425262281','Active'),(9,'R001','Raipur','Sector 2C/1/30/11 Near hanuman Timber, Devendra Nagar Ã¢â‚¬â€œ Raipur (C.G.)','Shree Nirmal Agrawa','Raipur','0771-6450980, 9425243011, 9425241130','Active'),(32,'R003','Bilaspur','Eng. College Campus, Bilaspur','Dr B V Ramarao','Bilaspuraaaa','9425548135, 07752-645346 07752-260408, 260409','Active'),(31,'R002','Ambikapur','Old District Education OfficerÃ¢â‚¬â„¢s Office Campus Ambikapur, Distt-Sarguja (C.G).','Dr K B Singh','Ambikapur','9826633280,9425548132, 07752-261050','Active'),(34,'ABC','Nk singh rajput','Narendra K SIngh','Narendra K Singh','sdgs','254242','Active'),(35,'ABCD','Jodhpur','IIT Rajastan','IIT Rajastan','IIT Rajastan','254242','Inactive'),(36,'sS','pHYSICS','Physics','Physics','Physics','9649946160','Active');
+/*!40000 ALTER TABLE `regional_centre` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `regular_exam`
+--
+
+DROP TABLE IF EXISTS `regular_exam`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `regular_exam` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `period` char(3) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `ex_center_1` varchar(30) NOT NULL DEFAULT '',
+  `ex_center_2` varchar(30) NOT NULL DEFAULT '',
+  `ex_center_3` varchar(30) NOT NULL DEFAULT '',
+  `ex_center` varchar(30) NOT NULL DEFAULT '',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remark` text NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `unique` (`acknowledgement`,`course_code`,`period`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `regular_exam`
+--
+
+LOCK TABLES `regular_exam` WRITE;
+/*!40000 ALTER TABLE `regular_exam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `regular_exam` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `faculty_list`
+--
+
+DROP TABLE IF EXISTS `faculty_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `faculty_list` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `emp_code` varchar(10) NOT NULL DEFAULT '',
+  `facul_name` varchar(30) NOT NULL DEFAULT '',
+  `facul_age` int(3) NOT NULL DEFAULT '0',
+  `facul_address` varchar(80) NOT NULL DEFAULT '',
+  `facul_sex` varchar(5) NOT NULL DEFAULT '',
+  `facul_marital` varchar(10) NOT NULL DEFAULT '',
+  `facul_qualification` varchar(10) NOT NULL DEFAULT '',
+  `facul_interest_area` varchar(10) NOT NULL DEFAULT '',
+  `facul_experience` tinyint(2) NOT NULL DEFAULT '0',
+  `facul_photo` varchar(60) NOT NULL DEFAULT '',
+  `facul_designation` varchar(30) NOT NULL DEFAULT '',
+  `facul_resume` varchar(60) NOT NULL,
+  `faculty_desc` text NOT NULL,
+  `status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
+  `facul_login` varchar(30) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `faculty_list`
+--
+
+LOCK TABLES `faculty_list` WRITE;
+/*!40000 ALTER TABLE `faculty_list` DISABLE KEYS */;
+INSERT INTO `faculty_list` VALUES (3,'054','Om Prakash',32,'dhdfhdh','Male','Married','PHD CSE','Neural Net',20,'','Co ordinator','1350553270.pdf','','Active','nksingh');
+/*!40000 ALTER TABLE `faculty_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `entrance_exam_process`
+--
+
+DROP TABLE IF EXISTS `entrance_exam_process`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `entrance_exam_process` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(30) NOT NULL DEFAULT '',
+  `ex_center_1` varchar(30) NOT NULL DEFAULT '',
+  `ex_center_2` varchar(30) NOT NULL DEFAULT '',
+  `ex_center_3` varchar(30) NOT NULL DEFAULT '',
+  `ex_center` varchar(30) NOT NULL DEFAULT '',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remarks` varchar(250) NOT NULL,
+  `current_status_b_ed` text NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entrance_exam_process`
+--
+
+LOCK TABLES `entrance_exam_process` WRITE;
+/*!40000 ALTER TABLE `entrance_exam_process` DISABLE KEYS */;
+/*!40000 ALTER TABLE `entrance_exam_process` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `form_category`
+--
+
+DROP TABLE IF EXISTS `form_category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `form_category` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `form_name` varchar(150) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `form_category`
+--
+
+LOCK TABLES `form_category` WRITE;
+/*!40000 ALTER TABLE `form_category` DISABLE KEYS */;
+INSERT INTO `form_category` VALUES (1,'Enrollment No.'),(2,'Admission'),(3,'Examination'),(4,'Re-Examination'),(5,'Re-Evaluation'),(6,'Re-Totaling'),(7,'Re-Issuing Of Mark-sheet/Certificate'),(8,'Migration/NOC Certificate'),(9,'Tatkal Certicate');
+/*!40000 ALTER TABLE `form_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mail_message`
+--
+
+DROP TABLE IF EXISTS `mail_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mail_message` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `mail_code` varchar(50) NOT NULL DEFAULT '',
+  `mail_for` varchar(50) NOT NULL DEFAULT '',
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `mail_code` (`mail_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mail_message`
+--
+
+LOCK TABLES `mail_message` WRITE;
+/*!40000 ALTER TABLE `mail_message` DISABLE KEYS */;
+INSERT INTO `mail_message` VALUES (1,'NR001','New Registration','Acknowledgement','Your registration <regno> no and login details are \r\n    User id  : <userid>\r\n    password : <pwd>'),(2,'NE001','Registration Form','Acknowledgement','He <user>,\r\n  Your Form has been successfully submited . Your Acknowledgement no. is <ackno> . Please Submit you form to study center. \r\n\r\nuser Id : <id>\r\nPassword : <pwd>\r\n\r\npssou');
+/*!40000 ALTER TABLE `mail_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `apply_last_date`
+--
+
+DROP TABLE IF EXISTS `apply_last_date`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `apply_last_date` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(30) NOT NULL DEFAULT '',
+  `period` smallint(2) NOT NULL DEFAULT '0',
+  `re_exam` date NOT NULL DEFAULT '0000-00-00',
+  `re_totaling` date NOT NULL DEFAULT '0000-00-00',
+  `re_evaluate` date NOT NULL DEFAULT '0000-00-00',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `course_code` (`course_code`,`period`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `apply_last_date`
+--
+
+LOCK TABLES `apply_last_date` WRITE;
+/*!40000 ALTER TABLE `apply_last_date` DISABLE KEYS */;
+INSERT INTO `apply_last_date` VALUES (1,'BSCB',2,'2012-12-20','2012-12-31','2012-12-21');
+/*!40000 ALTER TABLE `apply_last_date` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `course_details`
+--
+
+DROP TABLE IF EXISTS `course_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `course_details` (
+  `tblid` int(11) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `label_name` varchar(20) NOT NULL DEFAULT '',
+  `course_detail` text NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course_details`
+--
+
+LOCK TABLES `course_details` WRITE;
+/*!40000 ALTER TABLE `course_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `course_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_coursedetails`
+--
+
+DROP TABLE IF EXISTS `student_coursedetails`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_coursedetails` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `roll_no` int(10) NOT NULL DEFAULT '0',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `session_year` int(4) NOT NULL DEFAULT '0',
+  `centre_code` varchar(10) NOT NULL DEFAULT '',
+  `medium` varchar(20) NOT NULL DEFAULT '',
+  `selected_subject` varchar(30) NOT NULL DEFAULT '',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  `payment_mode` varchar(10) NOT NULL DEFAULT '',
+  `payment_amount` int(10) NOT NULL DEFAULT '0',
+  `payment_remark` varchar(40) NOT NULL DEFAULT '',
+  `document_provided` varchar(10) NOT NULL DEFAULT '',
+  `documents_couriered` varchar(10) NOT NULL DEFAULT '',
+  `courier_name` varchar(30) NOT NULL DEFAULT '',
+  `awb_no` bigint(12) NOT NULL DEFAULT '0',
+  `dispatch_date` date NOT NULL DEFAULT '0000-00-00',
+  `expected_arrival_date_pssou` date NOT NULL DEFAULT '0000-00-00',
+  `remarks` varchar(40) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `enrolment_no` (`enrolment_no`),
+  UNIQUE KEY `roll_no` (`roll_no`),
+  UNIQUE KEY `course_code` (`course_code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_coursedetails`
+--
+
+LOCK TABLES `student_coursedetails` WRITE;
+/*!40000 ALTER TABLE `student_coursedetails` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_coursedetails` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examination_center`
+--
+
+DROP TABLE IF EXISTS `examination_center`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examination_center` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `exam_center_code` varchar(10) NOT NULL,
+  `exam_center_name` varchar(80) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `contact_no` varchar(100) NOT NULL,
+  `status` varchar(10) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examination_center`
+--
+
+LOCK TABLES `examination_center` WRITE;
+/*!40000 ALTER TABLE `examination_center` DISABLE KEYS */;
+INSERT INTO `examination_center` VALUES (5,'EC0002','PENDRA','DISTRICT INSTITUTE OF EDUCATION & TRAINING','254242','Active'),(4,'EC0001','BILASPUR','GOVT.BASIC TRAINING INSTITUTE','254242','Active'),(6,'EC0003','KORBA','DISTRICT INSTITUTE OF EDUCATION & TRAINING','254242','Active'),(7,'EC0004','JANJGIR','DISTRICT INSTITUTE OF EDUCATION & TRAINING','254242','Active'),(8,'EC0005','KABIRDHAM','DISTRICT INSTITUTE OF EDUCATION & TRAINING','254242','Active'),(9,'EC0006','RAIPUR','G.H.RAISONI NATIONAL COLLEGE','254242','Active'),(10,'EC0007','RAIPUR','VIKAS COLLEGE OF EDUCATION','254242','Active'),(11,'EC0008','RAIPUR','KALINIDI COLLEGE LALPUR','254242','Active');
+/*!40000 ALTER TABLE `examination_center` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `faculty_assigned_subject`
+--
+
+DROP TABLE IF EXISTS `faculty_assigned_subject`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `faculty_assigned_subject` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `emp_code` varchar(10) NOT NULL DEFAULT '',
+  `subject_code` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `faculty_assigned_subject`
+--
+
+LOCK TABLES `faculty_assigned_subject` WRITE;
+/*!40000 ALTER TABLE `faculty_assigned_subject` DISABLE KEYS */;
+INSERT INTO `faculty_assigned_subject` VALUES (2,'<?=$emp_co',''),(3,'054','BSC01');
+/*!40000 ALTER TABLE `faculty_assigned_subject` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `uploaded_form`
+--
+
+DROP TABLE IF EXISTS `uploaded_form`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `uploaded_form` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) NOT NULL DEFAULT '',
+  `file_name` varchar(40) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `uploaded_form`
+--
+
+LOCK TABLES `uploaded_form` WRITE;
+/*!40000 ALTER TABLE `uploaded_form` DISABLE KEYS */;
+/*!40000 ALTER TABLE `uploaded_form` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `assignment_tbl`
+--
+
+DROP TABLE IF EXISTS `assignment_tbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `assignment_tbl` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `period_name` varchar(20) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `file_name` varchar(40) NOT NULL DEFAULT '',
+  `remark` text NOT NULL,
+  `delivered` varchar(5) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `assignment_tbl`
+--
+
+LOCK TABLES `assignment_tbl` WRITE;
+/*!40000 ALTER TABLE `assignment_tbl` DISABLE KEYS */;
+INSERT INTO `assignment_tbl` VALUES (1,'BSCB','1','BSC01','1352369283.doc','jgjg','Yes');
+/*!40000 ALTER TABLE `assignment_tbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_department`
+--
+
+DROP TABLE IF EXISTS `master_department`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_department` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `depart_code` varchar(10) NOT NULL DEFAULT '',
+  `faculty_code` varchar(10) NOT NULL DEFAULT '',
+  `depart_name` varchar(30) NOT NULL DEFAULT '',
+  `depart_short_desc` text NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_department`
+--
+
+LOCK TABLES `master_department` WRITE;
+/*!40000 ALTER TABLE `master_department` DISABLE KEYS */;
+/*!40000 ALTER TABLE `master_department` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `migration_noc`
+--
+
+DROP TABLE IF EXISTS `migration_noc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `migration_noc` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `roll_no` int(10) NOT NULL DEFAULT '0',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `payment` varchar(10) NOT NULL DEFAULT '',
+  `issue` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `migration_noc`
+--
+
+LOCK TABLES `migration_noc` WRITE;
+/*!40000 ALTER TABLE `migration_noc` DISABLE KEYS */;
+/*!40000 ALTER TABLE `migration_noc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `center_user`
+--
+
+DROP TABLE IF EXISTS `center_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `center_user` (
+  `tblid` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` varchar(40) NOT NULL DEFAULT '',
+  `passwd` varchar(20) NOT NULL DEFAULT '',
+  `first_name` varchar(20) NOT NULL DEFAULT '',
+  `last_name` varchar(20) NOT NULL DEFAULT '',
+  `center_code` varchar(5) NOT NULL DEFAULT '',
+  `email` varchar(60) NOT NULL DEFAULT '',
+  `address1` varchar(60) NOT NULL DEFAULT '',
+  `address2` varchar(60) NOT NULL DEFAULT '',
+  `phone` bigint(11) NOT NULL DEFAULT '0',
+  `mobile` bigint(11) NOT NULL DEFAULT '0',
+  `emp_code` varchar(10) NOT NULL DEFAULT '',
+  `user_type` varchar(20) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `center_user`
+--
+
+LOCK TABLES `center_user` WRITE;
+/*!40000 ALTER TABLE `center_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `center_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_practical`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_practical`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_practical` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `ack_no` varchar(20) NOT NULL,
+  `rollno` varchar(30) NOT NULL,
+  `period_name` varchar(5) NOT NULL,
+  `subject_code` varchar(20) NOT NULL,
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail','Absent') NOT NULL DEFAULT 'Pass',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `ack_no` (`ack_no`,`period_name`,`subject_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_practical`
+--
+
+LOCK TABLES `student_exam_marks_practical` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_practical` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_practical` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `re_evaluation`
+--
+
+DROP TABLE IF EXISTS `re_evaluation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `re_evaluation` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `subject_code` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `post_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` enum('1','2','3','4') NOT NULL DEFAULT '1',
+  `myphoto` blob NOT NULL,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `session_year` int(4) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `re_evaluation`
+--
+
+LOCK TABLES `re_evaluation` WRITE;
+/*!40000 ALTER TABLE `re_evaluation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `re_evaluation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_faculty_name`
+--
+
+DROP TABLE IF EXISTS `master_faculty_name`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_faculty_name` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `faculty_code` varchar(10) NOT NULL DEFAULT '',
+  `faculty_name` varchar(30) NOT NULL DEFAULT '',
+  `faculty_short_desc` text NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_faculty_name`
+--
+
+LOCK TABLES `master_faculty_name` WRITE;
+/*!40000 ALTER TABLE `master_faculty_name` DISABLE KEYS */;
+/*!40000 ALTER TABLE `master_faculty_name` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `degree_process`
+--
+
+DROP TABLE IF EXISTS `degree_process`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `degree_process` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL DEFAULT '',
+  `tatkal` varchar(10) NOT NULL DEFAULT 'Normal',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `acknowledgement` (`acknowledgement`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `degree_process`
+--
+
+LOCK TABLES `degree_process` WRITE;
+/*!40000 ALTER TABLE `degree_process` DISABLE KEYS */;
+/*!40000 ALTER TABLE `degree_process` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_registration`
+--
+
+DROP TABLE IF EXISTS `student_registration`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_registration` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `address` varchar(100) NOT NULL DEFAULT '',
+  `address1` varchar(100) NOT NULL DEFAULT '',
+  `address2` varchar(100) NOT NULL DEFAULT '',
+  `city` varchar(100) NOT NULL DEFAULT '',
+  `state` varchar(100) NOT NULL DEFAULT '',
+  `country` varchar(100) NOT NULL DEFAULT '',
+  `pin` varchar(100) NOT NULL DEFAULT '',
+  `mobile` varchar(10) NOT NULL DEFAULT '',
+  `email` varchar(30) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `category` varchar(20) NOT NULL DEFAULT '',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `medium` varchar(100) NOT NULL DEFAULT '',
+  `study_centre` varchar(100) NOT NULL DEFAULT '',
+  `last_exam` varchar(100) NOT NULL DEFAULT '',
+  `photo` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `registration_no` varchar(30) NOT NULL DEFAULT '',
+  `passwd` varchar(15) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `payment_status` enum('1','0') NOT NULL DEFAULT '0',
+  `registration_date` date NOT NULL DEFAULT '0000-00-00',
+  `activation_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` enum('1','0') NOT NULL DEFAULT '0',
+  `myphoto` blob NOT NULL,
+  `Regional_Center` varchar(50) NOT NULL DEFAULT '0',
+  `Head_Office` smallint(1) NOT NULL DEFAULT '0',
+  `RC_Cootdinator` smallint(1) NOT NULL DEFAULT '0',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `enrollment_no` varchar(30) NOT NULL,
+  `remark` text NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `acknowledgement` (`acknowledgement`)
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_registration`
+--
+
+LOCK TABLES `student_registration` WRITE;
+/*!40000 ALTER TABLE `student_registration` DISABLE KEYS */;
+INSERT INTO `student_registration` VALUES (1,'1350377233','MCA','Narendra K Singh','gdsfg','gdsgs','sgdsg','sdgs','sdgs','gsdgs','gsdg','324011','9649946160','nksingh@iitj.ac.in','2012-10-05','General','Male','INDIAN','Hindi','RA18','2007','resize_1350377223.jpg','','','addIlJ1uSxIY2','454646','654','2012-10-04','fjfj','fjfgj','0','2012-10-16','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0ğ¿2£¨üÊZùÃúL·•$u^:‘+^sRÂTµeë ‹Içıãÿ\0r™•jĞ¡yÊÈÔ’O+şZV^¡®Emÿ\0M*O\rø?]ñÿ\0—7—%†œÿ\0Ç\'Éæ}+Ú<\'ğJÒ|·ûŸ:}é¤ùŞ•ù=Ş§Åâs¾á/™àÿ\0gÕuoøöÒîgÿ\0oËù*çü\"ş%?;ûHÿ\0ëŸÉ_RYèv–Ò«òÒ´#Òâ—şYÖ×û§ÌO^mŸŞj\Z‘ÿ\06÷1ÿ\0×ÄubÏÄ÷±ÿ\0Ï7şå}Y¬xNÊ÷ïÛÇ\'÷¿w^GãÏÙşÊú9&ÑäşÍºûêŸòÊJ9ãöK	›b¨}®eØó¹(ù%®^òóSğ–©ı›¯[ùÿ\0‹ê+ DûéütriÌ)ccîèÖé—-ÿ\0Û«egÇpòÕšƒÚ\'ó*¿™KU¼Ê¦I$”oªôyAŸ9$›(J}GòPiÎ\\J±YûêÇÚ<¨şà 9í©&©ª&›o¿øêŸÂÿ\0¿õÉ5]WşAÖïòÃÿ\0=\Z¸ıBKköi\'ü|>Åÿ\0v¾”ğ^Ÿo¤évövÑü‰òVóıÌ|Ùùvc˜O0¯.O‚‰ÜhzzE{<¸Ñ?‚ºKîU=İ?wÿ\0µ+RâH£ÿ\0–eg\nG*¤~_™W,íüªÏ¸¼H¿å¥ê‘V2—9róıgÏYw‘¤µ%Æ¨•NMB+™$Ùş­(œ\r)NgñáşŸãmâÎæ?>x&ş8Ú¾gí~¼¸ÒµXü¹íßÿ\0õ¯´<¿3Ì¯øñá4ÿ\0GÖ!ç‡÷3ÿ\0ºßáFÜ÷z3»ëh~ö“´—âyı½ÂI\r\\ó+‡ÑõÓu%ÿ\0Ô?İ®²;Š*Ãı,Ìc˜Pæª.y•ÇæTrIYÙ&úßço­S’J“í”ù¹É$“û•_}KU¤ÙHhJËñ&©ömMŸ}şE«ZW?ãI<«{tó>şút~(NgVT0ueÆÇÂ»t—\\ó¿Öy)^ùáûŞl¯ø?fòÜ\\LŸsÌûõív~UÇÉ÷ë<G¿TüÇJ§¤i÷’ÜÇ\Z%hIowåï¬ıóìÖñ»ıúÔ¸ñE]&\\‡?yqq•OûBYdÿ\0YW5\rRŞûî¬ªö÷–ßë«bå¼wÿ\0¹GØå¶«zä_q*I5¤ù+c\"8ïÛäzæüynš–‡¨#ÿ\0\Z=t—¿ÙşJÃ×-ŞçK¸Oãt¬üA•\'Ï÷şã½ë]\'‡õ´évîÿ\0¼“Ëù«›ñÆøõ	Ëòşz¹àÿ\07û?cşíë¶¯ÁÌz\\99C*]ÑØG¾_ŸîT~ZV|{üÏõ•\'–ÿ\0Ì®ôŞrÅ*¾Çÿ\0•_şzP\"Ç™Q½2¢©\0ó¹¿IæùuÒU?xnãû.Şÿ\0ıd½?àU½/ˆùìöìoÌî>\rÛÿ\0Å\'ÿ\0ÎõÔxƒâhd6ëÿ\0¿YìåÀöÿ\0ßŞïÿ\0WŸøòŞö-CÉHä‘şo/ïÖpş+>\nÀ¡&©ñÃ]¶¸ù.>åS·øùâ™>Ş%aøãÁóx[KÓîn~Íİ¦ÿ\0&8ÚWıæ5ÏÛø~ïû=U?ÔoØ¾]z<‡‹Ïïrê{ç‡ş\"\\jVñ¿ñÕsÇ—vÖûÓ÷\\ßÀ=şGmsûÈ>û×°|tøoiáÿ\0	ÉaÜûÕçrrLö¡?wäx©ñ“]²“÷?»şõS³øñâ	n>K¸»‹;Jò;dıã½S?³j’[<vòl}›$İ^Œ yUgïî}1à?—²ùi\'˜÷¼Êö¶E©[Çsm\'˜’×Èÿ\0Ø÷Ô-Ñ#’ÒwùşÍ$›â‘}coı–¾„øg¨Ks§ìzâ–çe/æ<ãF––^<¼…#ùdß÷ÕSĞãò´øßøÿ\0öZë?hKw¶ñänŸÇjÿ\0Uõ	İøoCÓîo.-ä{„Gòcûñ«tÍtËà=l“ÜÇ=leùŸ¼©#“Ì©É%ÉûÊá?Jç,o¢ZË ĞZÚ«ÔrPgÎI$•Úhş—RÑõD†OøôµGdş	ïW^¯gqö/Éymû¿:¶<îí§/s”ğ3~—/scá]ŸüQzz¦ÿ\0ûê¶5Ïı¦9Ëùßøë?Áò>‘vÏ\'˜è‰¹ÿ\0Ş®âßTO¹5¿™ıÚ!?xøyÀğhzì¶`šÎŞîû¾dêë/Cøo©ërGÑü‰÷R8şD¯¦#ğÚj_;ÇåÇÿ\0]+RâßLğŞŸòyq×O<¹NnHóŸÂ‡v^\r’7ÿ\0–ï³uz‡Ä\r.ÓÄ¸°š?’dØÕ‡àøßRÕ#ß–]F±å\\éûÒO1¹¾8³·à’>ñÇÂûßjŸ$\'ßŠjÇÓô»¿íî_K{¯ïùuöGüKõ)$³¿9?Ø’«ÿ\0Â¢[I¾Ú8ÿ\0Ü®ˆU‘Ï:Q<OÃ~½ñïµ+3üô¯\\ğŞ†šE¿É–•¡o%–›&Ï±É½?‰5Ä–:€ä<?ãç‡åÖüq£Ãm˜òÚÊŸ»ÿ\0e¨ø‰áø¬´xŞÛş}Ssÿ\0¹Š¹ñ2ò÷ûcOÖ-®<´G{fHÿ\0Úæ®x¢Dÿ\0„_í÷?Ábéÿ\0]7|¢²œùíÑÀÃ’¬j÷gÇ²Hÿ\0Û¨ã’«ÇRR?FE´=Gæ=-E@Éh¢“Ëà Ş½3á½äZ·‡ï4{É>çİó?ºßàÕæ~[Ö§†õ	tbÎå$òÑæÿ\0uºĞpcpşÚ”£×tz…¼m¬ló#“î&øşçİ®²ßPx£ÿ\0oøk¸¼´½Õ$û—\"\"\'úºè4ûÄòş¿Yÿ\0xüş|Ôß$ÎÓOñ±Yïó+›Ö5Kİ^óúÈ!}ì•r}·ïşí£¸ñf™¦ÛıšÛ÷ÿ\0LëXNq‡yññôİbòÏìòZ$_\'\'Ü©4¿Ú#û6ÎO:ãÏßÿ\0,cùŞ¹?xNïÄ‘Éxš|~Ï•ÿ\0ç¥yÿ\0ƒü©ùtÚ|’&úéöQ9ş±/å>€Õ> \'‹lôıcM·’Mşoğ|µ¹§ø¡îm÷ÿ\0ËJåô=RÊËKÚş?!ÿ\0¹G—öi$šÚO2\nÊq:!V3:Ky¿;ıÿ\0â¬½CX/ş9Uã¸ŠO¹%WòüÙ?Ø¬d‘èÿ\0ÚñÇm4~b#ïoŞ*l®?â†¹o-½…·îÑş}ŸôÉ~ïç]¦Ÿ&«Çp÷>_Ÿc¿çó+ÃõÉu-Bâòi<Ç–¨÷ò|?=^iı’Ÿ—GÉR|UGæP}¨´Ry‰Qù@IæTu™[&ú“ÌşåWó(JÄs¬ğ^¡ömBDşúè5Ü}£û•ävwmyÉüéú‡îãşãıÊ|‡Åç}XÕşbÇŠ<Aı‰§×è~ ñõåÅÍŸç¿ü²¹Ÿî%u$‘/¤÷‰Zèÿ\0Ùñ¤1ùõÎµ‡¹æ\'z§¨hş ¹ÿ\0I¼Ö#’îyTü½vúOßjù‰÷xÕ©¬xNöúIÛÌ¬{\rê\\~ûí1ÿ\0×Jèç÷Círjj^x“ÄvZ\\ßÛÿ\0i@Ÿê®c“çJê>øÓûJ?³MüóÒ«éz|QÛì¹ıâV}½¦›¬G5Ÿ÷ë?v}åg3Ñ.7Û^H‰\'–R\\^%•œ“?ğ&özËşĞûLŸ?ğW7ãMcı;8~ü¿;»\\§¥†¥õªñŞsr^K$’?™şµ÷²Uy(JZ|çé°‚§p‹}KQQH ÙE|´ùtIG•˜õ°‰(£Ìz7Ğ\r¥¹cKÒîõ½RßM°Iïnİ!‰#ş6jôÍSK{(ü—ÿ\0_oû—xÿ\0Ùâ»OÙ?á¾¡sy¬xòòÎHôí&Æ_±¼ŸòÒé—øİZåõ	>Óóÿ\0ç­99\"¦|6q‹öõ}„>ÉËÿ\0ÇÌŸ=ušÙ\"òßøÓşzW¨HöÒoJÏ“Ä\\{J99Ï™çä=bãÄV1şûî\'ŞòêåŸŠ4ÍKîGûõà÷ ¸¹ÿ\0–•^ßX–/¹%i9î\Z¤š}Ì<~¸;Ët±¼“eaÙø‚_/ç’´,î%¾“ğQÈüæÅŸü³®oÅ’Äòá?¹±?ñÚê4¸ÿ\0yQü\\ğÇ„®4}WÌó4ífÕ&Šoùç*ÿ\0¬³‘ôÙ$áN¿,÷kCÏã’¤ùª96ÏJ<Êå>ä<Ê<ÊŠØ|ä´Ÿ=GóQ¾s—4?\rê¾$Ô#³Ñô»Jéÿ\0å¤m+ÿ\0ãµíıŒüwâOßj±Ûøj×ø¾×\'›7ıûOñ¯Ò/Â~ğ–‡ö\rK²ÑtäşKu‰?û*óıcÄ	m$‰mo%Ûÿ\0~ãä‹ò¯z|~Ó¹ùmn&¯SøIDùÿ\0Ã±¿„´Hã{Ë=GÅ§Şšîãì–ÿ\0÷Ä7ş=^‘á?ƒ~²¼\rF°îXY,®ŸïK&k°Ñô{¿Şo¿¸’{TûÉÉz&‡g\rµ¼~O—³ï¯—÷>^+¢a²x5qØŠßÅ›f¹£ÛÛx_P³Hÿ\0p–¯\n×æ]Ä¤j\Z¦sÿ\0ZuÓÂßîÿ\0ş;_ª\ZÅ¿üKï?ÛJü×ı¬<?/‚~*iCû»]M67ıu^•Å‹¥Ï@ÂVäŸ©ÃÜ[¥÷ûõÉëš=Å·Ïåü•±¥ë¼ùë´ìú•Ç¯›’G³É\'æÈ•Öx“Áémq¾¹YvşZèö§<éôûw’Jë,ãò£ÜşåXÑôû{hÿ\0Õÿ\0Àè¼¸O3şyÑ)óšB—!©¥ÜyroàûÕ÷ÇÀı?ãìïƒåÇ¯	s§\\Éÿ\0,çÛ•Ïû\'îšøO¸}KÄš>‰úûë¨‘¿İİóWêçÃ8şÍ¡ÛÂŸóÃbÿ\0ÀkÑÁaùã.~§/:ua:Z8Ÿ•ÿ\0>øãá—Ï¯xnâÒÉ?åòŞÛÿ\0ßk\\{+ösÅıåÅÍŸ™şŸ2}ôª×Ë?eøşI&Ò¼¿ø…ÿ\0Ò=–“·ûqüŠ¹òj}>‰¾Æ![Ìø/å¦Wgñ3áŠ>êŸcñ&—$ÿ\0ê/#ùíçÿ\0që‡¯\Zpös÷Ï¸†&áÏJWO±\'™ÿ\0M(Çı4¨è |çìÄš¢_y“yfÏùmq÷+“··²—P‘æó5)Ñ×÷¹»W I¼^fËxãŞŸòÎ¹ÿ\0³ùš„Ÿí¥}œÏçÈL±oç}4›ıGÉòGÿ\0-+¤··HãØŸq6\'ıóÿ\0ëªqÛ§™n_É½?ñÕ­ÿ\0Õÿ\0Ÿâù«˜éOPıá?ØzùöĞøo/Š|\'ysm™uo\\ÅşòWÓ>&xsáİœ­êÚ;§Éß•ş‹_;ë´†‰ã½rßJ¶ÑäÊãe·Û.ä_âãvÚÎ|¼œ†°çøÏıá.mãõo]FŸ¨=´{<Ê¯ñSÁïğßâ¦¹¢<è¾ır˜~UNŞOİ×ÎÎùôÔgÏ¤“T{˜öy•Ÿ$Ü¬ù-ÿ\0®[ÆßóÒ³5,}¡ã³ï.Ë‘ßïÕ‹ËîW7â\rCÊ·‘)@Òg¤~Ìşÿ\0„·â…Æ¥7ïLMëşóWêÃÿ\0ôm?çşßÿ\0jø¯ö/ğØü;şÛ¹ËŸVÔ~_úå·j×ÛÊ³?÷Âßğ\Zú¼<9)DùDùæÎÒ8ÿ\0w\"r¸ÿ\0xnË[DšßË>ãÿ\0êì,ÿ\0ÖFÿ\0ôÏÿ\0ZÃñÅ½Å•¼š­œ~{ÄŸ½¶şúÿ\0õ«´ç<K;}JÎãÃ~!³·×´‰¾Il/ãßùWÍÿ\0?`û.Mcá¥ÇÛí~ûh7òl¸Oúç!ûÿ\0ğ*úcTñFŸ«I#½¿™³gû•ĞxXû4{<É$Dÿ\0Ÿ~?Æ³«†…ˆôp™…|¹©Kä~Kø“ÃzÇ„µI4İoK¹ÒoSïÛ]ÆÈÿ\0­e×ìg‰<7áÏéc×´»-jÉÿ\0‚â5}ŸüMx^£û|,½¾šxßX°IrÛEzÛ#‹íé^D²÷uè}†‰¡ËûØj}yÇ¿ûuŸ¥¼º„{>û¦Å«’H—1Ç³ø+?Ä ½ğ½¼—Ü[A‘òşï{ş¦½yü\'æø²MËûò|ˆ›ÿ\0Ù_¾Õå><xÂñÜYè÷–úö¼‰½¡·“|P¼Â¾cø™ñsÆ2’âÚmræ=;fÅ¶÷I·ßmeü3ğÿ\0—g%ËÇóÊ•ÍÍÎz<¼ŸÏü@“Sñn±&«q%İÕÄûÙäşïµrqéòÅnŸ»tùÕÿ\0İjöìtûÉ÷ëPğÿ\0ı3şúV‡L&eşÓŸÓâgÃ½â.ƒş—¨é0}›V†?¿µW>gá_-ÙŞ~ïä’¾¼ğŞ©¨xKPæÚOÜ:lº¶“çŠuéó-yÇ‚bãÆ~Óäÿ\0„^dGº³ïØËü_öÎ¸qyıã·[“İ<¯ûQÿ\0¤Ty~årÿ\0hxªÅ½ä²É^w!èó—»ßXz^‡¨|Cñeƒ¥G$÷Wo³÷òÍ‰Ò¬Gg©ø“T³Ñô«y.õé-£ûîÍ_¤Ÿ²ßìŸ§ü ğŸÛ5ˆãŸÄ·ÈŸl¼şÕ›ıZÿ\0³]¸L?<¹Ï;ˆä!Ö|\'ğ^ğ~—¥y~ZZ=¼+ÿ\0\0Zñ=sâÇˆ-¼a¬M¥k6–_n—È†9>HÕZ¾ŒñçÅøKGÖ-¬5ïõî‘[Z|ş[2ñ“_!É§¿—ÿ\0¿óüõíJg•Hï4?ÛÆÕ#‡U·¶×l×~ò?*_ûèWÕ\rş.h?t¸ŞÏÌ‚ySæ³Ÿïÿ\0öUùïªiÿ\0i¸·ßıÊöO€wŸfÔ#°›÷ipŸ+Çÿ\0,Ù~ë\n!9\ZU„O\\ø™àw²Ö/İïØëV<ªyeœ×É:I]¹¬?‰<?¨X\\ùrkzzyÑÓÜ^ßíW‹ı¡ôOGsî÷º;Wo9Æ{Ä–éş»ı[ïûñüV>Úÿ\0óÒ³ôûí+8æOãš£¸ÿ\0_\'ûÆµ2;Hãò¾àÙ^GñƒÄŸi·’Ù>æÇEJõÍF<ZI\Zu?y«ç‰¥å¿İØÿ\05pÌ)|G“Ühq\\ÜßuÜxoKK-İ?à¬ë{%–â=å~ûö®âÎÙ²íù_¿éYÀè«?²q‘Ùşò?ø\ZU‰4´Çş¯ç­²¯Ú:¯ßô­«=5|½î£şú4LÒ›^xmü¿õÇ[‘ü?öˆnydîğÊ’|éµ«¶¸ÑÓ77ÉòªóèpÍmyƒ±ö&îMeÈçÅ¿´§Àôøeâ·é¶ÿ\0ñMjo¾Õãû7V‹ÿ\0‰¯\'³Óâ“ç¯Ğ/xnh—ş\rÖPMå±šÖa‚`q÷O#¨íÅ|¯û9ü»ø“ñy¼5¨,qØiÏ$ú›¼HÛ”CÉ;½Åyõpşÿ\0»Ôõ©b#Éït=Ûö+ıîôİ.óâF·oä^İÀé¡C?ü³Vë9í\rh|Pñ&»â\rròÚmRæx\"Ù$rlMËşÊ×Ò<ecàOÙÙZÂÂæXÖhbÊ¬/Ês1í_2è)Ff¦yßqnkÔä>XÇ¡çFRŸ5Yu\"Óô7¶·ØñıùÒ¬g¤‘Ûşïûõ×ÛXÇ7—‚©ûÿ\0Jlš@ÿ\0Gù¿¿üFµä2ç<ÚóCId·ıßÎèõØ|?ÑŞÚâÍÓï¥Y“I_2Ï÷øu^²XE¾Ò®ÿ\0?QG s/ˆ$¶GyEÔ[&Wÿ\0ik‹ñe¿Ú|Ë”ıßÈ]¦»\Zy>ÿ\0‘\\¾±mî7ÿ\0Ï\nè9ùıó¨øg®y–~Kÿ\0×G5âyÏşñ¯0ğ4my\"uO3øx®ñä}íõªÄ¿ˆÿÙ','B002',0,0,4,'','Approved'),(2,'1350445816','MCA','sgsdg','sdgsg','sdgsdg','sdgdsg','dsgs','sdgsg','sdgs','sdgs','324011','9649946160','nksingh@iitj.ac.in','2012-10-05','General','Male','INDIAN','Hindi','RA18','2007','resize_1350445811.jpg','','12345','adybsuQmPYJiQ','454646','654','2012-10-11','fjfj','fjfgj','1','2012-10-17','0000-00-00','1','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0ää‘üº}I$u–¾]~¥9Ÿ‘ÿ\0ËZ<´şŞRÔI\\üæ¥ˆä­¶Küu—\'î¤¢ãP·¶ÿ\0]$qÑÎksCûAãÿ\0–•ª|@Ò´3í—‘ùÿ\0óÆ?ÿ\0Jñ¿Š%ûgön•\'–‰ï^?ö«Îìï8äÿ\0–›ÿ\0¼Lnq\Zä¤®ûŸ_—å3¯:®Éô=£Pı£-,®$û6—$‰ıù$ÙæU9?i\rBO1,4»xßäÿ\0Y&úñ=R9c{ÉE¼~T{ÿ\0¿üWÌÕÍ±SûGÑC)ÂÃì@YşÓü~hñÉıç‚ãükÑ<7ñ³Bñ$qÃ\rç‘<ßòÆãä¯ü·½óä‘ÿ\0…#«–÷eÿ\0?éİxäÿ\0VÔC6¯öõòšcİ>ìşĞKŸ¹ütIqåyuòƒş.k~’8~Ñö¸>OÜÏó§ü¾„ğŸÅ\r?ÆÚ|w)$jÿ\0–°ÿ\0\Z5{Ø|tkü\'Îbòùa}ïÄï$¸ÿ\0WYw	/ü´ªÿ\0ÚlŸ=S’OŞWµpğg2är\'™²£’Dıçï<´ªh¨î$ã­yÎ_w±cÌKhşxÿ\0Ø¬ù­î.&y?•˜ãéR}±ü¿õŸ?ğÒı¢oùé]”êîrV¥±=ÅW’:Ğ’«ùuçN±ÛìLù*9$òêÅÅgÜW4ë\ZCrş8ø‰iá+?ùézÿ\0ê’¼?Xø‘ªê÷ò}ÿ\0»ıÄü*¿5‡ÖüQy3ÿ\0¨Iş™ª×?o³Ìùÿ\0x_)‹ÆÕœ½Ùh}æ_—Ò£Êq¼™%¼Ÿ¼ß4rIÿ\0]+BŞâßÌù?ò%wş	ê~2·dıÜÃæv½ÃKıì®tÿ\0âHç¯˜«Œ\'ÜûÌ>M^¼y¶^gË~[ÇåşïÌÿ\0ÇÒ«Ü[Ë,›ßï×ÖŸğÇö–1É²âçÿ\0×/®~Ëz¬Vò=ÄwôÆO‘ë?í\nGLòZğF|Ï%»Ç&ÏõşFz±½¿Û-Òkˆçƒø\rß—\"»xSğü’C5½ÌnŸ$°ÏÜ®û>i$y­äŞŸu#®ˆN5>Æ­†«B^üleÇ\ZGòMûÇOùçZñ%ï†õ{›9<·…şç÷×Ò²üÄIã“ü²z§úÍ•Ó	ÊœùârÎ©IŸ\\x_Æş$Òíïí¤ùø?\Zµ$¼.¾søOâOìMbK	¤òínÿ\0òv¯pûG›}æí©s›f8ªÕåèö5?´?yRG¨?—Xr~¤â»¹ÏœØûEFò>öÿ\0WÖ©ÛÉæIR<Ÿ;}hçsjuIQÉ\'îê9$ªûëŠs=@şZÖ^©p–ÖòLÿ\0»DGv­	$®OÇ—_†õOïù^MjÇu\Z<ìùŞãì÷7w÷İİ¿àTiz›¨[Ãÿ\0-Ñıæ¬¸ä¸ÿ\0ß®³áı¼ºßŒ4{htOûæ¾b·Â~‹‚‡=XÇ»>ğø7á;{\rÛìø+Ù4}?¸¿‡vÙº=¼/ü	^‘¥É_;sÌıZ¬ıœ9\"X·ÑâòşxüÊ¯qá{ycÿ\0W[”=tNŒO+ÛHò¿\Z|/Ó<Io²òÏÌ“øfş:øßãGÁ»¿\0\\IygoçÙ?úÔ“û¾µú!$uÃøÃÃöZıœ–×‘Ç\"?Şó+Ÿß¡.h›ÎÅC’_yù?ª[ùRIşıSd²F“Iå¦ÿ\0¿÷ëêÏ‹²½İ´——š%Å½İ«£ºÛIò:mşé¯•õ\r>[‰!xü·O¼’W«F´k‹ÂUÃKŞÛ¹bŞãÊ’7OİÎŸú{æ¬=õ»ÿ\0¢=|ïonò\\lO¸Ÿ;»^Éà½A.t;}ŸÁòß5ôùe_yÀø,úî”û3´ûeIö‡—çªqŞ?—³ø?é¥cù{+èùÏ‚4-î<©>JÔó?é¥sñÈşdu;Ü|íõ­9ÆwUZM•bJ‚¼éÌö¡´•Çøòİî|7ª\"}ÿ\0!ë°’³õt¹Dãù+É¬zÔ~Éò–Şe}û-ü?ŠúI<Isÿ\0.²ş»óW…ë¸Ñ5‹‹9£ûòÿ\0»_l~Î~OøUzZ$ññ½ÛşÕó8¹û§ê¹$#:üİ•Ñ©\'ÆOìİbK;9.à‰ö3Çÿ\0->•cPı¤<Wey$6½‘øäZé?´4¯‡z^ÿ\0ì¹/çO‘m ç‘š¼ÿ\0âGí9ã_‡~$·Ò¯<7¥Z$Ö©yöo1ö¿Oœqº¹ivÇÒãeÉËí[×±ôgÂÿ\0‰ãm.;›Ë9,.¿Š>G¯@’DòëÆíõKßì»;ËË?°]\\ZÅx¾_÷]wWq\'ˆ\"ÿ\0„Îÿ\0–û+?¬|\\ıª_–pÙœÿ\0Ä^ønŞOìÛµÏ³åHëÁíş8|M½¼û5ç‚î6;ÿ\0®İ“õ¯d·ÕÚŞ;Ï³É{pû\"Hşzò=Sö¤ñ“ã‹Ï\rÃá»gxuìÕ†KŞÉ>í½(¥9Tíó3ÅB—™»†©ñÄvÑÉ5æ—$–O÷’Hşxş•æ<¥xÇÁ÷\Zİœqê(rÍåìy?Ş¯¡4¿‰x¶KËıK\rRİü›¨dùü¶öjÇñg†Ò=.â/ËI‘Ógü¸å?g3®xi‡”g­ÑùçqqæG\Z\'îö\'Ìÿ\0ß®óÀ~oö\\7ñÏ½k‡¼³ò¯6Cûğ*ôÍG}OÎoõğÿ\0­ÿ\0z¾ï+ş\'ÈüC<—³ÃrwgIg÷+CÌ¹Yöu •ôs?5a*GO¾µqÕ‡ço­G9ÚI\'•T÷Õ‹ŠÏzò§3Ú„I?¿UşO6‰$ªşg•^mYµ§ü*ûOŠ?\nï,!8õDß5¬Ş_ÏæÄÙÇâ¦ºOÙıáŞ—1ùnj~óı–5©û9ë’Ç¬YÜÉ÷6L¯ş÷ÊßÊ¬|;Óí4İCX°³“ıßT»H¿İİ»ú×ÊUæ„åê~É•Â¥\n¾Vg¤k·Öäßåıú¯¨|#Òµÿ\0±Í©iö×óÚ¨yãßåı+°ÑãI#­‹wòö%gÌêıƒÍõ=>Ù\Z¬Ù÷¦ş•©ı–’hÿ\0ğ\n§âİê?ïªØ·âÒÿ\0Ø®)ûüÇ­	û‘8½.İşÙ\Z$’Fé¿kÇ\'ú½Õ$ô«ßÂI5¼úÛüÿ\0lòÿ\0}»ûÙ©4ÿ\0İëÿ\0qßå¯H³÷u¥û¼¦XµÉË3‡Óüo¦ÜI3Çó»ïg¬FŸcÙ^¡ygåÇ¾¼¿Ç~ïg÷>zÎq÷Â2öˆùÿ\0àßÂ;OøDï5ë˜ã’öúê_)äÿ\0–$¸Àú×—ê¤Z„›şçû¼¿÷«éÍKMàİ½ËÜ~îŞ¹ÙşÖâØÿ\0¾«åù$ód‘ßï¿Îßğ*û<‡Ÿš¤¥ÖÇã¼s\nTiĞ¡\rÒe‹=]jG\'ğeÙÉû½•rŞ¾Âgãæ‚UŒÓ:®•b Óë.+>â´/$¬{Šñ*ŸGHI*œ•#Õ;Šò¦z0;„z¢XøÒ8fû—p<?ğ/¼µêğ¼¾ñ¡Û>×õÓŞAıôWÿ\0–f¾wÒõItBŞòÛı}»¤Ëşòú×¸xOâÂxÛX·…ôøôÙáƒ~øäßæ7µy¸ŠRæç?EÈs\n\\ŸW›ÖúDhê« ¸“÷rW/á»6Ş:±®jåù)÷ßï×4©—Äyÿ\0Š//bÕ#HcH÷Ëû½ïí],¸şËû4:\\’O³åıßÉùÕ1<ÍïåÆ‰ürV¥¾¡—òI‘ıÿ\01h/‹S²U~68½ûNæK‹;˜ã“çıÓÁ\'—şöêõ/şAñ£şñöWö„ó<ä“ÌOïÇ÷+cOÔ)6?Ü»\\ğ‡!¥Z²œM\rBO*:ñÿ\0ˆäD‡ı{£íÿ\0z½cT¸O.¼_â‰-4ˆïï#’K[wMÉü´®yCÚK@„áN”§9Yu<¯Ç–w~	øOg ÜÜy“»Ä’¼s»šñ“øşÿ\0ğ¥zÅÏˆ\ZŒn,áÓc“ìVÿ\0?q÷İ›Ú¼ïËód¯¼ÊiJ…{vÏÂ¸§K”©JñI$XJÔ·ªvVéælİÖ…¼uïsŸÈ\\·ÿ\0[Z[Õ=>ßÍ’·>ÏYóq†…ËÉ+ëRóıUcÉ¾¸§¾#¸’³Ş¬=S’JógDíö¥y+CÁş ÿ\0„Äwÿ\0Áüßî÷¬y*¿™ûÊÎtNì6\"TçÃ£>ìğ~±\rÍœn’yˆÿ\0:VÆ¡ş“÷$¯øG®?ü ú=ÊIæ\'‘±¿à,E{®Es|ÌıÉÊ\'îyJ3î®púÇ„î%Ö<çÕ.\'ƒøRãîUøEüß¹qqåÿ\0À^½2;;K›?3}Sÿ\0„OO–Mÿ\0gòêùØb!Ëäğ¾«äcÔ.m?½÷v~Uèš_›cgn“\\yîŸÇ${+R=ÒÆ?’:ÏÔ.\"9+fœğ™&©¨\'Ù÷ù•óíâD“ìöÉó»ùÏşïjõx‘ÿ\0Ô§ïëåjê^$ÔäóÏtßşëb»2Ê\\õy»!ÅaƒöPûf—æUˆíÿ\0yUãşçş?Z–ñùŸğ\nûXLü:¬	-ãşıh[ÇûÊ#û’UË8ßËßZNg4),íŞ)+cËªú|oåìÿ\0Çëcìÿ\0ôÎ³ç;ãJ63ï$ıİcÜGå}úØ¸¬»Ï¿]Ë\"œ•NHÿ\0w¾¬=G\'÷?¹ç¢\\‘¥sş ¼ŠÚßgñÍò-lkš…¾›4ZWªjÚ÷\\¤~ZlÙqk£„I|\'L\'ìş3ëÙşßí?ôôÿ\0>jäS]dhÒ5\rğıÏîWû-ë‰&Ÿ¨h“¯·´ÅşÜNßüP¯hÖ4ôÿ\0]ÿ\0}%|2¡ˆœ<Ïßrê°¯‚¥8*.h~,‹øäòßø’JØÅşfÏ2:æìô8®cùãó¤ÿ\0…oi\'ÎŸ»®ny¼45Z[G½î#+Îõ]ê÷M·Üÿ\0Ñ•Ô^xÊÚ97Çæ:V}¾—™±#ûŸÇ\\Ó™¬ swÿ\0Ùº]åÌÒyˆîÏ_%ézçö”’;şñİİÿ\0yş×5ôçÇMsşÿ\0Ş$2ywWèÑÀ¾ñü¾C’GÓuIøİ?à5ôy6sŒêŸŸq]XÎP¥Ù\\î,ü¯/çş:Ô³¹;=rŞæOøøùÿ\0é¥uš|,ì=}!ùlàl[Ûÿ\0\\³·ıåşî8ÿ\0Û«–ñşòB¦Ÿï+v+?İ¯ï;VV—ï#­\r”Q†‡?qeÜ~«ê8Ò­¤òRâ9\'ÿ\0¦uÅë<–úŞãÉ·4Mÿ\0?™ü_?§ûµïÃ\rÎy“55Ï[é±şæO=şæÊÇÅÛ[Ç3şóÎ}‘CünİkÏOşÒ¸¸Hn>çÎ¿ğ0Ÿı©ıŸş\'\'ü²Şû?:ö¨á)B^÷1_Å—\Z¶©o¾OÜ>ÿ\0’?¹ò±û-Iö7‹÷/û·tGÿ\0€µS³·ûN¡q3şñ\"wEÿ\0¾X¸ÿ\0´6¹]¨ÃŞœz™Õ«{B]TøOâğ—<7©<Ÿ#ÿ\0 _?ğmy_ÿ\0fÛ_l^iÿ\0i³ŞŸ¼ß÷kó=R+/eÍÄpoØñ$’|ò2°nŸğ*ûcàÄÈ¼[á;{k™#ûUºlÿ\0~¿-â<!‰ç‡SöÎÅÊx?dşËüÃKã’DOà­ÈõDòşİ½Wû?úFôş:¹qoæ×ÉŸsÏœŞ±p÷5ŸggåÇ½ÿ\0à5Ğ^GX~ Õ-ü?£Ü\\¿ÜDÿ\0¿•É¼ÎÎgŸ-şĞ,KßˆzWúÈ4øwıu•Hı¼NâŞ)d‘ÿ\0¿]æ¡/ˆ<ayyûÇšw÷÷6Úåÿ\0å¦ÿ\0àOàş:ıg)ÃÂhÀü;ÅN¶*uJgşõs§ÎµÔx_ÄcoûïŞ\"÷+T·ûL{ÓïÔ–r~îKhcó\'™ö/ûß=zÔ¨ÃÚòI\\ñ*ÎS¡ÏÕ4[êöşrIü{6WAo^o¥éf··D“ı*m›’9ø¼¿ş.´4ÿ\0\\XÉ²æHşËÿ\0=£ü>_üz¹ñyw\'¿¸â£ˆç—-îzeÇ—&úÔûeyŞ—ã‹K™>y<úéşÕtÛ)ÿ\0=+Êöuc§)êFq±ã~cıŸîştß³Ëÿ\0pÿ\0ìïGö<·6ÿ\0<}7ïıÙ:ÿ\0À«râÍ<ÉşX&øWş™íóÖ«Ç\'•%â?îö;íÿ\0¦Ÿë?øªûÈCì5íeñ\\æìî^ÇT¸…ÿ\0vÿ\0:ß[Çõ«’\\}†âó|_Ï.Ôòÿ\0½½EWñ$rÅqo©\'ñıçÿ\0kïÿ\0ìÔ^\\%Í¼o7ûsløÿ\0Š¹ıè{’ît{³÷ãØÏÓ÷É{ÿ\0wßÙQêš‡öl~sÇæ;ÿ\0ªOıš¬}¢+ky.f“÷òÉ?¾İ…aévï­ë/$ÿ\0\\ÿ\0î${«—ˆä‡Õé|L×‡ç“ÄUøQ…ôôÖüAgı¥qä@ó§›s\'Îè¬À~•öÅOèÿ\0³¦±á{Ÿ\nê—3Úêp?Ú­¤“™³Ï]¾¹¯›ÿ\0áû5¼sysçÙÿ\0=>Pßü]I½ÜrYŞ}¢M‰ò/ï7ÿ\0+ÁyUérÕê}<ãÙÕŒ©icï‡ÿ\0\"Öìíüé<Çtù^»¶~ïıe|—ğÅ	}gqa5äj…÷ÅÜ*¾¤ĞíşÛg½~o‰ÃËVT¥Ğı›ˆ¥ŠÃÆ¼:‘ê	rLò}Êùßã‡Äˆô=–ß~î³Zÿ\0V¯lø±¬[øÃwäò7ıçÿ\0k_üHñçü$šäŸñåÄµ†Oùf«ÿ\0ÅUá0“©>yGİGg\n^Ê/Ş‘åş$¼ÿ\0‰„{$“äÿ\0Ğ¿Šµ<?ª%÷™ms\'™;ÿ\0ªšOãÛÚ¬[øí1Éröñÿ\0µúQgá¹o¤’däùß÷î“_k‡Ãâ©ËÚÃ¯CóMZ#ì¤ÍO3÷ríHÿ\0ŠÈ–6÷æy“¼û\"şútj#ÖY$¶¹ÈºOõ_ííãşú©4yí‘ùß¼i7şóø6«×ÕQåœ¡W³>b¯5Î=ÑÔ[ì–âã|<V¯ÿ\0DGşËV$·ŠÊIoõŸ}éŸÌÿ\0ün£·“ı3X›û‰*ã¯Y÷ñPk’Cÿ\0,!wó_şÿ\0üU{uu<Z_æW“|’}¥?we¢/ıóÛşıSßD½¹vxNc`>¥~Súƒ]Ÿ\Z\\ÜG—æAo¿ıÍÊØÿ\0Ù«^ŞÊÎâ!,±şñÉfú’I®obºîuÇ­¦Ç)ç™gÊ~ñİŞOøÿ\0ñTiñ§úÿ\0·óW?§ÈñÉ³ıÿ\0ıë¬’?õ{>â;£À|ïş&».)ùi{æYÍş¡şDÿ\0{t5Ëë¸¶û:<Ÿè»tßåò·Wagoö„iæy¿~Ïùç·gÿ\0Z’%´rCåşáàù¿İÚøİgZ—?ÀkJ´©üG—Şiwz•¿4~Zlß?ìüÿ\0üMnxoO†æÏ—óıÏøäû5uš¦–’éòlıã£»ÿ\0ÀWí5ÉÜiwºmÄ“Yşñ÷²Ş¯;êşÆ|ûù¯Ö>µ‡Èê4»…Õü»o÷7ßXÿ\0Úõ^ÎÍ-®<—ıá>o3ûÛ}}ÿ\0yUô½b)dgî\'“gûÛÔí:ØÔ<©#ÿ\0M÷¿İfÜ?ñÙÚ»~8¿	ò[¾“¨G©X\\IitŸ:Íæı•«éO„´Z´vöwÿ\0è—»ü™aş\rßìıkæ;‰Ûı\Zç÷Ÿ\'Ëşòÿ\0—ÏÙı¢+¶M$Ÿ¹Üö¯˜Î2úX®_æî}¦E›VÁIõ‡cß?j‹úß™ ØIç¢|óÜÇıåoõcé^£ømî|»ÍWıC¿ıû]İÿ\0ñê±ı-ìŸi¹“Ì]ïûÏö¿ıºÜÒã}JócıÏş)¿ûei—åQ‡Æ´G.gœU¯-7‡‘_X·H£|¸ölİıÿ\0óûÊØÑôùd³ıÏîîŸşzË?–?ş9D–~mÅÄßÁ³ï>älÊOşÎ•¡$icq½<Íˆû×Ìÿ\0–ì¬ÿ\0û,Uô|ŸÈ|¬g?¶r~,³ŠXãtıÛıø¦ı­íŸüz°íş×åÉrñùo>ïîn\\ó]‡üj§úÇ›blÿ\0¾´5‹x¢Óÿ\0s÷>Ë±ÿ\0Şeş.³–ß÷t¹¥,_¹ï«ë¡ÍéúƒÉöÏï»º7üıš¶-ü«ã›ş[Ì›åşçÌ©Yz=¿›ª\\\"|ÿ\0é[ÿ\0ò,u¹yöyo$™>â@Ÿú(/ş…]hãsçk–4»ìK9o/{ìó^Hş}»“§Ö¹ûwPYJÃş¬\0×ş¹«——zßüçÿ\0nMÛÈÿ\0Ñ‹SØB‘[hùùÿ\0¾G1×Nâ9KÈşÏªIşûmÿ\04•ÒÌ.áÒOŸï§ü	fÿ\0âë#]ˆÃ<jòo-¼ØÍ^Ó¥iÿ\02lM¿íwwØ,ÿ\0Ç¶¹pÉælÿ\0ìÍlj½íÄˆ’­ó]Sşs\\ŞŸ#}ªâOât}Ëÿ\0}×Ig#KyşŞnßûêæ” ½ù$ÿ\0Y÷&}ëÿ\0Lÿ\0{÷ò%X·³H¬ãšo¹6Íßì3}™W“şYÿ\0×ÒèÔ«“ÿ\0ÈşÛ§şƒm\\Ó:`sw´òäßş½å›ıØ$?û%W¸ğûÛ[şæâM›İ6¼ÎŸû5mÏ0–×Ì¼™í„ôº„x³¸tşÿ\0ş×®eHÕ‘Çëš|¶:|w/\'Ÿóï_øÆÿ\0úµ{GÂøU’ü/ñ\"x’Kk¿Eö‡³Kˆÿ\0z›bÄf,·^?­y®cÛeîïÿ\0eaÿ\0\nÛÒ¼:eğÄÄ“ŞÉİÿ\0-;×W\ZÓ|ÛÕ,D¨ÒÛtAyoıÿ\0ùbˆŠ‘ÿ\0³ÿ\0´ê=>ŞãÌÉûğ£ïÿ\0ÇÛÿ\0dªR¼’\\^YÈ¡§Şïæ1Êîvx®=G	¨æ~÷sçı™ëÙ‡Àx3ø‹Öú}¥µ¼nñùè‘CüûØ×ÿ\0iÖ>¹æÅgûÉİ?ƒæQı[mšæÎ6ù!ß¿ïy²U+¹„Ò\\î@Ÿ¼‹n?ë”hÎs3<\'oş™Ëÿ\0Ë)ÓıgûR¥X’İîlìÿ\0é³ÿ\0í(øª±¡„ó?ßx¿ômWégg³ûÿ\0û-µX‘Ÿá;³\\}¦hşD}íşëyur==%á?õÛİà84øå:8(€»Á²M¼}ÕLS4âÓg&ü¿ø\n¿ø-Aª÷äÌıImµˆí“ÌÙ¿bÿ\0ÀY?øİ]Õu˜´Ë¿³F™T<ŸRQIıI§Ï%ÅŞ¿!hãA¾WóŞÿ\0–•Çø”Ç}¯_Må¦B«¸ó´p?@+µ_gcl<=¬ZìÿÙ','B002',0,0,9,'','hg'),(3,'1350555002','BSCB','Narendra K Singh','Mr M Lal','IIT Rajasthan','','','Jodhpur','Rajasthan','India','324011','9649946160','nksingh@iitj.ac.in','2012-10-02','General','Male','INDIAN','Hindi','RA18','2007','resize_1350554998.jpg','','1350555002','adsQQCRhF.8V.','454646','654','2012-10-17','SBI','IIT Rajasthan','1','2012-10-18','0000-00-00','1','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0ä¡úÓe²\r¹JïëÈàŠbÂÆOLâ FÎWfî:æ¾ş÷²}\n’Û¶ã˜Ër=*°\r·÷x òÙ­Xícf(•\' ê)~À„¨Œ^´jK¥r•¶’Ñ°!c9\'ïŞµu,™WËéS}’ ê\0Ç8¨îå·Óífº™Ö8!äw8UP9Í=Ëå8¶ôH‚ø´[jÈIÂ¢°Á5åºßÅ+=NHåf˜Fq”}«ôìs×Ú ×¾5[ë1^%{h]mŞhòÍ3Å†\0{×‰êsJñLåppCgqü?{X|œÕOÁx—zèeRº[ÊÛú_üºh}ÆmHĞæ¸’w–~Æ0îù^1^]ªü`×¼E3Bíö;€±Áoæ<c®A8ù÷¼Ê;I&mÁŞ‹ºº­ÓTÑæ[ -¡MŸ0¼æ9ÿ\0	\0ò§İOJ›ºW??ÌøÃ6ÌéÆŒêrÅ/³¥ı«$^1×l|äû{Ù‘w‚5#spr1àãœã<÷«º\'Å½E‘şÛt³[çp·ºCûÀzìa÷Hôçé\\„WvÃPynk‹„-„Æ9ö9#ØPŞÂ/c‰!»†a9Ü¶aİ„àƒ9éÓ=G5¼©Sš³G…„Îs\rER…y&¿¼í÷^ÏÌúÇÃ:Í·ˆ´È¯-Ñãcrê;ƒÜÖ‹ìY1ó.z€¯›ü\r­ê¾šÕ„×ÑÚØ.òŞåA\Z¿BI gã}M}áİjßÄ\ZTw¶ÓïŒå	ÉFÏ§­|ş\'\nè;¯…ŸÓ\\%Å”ø‚“£[İ¯ªé%üËõ]=\n×0A(*ÈÙ$Î+%ôÕ\r€Èz…=½u¤ü§.ØøªíƒÑÈÀÆzæ¼ıĞ%MOs“:@bI‰Ç±4’è±†V œÏá]?ÊIóş*?Â€¹R!åéïEÙÕáØä[N…FòÎ:È¦›YíŞ¼³šê\'‘blpG®qšª\rÉ‰ÿ\0eøşT\\ÉĞŠ{š±@cVoSÊÕ:ÀBöÉôánÀ¯py©»-œôÎiØíĞ‹Ëa!!x<€;SãP£¡öéSıŸ©éŸ­+A·nÓƒÜæªÁÌŠì#“Üµó¯ÆOÚ®½>…i<×è¸Y…Ãî)	è¸Ám£³2}«è½Fsa§İ]?Ì ‰¥*8\'hÏô¯‡.o¤Ö5›ÙÙŒó³99êìsıkÔÀSæ››è~9âNhğØ*X:{Ônï_…ZëæÚû×V\"ËMK«gV¸]à¯%F\ZN=øà`u®GKÒç¿¿\n#73c‘øõ×ø}ôûØ$´‘Ò]ñÇj÷€ì:c$äŸÖ¾³ı?f»9bƒ[½ZÜ¨ò¡`q)ã,sÔuì3Àé×ÑÅb¡†‡4·?Ÿ0˜9âçhíÜù÷Ã—bî=šZÇQò“Ç×ş•Ûé>ñ¦½FÇF“ì®@ıÕ¾UñÀÎr1í_{\'Á>ÇXŸRşÏY/d9V\n¸Ú2GËëĞdzWa¥h‡û?ËšÙ\"lçÉ\0|¼ğx¯y³Vå‰ô4òe¼¤~xËû?xæÃMûLº\r£¬³nVLÿ\0²Àn}kÊµ)t;Ùb»´¹·Ô#ùX3²ÿ\0ç‘ÓëÒ¿YunPÄ¥Ç$mëøWÎ¿´oÁëx~}BÒÚ8µ«fó¡¹‰³FõZT3vê(ÔZ0Äd«Ù¹Rz£áy¯-omä-q$wv´%Û¨õ?Şïéœ×¤|×.t&·Kƒug:Z4º¶Óµ˜v+Œ{†Áx¢Åtÿ\0ÜÈN2«…l‘Ør0=ş†¬øGÄoâ]%‰\0†ôJ¯Ù’z!ìT7AÛ$WÒUJ¥&ŸcÊÉ±5p\n´åÊÔ–¾MÙıêèú°Í”Î7£`äŸÈÕe–P=QŠ³»x”’~PmÆ)Íj\0=áÍ|ıºµ2äi3÷ˆÇ\'ŒÔ?½g$–“•Ø­G´FsÉ\0qŠÔ(Êäã×“ùÒ±<·3%×9É\' ëJ‹/PãÔšÒ»L(9?(=pj ’c„ÈõÅ¸¦Î™#R‘’y©!Øtç½XòÊ…à{\nV‰1?½ë]|§/9U-ÆF29¥û0R1ódU¡Ü:Ÿ­/”¨I8ãŸZ|¤ûC—ñãGeàzy%HXÍóÈp ûœ~uğÌAšENp=Í}ñá$o„šù‡“²=À®p¾bî?•|em1ŠPãïkØÀÆĞlşzñ*³:…&´Œ/÷·şGÒ³?ÃkÏ‹İIïÜB2€9>½ëôÂ’CiqÆ$P0|û,O©\\ê¢æVshÄFƒ±#œ\nûÏÃ\r+4ì±¡şócò¹¬äñVNçÎe1Œp©µkí£ÀÌÒM‰ÙòKJrrjÙŒ°?îîRÑ²5ãP†9lL0 Û­iÏa.cx9fn1ìkÂ£[\\ëu)§nkÎ¢nÍÜ=Ep>.òî\"•~WREz—‰.ôOÚí¼Õ W#»€3éÍy¶»}£ë1´Ôídã‚’©Á÷æ¹ªÒš{T«BJÍŸ_´Ç…WBñ£İZ¡Xn²\\(ùsÔŸóé^?irÖ“E6XGŠäƒŒ`‚\r}ûJx}rÌ²È#¸‰‘)û²c¨¾4šbjJ`×ÿ\0¯_k–ÖöØtëF|6gFX|KšÙê»¬BÜÚ[Ê­µ$\\cÓŒ{AÜÃôÍWğ„rÉá½*9 ’\"–Ñª™1#hÇOğ­$Ï¡¯)ÂÛÙTkº”ã9nÒ3|¨[nIäc¥5\"Lß=EhÉk‚I#ô£ìò33\"åšC£Ú®æØ’E*ËòÃéUÍ«\'Ê²( ­vµg´Š÷sŠŒY–çpØÍ\'•_3Eà(¤6Kç¥H8Éà{ÓÌXo}ã=sR¬LĞà‘ÜWRW<Şku#òãcµ_ĞNTã*Ä–ª ^µbÚÑAùˆç¡<U¨İ˜º‰+ÜóßŒz[ê¿|En’‹Vû)a#ÊC~ cñ¯…ã ¸VÉæ¿K×ÃQø¦XôgUš;¼Âêàà©ëŸÃ5ó§í%û1é_¬STÑ^+Hc!àšvspÙÇ¸’Ï#ñİT+Æ”ı”ºŸ‰ø…úÅJXˆ=T]×•ôòîj|!Õµ/èºdºı«t–»’&`¨™<³g½SñßÅ?x³J–{™æ²Ñb»ÜBá -’$®p<á{×²üğÌ>³‚áY¥’F+ÃF{W ÁğªÄÛÜéÖöît+—ß6—:	`cœäó‘ÍxñÆR£ˆ“”o®ıO©‚«_Æv²ZtØñO…ñ‡|¤x’-RâãG¿W–Ûí¡vIµˆtŞU²3Á	¯¦<ñPÔ<5tnI‰ *²œõ¬_ø~wÑbµ\r6Î%Š4…¢¨è£Ÿá®ø\'HHü5ymÌ²œuf#ŸÖ¼ìf&5&åLô°XWJ\n3<ŸÆ~ñÇq4ÛVš9KyvĞ[H¨îNrå›…P:œw\0dšùÇÃşÕµgVÓ|<—ë¨èpKuv“Ş|ØM¥1±Fî„)<öçŠúóAÓ§³Ö¶>WšN\nH™*G\\ ı+¤Ö<&·çË:º%Öß=mä+çÓyêß‰5İ†ÇÂ\']œXœ¶xŠªI¤—WKÖõÛk¯Ï«Y?Ş´¸Œ+Bq‚F9ØãŞ¾RÔtÿ\0¶x¤[@ógTPxÉ$qù×é‡Š¼-g¥è3[Çe¼O„j\0éÔÿ\0xÇìÏğ»GQ®»oo§ÕşÉö‡ˆ;Å\\…BÀ…$œ’=«|7–gnÖ#\0ªU¡M¿u7Áş6gC£Çr–VË4&İ‘æ‰3¸­³W\'$ğ8=ë[ÄZBè:åÕŠdˆŸ\nIÉÆ23ùÕ4ÁVÜ·±â¶…¤“?¦)VU)Æ¤6i?¼¤¶AbF*)RÙO”’Æ{Õ°¥@è1Š|pº·ÆsŠ®SWQõfd¶œ(fòNi\ZÄ?¼eö\rZ[,`0ÇÖ«´*§Ç=ñPãØÒ5rÚZIå_îƒRÆ 3)Äw­)!\r<ŒÍ´Ê°ä\ZrG› <¨ÆsÜWB1ÖºÔ£ ÊÆ@8ùIÎjp	òdUTcGo|Tğªy,‚7¨ëNGß¸-ÏëWc\'>…+\'€Œ¾!¸ŠIí¬?}*F2íáˆ÷\0“øWgñ·Ãš?Ä_ƒ\'Ô­¶]~íµ=>æ 	Aå#‰ú0$jäníá½‚xde†DòİÀŒÆ²¾]Ícªİ|5ºc$ZicfÓ9]>PvÄì$®}1\\8•Éj«¡ğœO†•XFªÚÜ¯óEß+yáû;…pU¢NGû¢¾…ÑCİ. À¯~hÃÀzæ£áu”Ëoe3AáO¦+Ş|/ªG¿™#>SÏJğ*ÛÚ·ÒçÃ©5¶,üLÒBøEb‰„r<ª‰şñê}ğ¬/†zl‹w_À ŒœI» à{w=1Z>2ÖmõËQi+2Ç!ÇB+˜Ò¼1¤4ww’/ömÜ„f]9~Ïæ´è¼1àsŠÕSI_¡—¶táe«ò2®míôßŠö6ùàWĞg¿Zõ+í&[U.§<g\0ü­Åy]Ï…47P‘ìl¡+‡Y%•¥=ƒÈ~cß©®ŞËÆ»ìÒÖoœd(-ØvıkÁSĞè^{=Ÿcñd±]iÒFã†f¼³à_‰4ÿ\0h~?Õu‡Ø4mb;ÖÏğ/Ù‹0§ä_Å…w,¾ûI¼;í\n¾µàÚ–€ÒiVMÆjæëP7?g€\rÈGûL¨3îEtàÒw{~w5…)â«B=ïù¦¿Sµğ¾±¨x×Kµ×5H>Ï{¨n»h±÷‰(¿‚à~yí‰eUN;V E²¸HÑSiRªğúT;3Á’y€+è”RV?i¢İ8Fd’_\"¥´r3ÈãRIBëóñ«6£s3lÁ’\0Tw|¶¡‚8§²5ænV2ŠÔàtö×p­ãŠŸÎ9Tb#‚\0éQH‘m§#<VLíO¹¯p3(åq‚y§€MÈP¸Ç=ê9%arX’:t4ØndwbÎw®HãƒZ\\ó¬ìYŒ·|ÍôÚh’á¡\\ÆãÕzŠdQäŒ†#½6I¹,ÃŒƒÖªärİêHy¼–$õ8<\nòŸõé6:—†dx|A§»*˜¦0¼·U‘ìy>µëVÈ[·.yçÖ¡†Wòä@ÆvZiÙÜåÄáá‹£<=O…sû<iZ—‡4´ÑõáåêÖ’0D†%”–ÉÏô¯z²¹h%ÛÌ#.%^zŒWÍŞ5ñ\r÷€ş/i—Ş[6›©Ú¥Ú8I\"$†ÿ\0¾IÏÓÚ½‹Mñ4ZÄİÇ\"¸8#iÎE|æ2”•G.Œü†XTğñÚ6µûYXÛñâøÎ$ÑííÒ)2¦gİG¨_ñ5™¥[\\µŠùÚëÙİg{ãù‰ÿ\0xçùW{cª}¾Ş%‘²ªsZ\r¢ÙŞ([ÆÌ~óÅ:U¯+rthÆç’ë:f´\n6™«´óÇ÷f†?•¿Ş=ëwKM]´8çÕÖt¹ß$#ŸJî.t»=\"Ói„ç•Êø—QÙ“D\nzu¨­6ß-ŠsD¦b=ÀšÂşéÉœàı+É>\ZøFøxËÄŞ&»AöKöX,™¸ìLn8şH«¿>&ÛøÁ³•=Üªc‚yw=?úõÑü6ÓçÓü	¢ÛİnqÀ’I»›æcùšîÀRjò{3ëxr”jb%YıÍİ™¹²E!eR:¤ç4Éâ(9n:áG§Gò¼áäŞ9Â€jX‘ÙU\0sŒüİA÷¯_sô›ò”\"}œÃpçœøPc–]ÁJ«t=j{ÒÁ&= |»GJ®“:Î‡%HGCRn›k™LI’IqëMòÓÕáWnÂm uíTÚX<ø	â³i#®-É¥ÒÇ;6íãéOû`eÁ\n	?(ª®èc‚¦¥ØQ¢<9éÖ¡18Fæ“İ«<Œ1…P>^:ö¢FX­€úõ˜\" ÀÀfÈúÕ–$•İTb­3\'M-z[€Ëİ€8À=8¨e\'{H8;—Ò †ÒFr‘œ·J–\0è›ù”í\n;“íWvÈåŒvfn» Ç­Ù‹¹!Şl%IRV?sq	Ä6+Ä^¿ğr&­¡ÖMóOb{²zn•ë>$ğ„ú\'Ã)ä•®šæÚæuÏÜMåqødf´´İ=/t˜Ã\0ÛdüW›n…H_ª×ï?Îs\ny¶.¤¨|0|©®¶Z¿½»yWàÏ‹¬D7yR²ü¤\Zõoˆº}­°+2Ã¨qÏÒ¼ÏWø¥É«Ë\rİš<e‰S÷X}æ¶´€ŞÕíXnï dd’?ZçŒ©^ñº>bq©³:=câV™r™k´\02Ã^Gâï‰£Q½\Z<oª^·Ê–öüŸ«Š=I­ıSàç†ì@~ÑvûóœÀbµ|à‹]2İåµ²Šİ[¢¢ã?_ZR©I{Û²©Ó¨Ú[-ª|ÔüWâ}\nó[˜\\i\Zæñ\"95àG\Zú‚İZ½°HñìŞ\n˜×i^˜…kØé®Ş6³·l”º³¸ŠU^˜	»ô*?\ZÊÖtÉô‹£Û‘ò¿Më¢½\\3s ªz£ôîÅáùª`tU¥ç%k~¼ïÜY/âh¡#‡†Ü1úÔh	˜»eXe|¼Ê©Jñl8q†e$u¦ª‡Ú‡oÉÇŞ³“?DT¢‘d\\Ç$gåØIÀ\'œÕyŠoÜX’9ªò“òğqr*6‘Æ9ÇÊ³æ:cNÚ¢ÜŒĞÀ`à%©P(à·¹šÎHÚ)[ÙÎïşµNgg;˜äšJ]Í;lÊÉy8\'à¢Ÿö›‰pL¥H˜±>ş§€øãÄ ‘ËVjæï—±(ypæ|GÍÁ©IÚSM†®§Xã‰¥sÂ¢Ì^…áß„WúÉµi>Áı\03ïÙSí[Âœª;Eešà²š~ÓQG²êıÕœ<ùÓE\ZÄebpK~êŸ\n~]>»k©ê–ë¬DÊ–ò± |¤úrAü+¿ğ§4­Ñd·³HË6İÇ–>åº×]\0[hhUvôô§åŠõhá}é³ñ÷jã!<6_HI4äş&Ÿd´_{~†æ\rÕõÆŸpÚŞ@öì‘‚8¯>Ò4i4©¦°›%íÜ§Íü@åŠõFÄİFeˆşö\"$V¸ë\\·Œ´ó© ƒ+:Ä28®<ÛíhûE¼.§Àå¯e[Ù½¥ùô8Ÿøv+—F@²x\Z¯ÃÖ¸n-î#Œ1Œ•ÏÖ»Ë­=5;s)pFFCX°E-€aìãl£5ñéØû/ˆäï<.–Ì°»nÏ>¤ÖÒékc§\n\01Zº~nnüÉä3¸äœm¦×¿t\08ı*Z¸ÓIÙşĞ>Ù«\\êN ˆãkxÿ\0àCæş”|LğbëZ}¿ÙÖ1y\0…ö\'ßü+Ğü£Çc£Ú¤ÉşµZFş÷?ÈT~(ÑBÄÆ&/\0©¯Ğ0¸uO\ZMt×æ|lsJØlÉchJÒ‹Óå§ÜÖçÊº®‹s£İ47v²[xÜ¼¡ïTÛjŒó_P^i6~!ğÜw2ÁÌ‡É»ÆT‘Àoo¯½yoŠ>˜Ä’iccÉµººßã\\•p’°Õ¸äü}ƒÅµG0^Ê}÷‹ıWÎëÌóØ7$õÊÕf+¼î®=qš³{ew¤]=µìR[N8Ù(ÁúZÏÕdÜ1ÜW™\'mÏÕè¸ÔŠ”ÓÙ­˜ç*Œ\0Ü>†£i@\'ØúRI2”8ã\'©ªÆàÎIúÖ.G\\asr$’âhÒ%idÎÕ?™á^áŸ„z–®È×¤ÙBÇ!:Êß‡jõü9Ó¼/gHÖK©\0;}æü{jï­l6F±Ä¡=XuÅ{ôpi+Ôûç\\óÄ*µ$èåQåó½ßš[/ß¡ÆøwÀ´/ol±?\ne~doÆ·>Îb	A|ö<°çhîs[sGæ:Â£!yüª”->¦ê9€Í^’ŠŠ²GãøŒMlUGZ¼Ü¤ú·vh}m´ô@¸TSNıòŒ`ƒü]ı+ »„<*Aôï\\ø~÷Å¢m4Í5Œ¬Æíàr’İdñ°å»’QŒ“V‘ÊVÖ>*Ù­ôúO†¬åñn±	ÄédÛ,í>ä‚‰ê»ŸıšÌ‹Lñ•Ï“s®ë6—¢s°évm-~l\0®ÿ\0;° |ì@?İ\0×¢é\Z}—e›oc•¤)åÅoa#UÆ0p*¯‘Škk˜ÁØÄôÚxûàı«qM4ÁI§tsZt¦Æ;‹K¶hÛ;ı~•z=*D+\r¹ÍR½ğÓZÉp©æÉµ³Ÿ˜ÆáHşéõÁÍgéú…ÆŸy¶BáT³o\\×çøì#ÁÔ·Ù{¡`qK™i5ºş»VpÙnL(aÛÖ°5HÎ²¨\0ÛĞg¦;šÚµ¨Ì¬w÷F+›Ö¼}gm¨Kƒ£j)Õ…k= !ò»æYœˆâĞŞÕX,,±UKİ[‘ŒÄC	MİûÍhu*ñ¤´³–m/UÕåŸ+¦‹fn®\0r€Œ\'AŸö‡­rß´gíO—¬¾¯á’ÃŸíİêÕF{–(T~uÔø.=WU’ë_×ôÁ£jw*°&Ÿö•¸6ğ)$‘~RÌIcE8®ƒOCs4òUÑ†¾õ#à³8ÿ\0	êÚv¡Üºeí¶§¦j0ùOk*ËŒ åA ôëÅ\\Š&´#|\\Y6<²ıB‘÷síUõo‡zvƒ«6¿ ÛG¤^]Ah¾\\|ıçŒ|»ñŸœ\0İ‰\"´tÂ·´N1å¶W¾ä§OÊ¦Ö5æ¹ƒâiÚµ©Šâ(ç„rQó/¸#‘^)â¿ƒ·6Hóèïö¨‰Ïçæ_£t5ô}ònùÚ@tª–Ö+$26ÁûÌåzdW5\\=:ß>Ÿ&âLÇ#•ğµ=Ş±zÅüºz«3âë¨&´¸{{¤xe_½ƒi…@YX×ÓŞ5ğ&Ÿ¯fÚöÔ>FRxÆ3ìkÆo>	x‚+©VÉã¹µ\rû¹ZM¥‡¸õ¯Ÿ­‚©Mûº£ú#ãÜ·2¦Ö.JŒÖé¿uú?Ñëê}W8û=«\\)»Àô®Ú\"¿u†A‡šÃhUáh‰áÁ_­ièn$ÒmÔ±D¾YÇ¨8ş•õò…îX–Âİ™F\\ô\0w¨´k/±Ú»Iş¹şfÏ½X‘V@»óÇz°±‰ƒª©ˆµ	­Æ:Š­e§µ’4x4ŒùNjÆšÅK+p@èjó…»Úš‘ql®\0ãwÕ`hçóY®0Ëıå=«zH¶±ÀÏÿ\0ªªIâC:Sœ½I4Ç‰£EAˆŸ©xøÊö—¨õÆ*•¥µÔ¼€dpe<8=}k§k8å… `‚:©ä\ZÀ›I6²™¼©¢ù˜òºË(ş`wäW3±TíÕlz[ÂTæè÷+İÙ.§v–,ŠÖãï¦>V=óíí[1ii¶éogpE÷–(P*‚O £A±.ä®x;Iïşy­V‹lÒÈ6ø\né£J4iªqÙµªÊ½GR]L»˜Y\"XP|ïÁ>•rŞÔC*Š’4\r399â¬0\n£Ôâ¶22/—zJ¸?p€XÖ¶g:HÃ(ÊP8çûÂº’Iã#—iÑÎÓ¸g§T±£;_‰bÓ^H€ã\rõşª–Ö%khWr0Gn*=F&ûA÷ƒq“Ò¤ğü«%À2Så>ÔŠèfŞD³]Í»’vÂ¾ç©şu˜|?¤¿\'¥mÇ‰oÁ¡vÇ©Îş•U‘¥†FL ¢×Ë“JŸd·\"0è¯ÛğşU-ŒÂœ«à3Ç¦ıu—£Lo4È¡äÈ±•\n¼§¡úU#º2«Dªƒ†`yÇ¥3#®[·w)‘#/£m}„,©<\ZæôµFE\nGA[°F¡º‘Gj\0Ù¶hŞMÀa±Ş¬0ÈªVH\'ƒÀ«™ zÿ\0úé€Çpp=)…A7oz˜\rêG5Âƒ“ïõ df%#Ó5KRµûgÙ­7¬mq2Ä$oáÉÿ\0\"¯…<“Ó?\ZÉÕ¤0D«òÄ|Î{œĞ#TD¶V¨\"ó<·VÀ–/-À®ÉôªÒ¹ši0z~»EXEÛ7;İØ±õêj´‡>Oş$Sc59Ï¿o¥>P2¿AKÚ¹#şµ7p$qŒbAÕ‡ù5ÁU$`ÉÎjK‹1r6öæ³İÂV_\\Ò>÷P‰ä1‚=O*¥„‚Îñˆqå¹Áıi/­Ñ:ÈÇ8ü«7*ã^‚?/J\n4Ò@“Ìñ¶ß‘ög±#ù\Zçu=Zá¯¥)ÊñÈğ3úÖ»²[h°ÜùIgÕUXş§5RÈöıì±ã¹äĞ	ÛR->òK¨£W*· <%Ïİ”t\\úŸ•T×u¨ì5SzÀÅgpÃ~†\\éø{ÖÂèë¨Zjò¼Ÿ-ÇU#GçúVuÎš5İ2â)Â‹Ÿõ7#\0¤‡v$rälS]ŒüÎ“F»¨Cq~k¤´¸\rƒß­y‚üCäj·šÛşÓ`†w!+;ğ*ôË£Â÷dŸzH¦u6/ò·9?Z¿»ŸÓğ¬}2L£Äÿ\0JÓŒåAíÿ\0Ö¦\"bÙä)’ay?şªD9#Œ?•8(eÏğ ei±#9éUÙZì8bEeàú©!I<r¥,Qù‡Óğ¨Wígà*|©É½*#´<‡<ß•1‰!íŒu¨3Ó?şªs>“0j\"à‚FGQR\0ã\r¹É¬‹Ó†8àsZ’1ñÏ§µbj|ãüè#Sœà7ÊGúšá/µYoõÔÓ´ù7NÊ|ÃœCÁ\'ğÍhøãÄŸÙV3”¤”«ÕH=‡5ÏøC¾/µC\Z]M‰^[r®G\n[¾¯­²¯dvz£²·µŒ ,Ùê£îÄãğÖº=(Ai§[Ç8vÍÍõ<ÿ\0ZÊº¶×v¶Ã”^RGR~èşgğ\\Ù=ıÄ“¬›U˜íì8Ê©ÿÙ','B002',0,0,7,'','approve'),(4,'1350644000','BAH','uoyoy','yuoyo','yuoyo','yuoy','oyuo','yyo','yoyo','oyuoy','324011','9649946160','nksingh@iitj.ac.in','2012-10-02','General','Male','INDIAN','Hindi','RA18','2007','resize_1350643998.jpg','','','addYVRKm6TSVw','454646','654','2012-10-10','fhfghfg','IIT Rajasthan','0','2012-10-19','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0ñú“Ì¨è¯”?«yÉ<Ê“ıeW¡+ ,%KQG%aø“Å–Z%¿úÏ2àHëXBS9«bia`çVVHÜ¸¼Kh÷ÿ\0ã•ÉÜxóí?$1ù{?ç§É^oyâKÙ.$›Ì“çş2¬[É{­É“oæ·^¬0ÿ\0Î~oâ‰Ô÷0ñ±Ğ\\xóPM${+PñÅÅÍæôıÚXÁw·?<ß»«‘ü;O3çó+Oİ@ùz¹>¼ynÌÿ\0øM5;)?ããÌJè<?ñ%“eÌŸ=W“áß›åìó+—×<¨i¾c¤~bQû©…Ï1ÂË-³Ú-õ®có¡“ÌG©$¯ÑüAw¦Éäù’Fÿ\0Ã]ŸÄ\rNÊHÒçË»ƒşø®yáeö¹Âqm	Æ0Ä\'zG™RyUcéúå¾¥oçC\'ûÉZÉæ|‰\\|“>Ş&ˆóÂWEÈäóå\\J§o•Ro¬’ÅWÙRy•\0Só££ÌıİG$”rU„ªhıåG¨j‰¦ÙÉ3ıÄ™›œ)Ãf?<Xš%¿’’¥M÷Sşy×‘Ş^i^I3ù’;Ñ¬j’êú…ÅÌß¼w¯Xıüo­êÛ–şbCò@’}ÍŞµìrGKGâ¹cW7Å{iXøoû?İëqÇ¬G$p?Î°ÿ\0{E¿Â»Khã¶†ßËDşşJôÍ<ÈÓø<ºé?²â’=ÿ\0êëÆjµş\"¡P÷#÷Gÿ\0\nşßìû<ºĞ·ø¿\"GúôI,âş:±§ÛÃæoJË’cç‰æÿ\0ğ­âòşHÿ\0Ş¬}cá½¼±ìxÿ\0àôš|^^Ï3ïÖ=æ‘×L©B©ò?Œ>\rÅ{\'É—?ßW¯ñ‡õŞImyÉü/_|j\Z›÷ãùÓî×—üDøoo«YÜ$ÑÖ´q‡¹-ŒñXÖ‡¹£>OÑõI´Ù?s\'ÉıÊôÍXKë8İ>ıy¿ˆ<7qá-râÎo¹÷âùéZ×>Åq±şã×¡ˆ‡<9àtğşgWŠö5eî½P·¸ó>G«—op’|éZÉæ×’~Ï	ßRÍ\'™QùUGæSä5ç)ı£üæ£ûEGæ%G$‰Ps<Êäş ^?ö|vÉ\'ü|ìµ¹$\\/Y#JëÃÃ÷§ÎçØaŸÜqöö¼Ùşı}Iğİ\"ĞíáşMÿ\0ğ*ùŸO“Ì’?ïìù«êO‚öïı—ûi]9„ıÃò³Z²™ì–~ºK;İ×7gù‘ì®ÂÎÏ÷uàÒ=ê§?¨\\<RIRYŞ<U¹&—™Tï,ÿ\0y\Z\'ñ×I‘$z£ÇÏü£“Tıßûu¡—æùu¡áôç­=ñÃ”çä¼O3ıeSÔ-ÒçÌ«—\ZîşOİÕ{ôk}\\ÆçËÿ\0´G†íôÙ-ïáşÿ\0Ü¯óÚMé%})ûDIöÛxÓû•óØÒ8÷×¿„şó¸×ìëóÀï<®}¦ßcıô®¢;Êó	éïö‰&ó>JôKy8ë‡I­ä8Šµğqö½\rHÿ\0{RyuŸo#ÜıÏİÔ˜ùé\\üçÖÅs+˜ÿ\0hó*O’«ÿ\0ª©7Ò8BM•æş$¸ûN©pŸÜ}•è’Iûºòÿ\0HöÚåÆÊôğŸ>Šç/ªÇÔ“CıíÄp§ßwÙ_\\xNâÓÂZ=¿Údò¾Kğ^¡imâK{›Ïõşù¿à5í Õ.ü[q¾ÎÏı\n$ıÓÉ\"¢|İë,])Nk±ğx)Æ)K«=3Tı 4Í&Méû´‡ø?J¯oûViW>^ù<•àwÔîc’oİìß÷ä“bW7¨xî/¹oæ×	7×D0ğä9§‹«üÇÙšÆM3[’4†ãÌß÷ŸÌ®ÒßÆÜÇÏŞlû_èvwºEÄ{$’	?¹?ÉüëèÉ­Üéñìó\'¯?G“à=¬=nx{çÑŸğ˜E{üÊË¼ø‰iß¼:ù¿Ç4Ö4ˆä…<ÈßşšW‰ë$ñ¥\'Ïq\'ıü¥K9ù#\Z;#ïË\ZhWÑü÷‘ïÿ\0®•¡yiso#Ã\'Úş™×Àú}¾»,{ÒóıßŞW x/Ç#Ñ/6yb™÷+Yá#Üæ†.N^ò:¿ÙşÓüëçù/?Ò>zú“\\ò¼eà»Íñùnèÿ\0\'ûK_%É#ù›?¸û\ZºpŸ‡c‹0‡½÷;Oìòüšë-ÿ\0w\\…î?Ò6r»Ky²Ä|GéÜ9WŸ-d±É³Ì«l¿óÒ³üÏŞFõ\'Ú+›úÎr=ôUze78ù$zóÿ\0\Z~óPÓş]ä•Ÿ„æñN¹·ß™>_ûêºhÏ’gÌgÔ¥_Ëƒğ—w­ëÛYÛùó½{Ç†ü7©èûÇ{eWıœü?·ÄMsï#´O%_şÿ\0Ö¯©/>ÿ\0mÇ¾ÏËøÿ\0àTb1½ä?>Ãá?uÍ#çı/G·¶·Ô!Õ|É\'™6A7üó®NãK–ÇÌıçŸò:/—_PGğÏìÖr}²HäOâI+ãÀz|_\"}›bt}c’&RŒäy—Ÿağ\\“jº|s¿Ï²oøñWiğoà^$ğ=¾¥y{¦½Âo‰à‘‘ş§šë?á]éş2ó4©¼ÈôèvM:Güj¿Ãø×¼xK·‹GòR?->TûµÍ<D§tí¥‡Œ%ïl|/\'Ã»M7â\'ˆ4nI/ŞßÊû,×r3ü­Ywš>™m¨\\Y¥¼plGÛ7—_L|@ğ¼¾0şŞıŞôƒìÒùŸì¶U«‡ñGÂ{MZòK˜d’	ÿ\0¹]0ÄGİôÔæOš=:G£èvúßˆ4ı)4¿²Aó¼ó\\}Í½»\nÔşÇÑ?Óä’Òêİöl·İ±öÿ\0l×Ayğ¯]¶Ô<ä“Ì­…ww1Èïû½ÿ\0z²Äb%9{¦tpœŸhó¿øY–ş¼¸Ò¿yeó¤óIÇMßwn>õx^¡p’êŸÆõô‡Åfğş¡©[\\¥D3\'ë_?è~¸½ıóÉ¼Å4Ÿr»°ó¥ËÍ<T*Ôœa÷\Z·ó<Çş\nê-äòäÙTôı]9-®×£üŞ]Y®Z³ç™únS‡–õÜ¿$Ÿ»¨÷Ôvñı¦:<ºç=şpó*=ôÊO2¶9¹ÂI+Ğ>Ü&“¥ëšÇ—æ][¦Å¯;zôO‚÷	syªiOsı¢\rëŸÇ·¨¬¥ğv;ZLöw¸ÿ\0ŠÃÄÿ\0}İşúc_\\izÇ—oï+Àô?†öşñÛìä“È¾ù\ZÚ¾Œ¼×¨YŞ?—òW\rYóÕæ>.”y#Ëêuš§›}åşóıêÃ¸Ğåó?ÖyiR[Ş<ŸòÏçOã©4øîï|Çxü´J44=.ŞÆ=ïqåÆÿ\0Á]¤ Ó-£·¶†ãËŞ›\Z¾Kø¡§øÖÛÅ–÷:n©qª}ß.=ñºâ²î> j±Şo3÷#ş÷µkÉ2=ÃêOhÿ\0ÚV÷Oï7§Í\\<z„¿»†oàÿ\0•âşø±ã¹|aom5œpYK÷as¿âkÛ/-Ò9<çç½D½À‡¾hiò\'™òyöÓç­Èã´û<Ÿ»òŞ¹8ÿ\0wó¤Ÿğ\n?µ<Ûy7ÿ\0À+>sNH.ÛÂú£¿Üòÿ\0A¯šü7átÕşÇsÿ\0-Şé\'û¬ÛkØ>:kmà=AOõÉä§üŠâşÇ-·õ›ŸİØÅ³oûÈÛÿ\0¥tÃø_38CÚb#ä?ñ$‰ÿ\0	¡³î#ì_øŸ$mIq\'Ún$™şü®îßğ*Ëz³ôHC’¡UXó*Ê“ç­Š#ßEË:¹Èä’´4=r_ëwöß»{wßYÿ\0ëhù(3zŸD\\|@ÑüIqf–~ñÿ\0}²I?Õ×a¥êêÑä¯”ô}Q<?¬YŞ?îÑæÿ\0u¸¯¡4{ÏİÇıÏ¿\\5i{3ãñ\Z¼§ªYŞC{ßıZV}çÄEıä0ùq§ÜT¯;ñgŠ.4/d?¼w¯#·Ç··^YÛÇ÷^y+JPç<š³=óX¸¸Ô­ä/äşıy½Ç‡îîu’ŞO÷+Á~=Ô¼Ë—Õ#‘Óø$¸ÙTÿ\0µ>\"Åşæ^Éü»“ú×G²—ó#>xög¸x~ŞãI“}ä~_•üÇ]ä~(´¹É¹ÿ\0€½|Çoâˆ¾ù.mä»µÿ\02|õ^?‹rê‘¥ÍÍ‚ÓHè ö¼‡ÔßÄ¬»Ë„Š±ô>¥¡Û¼5¡x‘Gÿ\0¡WÉ¼NŞrHìì¼IªGgsÁ³åI?½\\ÅÍRÓÂúü#vÒG%Ôß#%¼{ºşµÍøƒâåÇ†üQqg¦ÛÇ%ÒAó<Ÿr=Õçw\Z„·×’\\ŞIçİLûÙë¦—Å#ŞËğüóö½™åüş]hÿ\09©?ÖÔuÔ}Py~m(J7ĞJ*-ôPr…é”U‘jı¦ßez\'Âÿ\0\ZKsgö™?oò¾µÀWGğÎÍ%×5\rÿ\0qàÿ\0¾>j‰|/˜ğs>Õcó=rIçË®‚âãÊ³ù#òİ+ƒ·Ô%Óo<—“ı×ÿ\0•ÚYêZ•Ÿ“7ü\n¸¥H?½ïâOK¦É\'úÈßøk›·ø‘®şñO-+Õ5Oèú¿™¿Ì’³íşéRIò\\I\Z×Jé„ãÉïÏ››İf…õ‹‹ï/Î“Ìß÷’ºxoL¾·Şöşdõ¡£øËHû—gıt«\Zä––Öÿ\0$‘É\\ÿ\0lÓÜå1ôyMÓü”ş\nÇñG\"Ò4ù&ø\nÏFªwšç™$vÖÕç4ûíË7y$‘?øêŞ½ïxÖŒ=´ã˜ÿ\0<——“~ò{‰7µI¾™IæVÇŞS„hC’%Èÿ\0{QÉQÇ²¤’ƒ¤š–1(3)ù‰Ry‰QÉQÕÜå’_ùiQùuEş®™—9sË¯dğß„íü%á½í1ÿ\0ÄïYG¼oúgğ‹øıêãşø_xÂÎ·“ìHèò¿ğIóaV½3â¦¨’ü\\·…?ãÕ,^?İFÿ\0²×o±ÿ\0e_¸ùÏ0‹¯<%êaëiûõÇÜkš†‰&Çó6×y{XzÅœW6ûïÿ\0×‹JÎqU¤sò|D¸òö$”[ü@»‹ş^+›Õ4¿ŞIşÅcÇfşgüó®ØB‘Å)U„Hÿ\0…‘w$ë>z’=cPÕşüŸ%s~ÑÓÌŞõÜG\Z[[ìO¿YûøMaÏâ#ÓíÓø+P¼·¹ø‘oá½JO/NÕ­Qoùá>ï’_ş*ºK8ü©+Îüqfú—Å\rÂŸ»ySfÿ\0Ö´Á~ò¿\'sLTç‡¡Ï\r-b¾¹£ßxoT¼Óoãò.­ßd©Yÿ\05}yñCá¿Å_ézö•oåø…,w¯ı7h¿ÖDßílù–¾C¸óln$†ky xŸc$Ÿ}\Z»qxIáf}^Y™ÒÌ)s}¥ºÿ\0uRy•^Kˆ¨ó¸¹Ooœ³EE„ÿ\0”ÊF¤U%½ÅõÇ“g“ÏıÈãŞõíı™æ¹í:–±o$ÿ\0­{OõP}do½øWªxOÁz?ƒ¾[ùğE±ç¿»ùwo—ï5zT°5gñè|N/ˆ(Pî½æ|÷á?€ş(ñ%äiyo&‹ñyñş÷şøÿ\0â«×4…~ğ¼{,#şÖÖÓşzF·úü‹^™ú–¹…åÄŸÙvö?lº¶Mcmvıá³U?évúoƒî5$÷÷×^L_ôÍUL^Õ,%(yŸŠÎqX¯µeÙ\ZÓÒÊâ;”ó6ZA-çï?Ù\\/Oöš¾øùö%¿†õäûé|é+ÿ\0²ß%}gşá½rgıŞø-í¿ï¶ß^\'ûJinğšŸë!Ó¼ïûëšè­zR‡‘æÆ´¡V3}Î>=Q/lãtş:¯¨\\~ïıŠó?ø¡ÿ\0³ã…äû•Ü[Ş}§ıÊø9Òä™÷q¯Pâ“ıeGonfúØÔ4¿7çI<ÊÇşÏxî+X!±§ÆşgÉ÷+ ·ÙôÒ±ôøüª’KÏ*²™¤=ÃSí‰uÇèñ;øÁ¥Íş±-7¾Ï÷jMSXxã’¤ø/oı¥ãMBóşyA³şúoşÆ½l²ïây9®#÷ÚŸ\r÷ÛxP°O}=Òşÿ\0Š¼0üQ«Çüãk‹‰¯-ä´ºoíäØûYsïvµ<xšGŠ4;Çÿ\0[äòeÿ\0Ğÿ\0BZê#·ûrYÍû·±º{údÿ\04Mø=}ÅZ0Ÿ»5såpØŠ´ıêRiùüLıšõßG%æ›q»§lßû¿’]¾»ş^?•ú)%¼ZGîRâ8á÷ı‚ÿ\0ş=ämÜ…oàmÕÅø£àŸ‚¼[$©hÿ\0Ù/3ù-iòKi?÷dş_zğqdåÑöx •?s¯™ñ<r%ez§ÄÏÙÏ]ğ$—gÿ\0+X~}Ÿò×o÷¿Ûü+ÈüÊñ%‡©Mò8ŸoCB¼9éÏCô2ãÃö÷><ûßh»²´ƒí,“É½7*çîô®nI>Íàxæó>{»ïık¸ûg›ãlûÿ\0atÿ\0ÇR¸=sıÁ~ßüwRÿ\0ì‹_[(†Ff¥¼oı±â‰¿¿¥ºßJ*¿üJ4?Øy%ÃÜMÿ\0}.ÏëZ’[Ëı¡âÇş±Oı§^GûJx²_x/ìvßñôú\\P¯÷Ó{e™ïš¿‚òt+øóö¨ğg…´ûÍÏí\ZÕïÛåû&ß)büçïU8ş\"i_µ/ô«;›D±µŠm®öïş?JøŞßOilşÒÿ\0Æõí³ş±ÿ\0ß$¶İÙjp$2ÿ\0À¾ïş=^tjÊr÷‰Dóy-ßÃ~ ¼³ÿ\0SºÀk¬ÓõOúi[´åğß>Ş‘ÿ\0¡_}×ÿ\0i{W£ÜËîWƒˆ‡¿#ßÂU÷ÒMb_à“ä£ûf¹ÿ\0´T‘ÜW!êûS¨Tycª÷—•—åWÔ$zÏ×ŸÜ3õMAî~JöOÙßCì{‹÷ç¸Ÿåÿ\0ux¯ûıúú£á¾ÿ\0ÿ\0†ô{?/çDMßï75ôùd?{ÏØù<Î~ï©é‘ş÷ÂûÓı~ŸtŸ÷Ë¯ÿ\0^™qåjúÅ»ÿ\0ËéÈŸöİû!^goªiš%¾°š®¡m¦Ù]éÛşÓw&ÄÜÿ\0ÙWqûZ|?±ğş—fš¥Ìú¾Ÿu¾/²[³¦Öù¾õ}YÇ›Ş‘âÑŒ¹OdÕ-ÿ\0¶ô¸æİÎû.ëœªŞ\\¿øöÆ¨üIpúF¡¬j^\\sÙyém-‡üôÜ»‡å\\?‡ÿ\0iO‡^2Ö/!³Ö>ÈÚVøü­şjì5®³Æ–nğ~¨gï÷ÛÍÿ\0L®êÏæt˜ñë‘Iyo›ªGóÿ\0Ì7Vùoû%ª=GÁ>½¾š}KÂ›÷lÌ~Ä¯–ÿ\0{¿×½GâôCÁ÷3Gö[øq>&ñ†£§ø‡Q·‚òxaáÂFŸuW<ìiË	iØtë¸İ£Ş}›Ä0ó¤ùâµ•?•s~,ş)¿ÿ\0×wüŠ•sP-©ã‹”ÿ\0ñü_{Ö£ñúG…üŸ›ç¿ÿ\0]Es™DÔ¸¸ıß?¾éãÂ¾{ı­,ÿ\0´¼Yo¥\'ïì¶ÿ\0¹?áU~Z÷1ä½ñ„üû¿Ú]›j5ß‰±j#29<ÅdÛåVİ3şññ\rŸ…ÿ\0â“’o³ıÉÿ\0ô*¹g§½¶±¥¿ú¿9+éfø}§^|>Ö$6ÑÃ7ŸÒ9®7]ør‚oÉ>eÏûB²œˆOŞ,iúæ™ñGÃw×¿q«Ûÿ\0ª¹ÿ\0Œ¿u¿Ş¯ñGï|ªy3IéüA÷$¯Iñ~ˆ<;âQ\"m²|û]XıêÔºñÖ™«øgN²ñ.–.\"š=©¨[\0—2ÿ\0{~¸±¹ãæwaêò?#É£³y-ãt¢;9k³—Ã jsXJé$kó	P’~†µ¿áYcùÑOğ¯˜”ù$á#ëáÎ1‘çÖöoW?±ÿ\0ë³EÌÿ\0V1^³ğ›áHÖ§¶ñ\réXôÕ}¶àf’O÷:ßU¦¯>XœØ‰Æ„%9¿Ã‚é{go©G$i½(|¿¿şõ{DOİìş^›w¢éZ`~À¶S?yî$â_®–+Çş(üuĞ|c4Ze´š¦ß$aÔ¤JŞ§\"¾ç\nXZGÁb*Õ¯Tğ¯Û2âŞ+	è‰\'™t-ä¿ß[\nµá~ğÜ×:¤‰åıÄß^³âçÅş+Ñ¯õY…ÍåöÇ¸rÄc8à@ü+¥Ñ¼-ioâùq…KkÛ´»åÜW4£í$ätÃÜŠ‰óì~¸“K¸™#û‰¾¾¨øâ\rnOŞiº”—¥¾Ço3ç—çá?ÜÜ9¯/Ò4•Œ ßQù¾cıÚú®ÛÂ6úD‚pÎtx¼Ã\n¼}Ekr{ÆœÅÛÈŞ-SÁöoü±Wx­_j­ës\'ş„kÛ<Aÿ\0…ƒá¸ÑÏ“öX¸ÿ\0€½yv·üNµ•?ãâNßí\Zë0[¯CÿÙ','B002',0,0,0,'',''),(5,'1350644113','BAH','uoyoy','yuoyo','yuoyo','yuoy','oyuo','yyo','yoyo','oyuoy','324011','9649946160','nksingh@iitj.ac.in','2012-10-02','General','Male','INDIAN','Hindi','RA18','2007','resize_1350643998.jpg','','','adAOoMfYHJzes','454646','654','2012-10-10','fhfghfg','IIT Rajasthan','0','2012-10-19','0000-00-00','0','','B002',0,0,0,'',''),(6,'1350967733','BAH','Narendra K Singh','gdsfg','gdsgs','sdgdsg','dsgs','sdgs','gsdgs','gsdg','324011','9649946160','nksingh@iitj.ac.in','2012-10-02','General','Male','INDIAN','Hindi','RA18','2007','resize_1350967729.jpg','','1350967733','ad810utPQNlnc','454646','654','2012-10-02','fhfghfg','fjfgj','1','2012-10-23','0000-00-00','1','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0óÊ*/š¥¯ş³•$r~ ¤ó(Í\'™Uã’³õZh‘şúO2Oá†?¿Nõq8šXHûZÒI#S}SÔ<Q§é¿ë®#ßıÈşzó?xâîöM‰\'Ù şä~¹û{‡’MõèÒÂsülüÛ1ãhÂR†\nóg¤jŸ-í¼Ï&ßşşW/ÿ\03P¹¸‘!·ù+Ÿ’óÍùO-ÿ\0¹IòEş¦Hà®Ÿ«ÃìŸˆâ<ÏñT·¡Ò[øÓS–OŸ÷ìWaáÿ\0%ìMÏîİëÈä¸OùøùêÆŸxöÒFé\'™DèÄ×.âf¬e9¶ºñæTrI\\=¿ÄDû?ÏûÇO½Z\ZŒ-/|½ÿ\0»zó§‡‘úõ#À×å‡>¬èŠÌI~z>/}rŸG	ßT\\ñÔ‘ÉTíäyjärPlH•ú’J¯òPıõ^¥©1¾ôÊ¥ªjiº|—3IòCV*•!NœôKs?Å }&ßÉ‡ı{×›Ş^?™%ÌÒ|ÿ\0ß­b]nI&İ»ıÚÃ¸Ê’?;÷Ÿİ¯j(BóŞw›O3ÄIs{‹dSóïù\'÷*K{7—ş>dû:Uİ[G\'úÍÿ\0øåeÉ¾æMïÿ\0Jè>\\±æEr%´ğ:ç?ùîõ–o¼pù‘ÀŸ~³äâ“ä“ä \rOìû‹˜÷¿—ıt¢;?+çó+>=Aü½şåzƒÇ%A©cûAâ¸Øõ±oy/Üó<¿ãZæõMŸ}*ÆŸ$×1ïşåØõø£Íÿ\0CšO÷^»Hÿ\0Ûû•ãövïû·ó?Û¯Dğş¨ú–Ÿÿ\0¾Ÿ#W›ˆ£Éï¯p¦s*ñú­]\\v:1?‚¤JË·“Ê’®y•çrŸ¤ó–j*$“÷u™Vå=õ\'™UüÊ<Ê‹ŸhJàş$kIgö4“ø÷µu’H‘G#¿ğ|õâz¦¨×²Hï÷İë«ïËĞø+Ì\'C\n¨CíşDqêæoÿ\0–Â•rŞáä¸ßåù•&Ïİÿ\0Ë:’ßÍ—äJôyÏÄş2Äš‡ï6¬©#¸O¿ş®®iú™÷êI<>òıÊ=©§ÕæcÉ¨M÷?“ûõÙüßŸøë ÿ\0„~_/ı]Øïÿ\0\0¬ı±§Õäròoó?ÕÔ’n–=ÿ\0Æ•ÒGá÷¹“ä®ƒCğÛ~üt{cXa§3Íî-ßËªöwŸ?Ü¯pÔ>Åö?“ï¥y‰<\'.›ÿ\0,è…XŠ®TÊöúÇ™òyZWià½cı\"Kg“Ìß÷kÍí÷Å÷ã®³ÁòM&±\ZCûlõ¥_€îÉ*Ê†>œ£ÕØõK{„­î+8Ş´#ò¢ùŞ¼Cú4>j*8îËù>åGåËÿ\0=(:ÿ\01(ûDQTrIQı>ıä’l¹cÿ\0x}çî¯$OöëÛ7×‰ë‘ı›X¼Oî;×víšñ„?uJ~l#ıì‘¢W¨xÀï©G¼uæşıæ¡n•õG‚ô´¶³·şşÊ*Ìø,#;ÎG\'yàx­£Ø‘ùuOş¿ŞlòüºúÏG´’ßı\'Ë¬½CÂvRÉûšÏì·¸xü~ªÿ\0ğ‡¤Ÿ?—^Áÿ\0üQ}Ê¯y¡Åæ|Ÿr³÷‹äæv~OùçæWI§éiÉåıÊé,ôøªävöQIÿ\0sïPkîS)Ç§§—^WñƒCH­ä™+Ü$û\'Ù÷¤•çÿ\0-ÒçÃwŸßDzÓà”Niûñ‘òÜ›<ºè>Éåê’lşårrIûÊì<³íWeYû‡I|ÆŸ©Şy’É\'üó«Èş_ûu—%ÅXáëÉ?u„Íï%ûŸÁRy—Ÿ\\• —\"ı(4ç3üÊ>ÑPRI%79cÌ¯+ñåŸÙ¼A#§ü¶MõéÃüD³ıå½Ïüº°ü¼ÇÊq4=¾ÿ\0u¦gøOmKÄ–ğ§÷÷×¾^xÒßÂÑı™?y:W•ü·I5ËÇş4‚»\\Zi\\\\Í˜õ¥_‹cóœ<90üİØkŸ53÷6şg÷~õeéÿ\05¹<Íÿ\0»şårz†¡©êZ}Ååµ¿—jŸyã³ôı\rï´{‹Ç¸‘\'GD‰$ÿ\0–•§!çóKŸvzÆ—ñsP“ä›ïÖÄŸ.ä·“epÿ\0ü\'w­ø‚ÎÙãó7ıï2¾¤ñGÁû+Ü=µœjDŸş\\óê{¸xK”ùoXñ†±’:^À+Ÿ·ñÇˆä“b\\I=$Ñî#Ô$Gó#ıçÍTõ\rÍ©o•“¤È›^9?Šº(^#ŸŸ©Úhú§Šï¾G“ËGÿ\0¦•Üiwš…õ¼šn¥™ò|³Wê\Z>»àÛ‹t†O·üˆíä|ş[v½3ÂzÄº•¼{ãıæÊuNŒ,#ÍÔù¯Äš[é:åå›ÿ\0Ë®³Àöÿ\0ñ/‘ßøêOŠ\ZzKãË„O¾îŸøõl[éo¤GögıÛÃò7ûÔªÏÜGµÃ˜OöÉÏ¤Kl©,î?‚«½GşªJóOÔ¹Ë’\\~ò¤ûEGå§—¥ëcNp¨üÄ¨÷ÑXœüáæ=W¸ÑÓ[KgÌù×ş¹«¡á9ş4Ş$Ûáÿ\0¾×mlpâáí0ó„»ÿ\0Â=úo‰.-ŸøÒ½Âãáı—ˆ#g·óßû’}Êó=r4Ò>$hpÃ–ÿ\0eŠŞÛ_FxNDû<îUÊ~ô|ÏË©R÷eK³<oPøwâ_/É°Òã×ûÿ\0r¤ğ¿ì÷­êÒoÔ¤òÑ?‚¾ ³·Š_¿÷*±âË+/³ØYÇûë“÷•©§±çû\'/ğßÀv^¼!çşızÆ¹úÇû’×7¥ÇoeyÍy÷zÜÕ5KKèöCqæy?zˆGİ‘Ù·)â~<ø?eâ‰#òİëÈï>ëz%äŸf“äÿ\0¦•ôÆ±púmÅÏ™ñÃó²U=/ÄZ½¾ô¬ùLç²xß†ü­ù{îdòöWaqá´Ñ4¹6ñ×¢yqÜ®oÆ\'ö]ÂV’™œhŸ-Üx~_|@Õ?åÓcÿ\0%«$‘%×/?¹ç¿Ï]Ã{;‹oxƒX¹ıİ¬®ğ§ı4Ûÿ\0ê®NOŞI#ÿ\0ç¬ªŸOÃğäŒäW’O+îTucìÿ\0çyiü´®cì9ã’¬cşšT~_÷êO’¶ç:6Uxä£ÌzR1%¤³¸ûå¼É÷âtûæ£zeœöä=oÆ´Öô¿í¿/È½±Ùr³G\'É<UÜxTO±Û¿úÏ’¼ïCñÆ•/€äÓu/øş·GH¿é¦ï»ùQğß\\ÿ\0‰\\p¼Ÿ:SŸÂ~wZ¡VQ”w=“TñgØmö$•ÏèúÇ‰/>ßy\'‘_uëIöò4ó>D¬}cÇ:¤zT7dµJ!ïœÕjû8ûL¿k—¾ñEäĞë·ö¯ş©$ùÒ:Ã·ø¹{/Ú!†âHşÑòyßóÎº\rCÄ’ãd1Ç~é÷âO“ş+ŞãÂö7r[Çşä’oJì”|h{Yı´uŸíî5{‹„¼ñÅÚKüØI§İøKP“de«ıÚáô¿xJ?õ1ÿ\0fÎÿ\0vhäù*æã·k[=çÚàz\'XVœ=Ùìz%¿‰H÷Ö5Ï/O‘ŞOùgX÷Ù²y>gÉ\\_5‡¹³‘O.¹âtJw;‹x¼7ğîK›˜ü¹ŞÕ÷¼~ßıº’óÄš†¥§ÙÙŞ\\y[ÿ\0ªJ§Ÿ¼¬§ñ{–aş«{vX’?îQşª2£ßY±\'ÉGÉUã“÷•&úØ9Êõ™G™Fÿ\0úgZœ\\áæT{èóébPgÎ2º?ŞyQÈgÏü¿î×7¾/ùéQÛëbÕ#òyıäÿ\0f®”Ï›Î9=‡<¥ªzÙ£ë	åÉı÷¯7şÃOx’ãí—Gjÿ\0$&ú¹gâDû<ş­ßî×7ÅÜw’<?ÇD!È|DªÆq1Úy~Ğ-üŸì»yî¥üï\\ü~ ğär|ú}”•±gàøµû{·Üyhÿ\0óÏüjI>ør97ı³ş]4úÇ\'Â‘cûCBñ&Ÿög³Dşå¼{¹y4ø´\rs}„\\Ü®ÂOÚ[[Éma\'—û¿ùé\\~©§½´›O2ŸÇñUŸ?CĞ5\rcí¶ûüÏøpş,ÕXíí“ï¿Şªrx-¬öy^ÊÃÕ$¸‹C¸Öø?İj^Æ&´qç6ËVhy”µ•¥ë‘_Gşİh¬®z´e\rd~›ƒÅÒÅRæ¥+š	QÉUã’¤’Jç=.rHèù*¿™KG s‘|´o¦Ryu©ÅÎGQüµ¡¡èz‡ˆ/>Ç¦ÙÜßÏıËx÷ÕÏ\Zx>_É«qoı®ÿ\0;X[Éæ¼ÿ\0M§ü»)a*ÖøbíÜòqy¦üI¤ûu9{Ë³GYş“í¾<ÓáŞ#ïFÿ\0¾MG¨IæÕÏ„vnønÿ\0óÊ7zôjÒ‡)ù¶#0cŠRè¶F†¹§İø[PÙş²×ø?Øªú_‰Úãçû•ë0ğÚ_Gş®¼Xğ›Å$›?w^L*Çí\ZUÃÎ÷MÈüYå[ìI+>ãÅË$¼ù+—“K½£òîşåurÀã÷Ï@ÆÇÇ’¹ıSÅgÉæV<z=íìŸ?È•¹§ø]#ûÿ\0¼ïÑÏ~öe}/O¸Õ®#y¾çğ¥zGŠ44ÿ\0…oª[$r\rëşòóUü?¥¤^_îë´¼³ÿ\0‰‰ıô®Ïg³KÉ	y£å=.ñí¤¯DÓõ´Çü´®ÇşÉÔ#¹‡îM÷¿Ş©4y?w{´©}v—/m?WˆæéÕ$—¼ÿ\0WRG\"U}K»ñ¡…„~}ìß$Pù›<Æôæ®j\Z^¡¢\\}›R³¸°ºOà»‘ÿ\0ZñëàêÑø£ó?MÁf˜|WÃ%èGEG$”y•ÎzşáĞxOáÿ\0ˆüm&ÍG¸»O¸Ó}È£ÿ\0+Ş<û%ÛÅåÜø«Póÿ\0½aaò\'âõôÆ¡go¦ÛÇmmo\'İ†8ö\"V|—	{ßø+ôL>IBÅïÏ™‡bq\\Ğ¡î/-Ïø¹â‹/€¾·¶ğÆŸm¦İ_?“—ÜÚ¿4­ıêøÏTÔ.5+‹‹›™$êgß,Ò|ï#5}!ûR^>¿áû{Çÿ\0Qo}äÄÿ\0ï)¯—î?ÖWf/÷v‚Ùv<,gV.¬îÛ{²Ån|¸û7ÿ\0}6V<ŸêêOÉömbŞoöö5|¦cü#é°?Å‰ô¥ÆËèÿ\0ç¦úåõM\rçŸ™Z–÷Ÿ»©$‘<¿¾Cà÷O¸øÏ7Ô4?+ïÇXÿ\0gHä¯X¼ŞæßdÑ×q¥Ûı£ä“ä­aTæ?O³Y?åtz?÷êMÎŞÛçzÜòÒ”æ8R‰Ÿn‘I\ZVÆ¡²[y+.9<¿¤¸¸³ÉOŞ7<ÏâEšI¡Èÿ\0Ü+‡Óÿ\0Õ×¢|Hÿ\0Fğ¾Çÿ\0–³¥yı¿î£¯«Êcî³âsŒ¹ãÛI¤[£ïW¯Ğ‡~ Ñ>3ü7Òï5>ÛVù<›¤¸—*ıêüïó+éÏØoÅf¹âM\'ÉqÛ Oújœ7ş:ÕöXZ°æöSê|Î23T½­9YÄôÏ~È~Öÿ\0}áëË\nùãş¶ßõù«Éï¿dŸZ]É/¥O$¿hq¼v8Ç¯°#‘ìo<—ûZh¢¶Mƒœ¹ùğ¼]™Ğ‡\'´¿©©ÚdÙ^wñ#\\şÍÓşÍß’½3K‘e·gÿ\0–I^ªyºüš…üß¼û<ÿ\0ºOökÓ‘ñ<¿ö˜’-\'À~Ò¿å½ÅÓÜËÿ\0_şÊ¾_¸ÿ\0[_`|løOÿ\0GGÒï!¸’;İ=Ê†?ùo»µ|×âÏ†ú‡…µHì&ûï^+ŸŸáĞúü¾µ/eÉs“ı]hxNK±ÜBÿ\0»ŸÏG‰ÿ\0à<ÕÍSÁzü³ó?ëgÇ§½µº<~^÷ŞßïW‘ˆ¥í=Éı\ZÜôOtÓìåşË·›ø<º¯q#ÿ\0Ï:ËøWñ(¼½Xùÿ\0ãÖi?ô^¡¨x^+˜äx~ı|f#*÷´Ãâ#^éæw\Z…cÜIæÉ]†¡á÷ŠOõ~]swšÇ™òG\\ĞøÎÙ|!gp‘V§ÛË¬»}_ã®“KĞå—ËO.‰\Zrììî.k¤³ğûùqùÕØiz½¼»ùë°ğŸ„ÓRí3GşŠŸq?¾Õëa0“ÅUŒby8ì\\0´¥V©ó?ÇM4ß	èw?Çw}*/û¨¿ı•xÜŸêëìÚsáİÆ·ğŞ;ûy7èw_i•?é“®×Çş;_#ÛøP¾÷6w3ÿ\0×8Ùëí%„ú¯»ÇÁÇõ¯ŞÊ]L¿ùg^©û)ë¢|tğû§ü¶óao÷Z#\\ŞğŸÄºÜ‘ìÓä?¿qòWª|øO.‰ñ2Şæó÷ïh›âş\rÒ»pô§íc¡Í‹ÄRt§n‡Ú$Ùæÿ\0øX…wÂæuPk/Æ	ö{ïì«šv¡ş…ûµôqøO‡$¼¸şÍĞõøyŸ†ãót»Äşûï®»Æ— x‘œ/ñ6kÂğGö;œşU”€€íşÓ$p¿ğ=qÿ\0\Z<\'i­ø²7òştûÕèµ$ÿ\0~°üo´ø“æûûë#HLòıcáßúôçJñxöÚâŞh|Ë¸t>_ÏWÙvv±İYüåGûÃ5Æë¾„]ïDÿ\0ğ®:¸xLõğ˜ïcæ|Eqo,¿#şíÓî¼uíŸ	ş&>¥z>«\'úl?voùîµÄÿ\0†cK’MZÃË[WæXãùLmşÈ<W–Ä³ÛŞA<d,é&øÙxoÎ¾c—ûhË¿Cìòüla8Ë£Üú¦Hâ¹çªğÚKÿ\0,ë‘ğŸŠ_X±WÊËüK’èk´·½öÎ¾pä÷%Ğıµ!Ï±øNÒ/ùgZz<^gû	UäÔw³\'şùû&ŸP’+Xóæ}ƒ?(?SZQ…ıÈ…Yû8Js:\rèrø“PÙåùv°ÿ\0¯ı–½#ì~e¿Ù¡ÿ\0DÙò~î?áö®‹Dğ­¾¡[ÙÁ‰Ë)\0—“øºŠä<uâµÑìö¡çûÇ%S_¨å˜(`éyî~!›fsÌ1‘øVÄ¾4’Ê/ê${&ƒÉòŞ®Â~Óìtx÷ÙÇóıÚå´[ÏëfK™D€}ó\'ôê(xÒ.øk×‡¿Ğñ\'>HòBE?øDôù4ù6Gå¿÷ëŸğß…í4İrG‡÷ÿ\0yë¸“şArV_†âO´Hÿ\0Ç]‡7?¼ƒÆ«¨ìn?Ñ#úT~,•¼Ê’Çş=cúZÔRøÿÙ','B002',0,0,9,'','3'),(7,'1351754089','BSCB','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','B.Sc','resize_1351754085.jpg','','','ad3R0QkRGsaDE','2352','52525','2012-10-31','gfhfh','fghf','0','2012-11-01','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0ò¿ùkRTòÖ2¾\\ş­,y•GæQæP‘ÈñTµ[ÌzÇ×<ai¤Ç±??÷+«‡yrÆ7<Ü^c‡ÀÒö¸‰r£ “d_;ıÊËÔ<a¦YËO1ÿ\0¹y¾©â‹½[ïÉåÇıÊÇ’â_à¯§Ãäğøª¿’?)Ìxî¬åÉ‚‚K»ÿ\0#Õ.<iæyfäã¬ÿ\0øM.$Îşçğ»\\—¨=·Èÿ\0Àû×ıÖ«Ú?¸ÿ\0úWÑRÀáiü0_3óüGæÕß½]ü´üÃş#ÛI²k3ıºÔÓüq§Şıÿ\02\nò;ô›Éÿ\0‚3Êÿ\0•çUË0µ9´·¡ìá8»6Âòş÷›É£Ş#Ô-îÔÉ•’W‰ÛêÒo†ãËzë4\\Gû›ÏŞ\'÷ëÅÄdò‡¿JWò>÷.ãŠUçÉ‡\'šØíŠ¯oyô{á“ÌJ’Şá-¿é¥|ìá:sä‡é4kCÎŒ®ŸThGRoªÿ\0hóc£}bhI$•úI*=õ¯8y•%WßFúÈµ’%WûGùÍqş8ñ#Åşmû½ÿ\0ë^º°Ô½½^HVm™ÒÊğ²ÄUÖÛ/0ñG÷–v}Ï½5pşcÉQù•Ú¾óF!ËùÇ3Ìkæ•å^¼½bO÷ÿ\0yV#‘ÿ\0‚³äÔ>Íóÿ\0«şï÷ë>ãT–_úgşÇñ×OµŒ6$¸ıänò}Ï½åÇü5^óXŠæâG‡Ìû*}ß3ûµÏÜ\\\\_|gÉıÊ/$Kk?\'ûõÍ<AÑ\n%ÈõO2Mşgß«‘ê	\'ü´®N¤Gş™×<14ä;î?¿V#“û’ßÊäíï.-¾äŸ÷ò´-õùí—şİtB´Lù9ãC×Êâ7õÅ]å½ÂKôıäo^Gox’üé÷+°ğ¾©ÿ\0.Ïÿ\0\0¯\'3ÃûHû^¨ı…3™ákıN¬½ÙmäÎâŞO.¬o¬{{Ê±oqæ×Ê¶óšIUè“÷_òÒ«ï_ùéA¡c}hÿ\09ªhzMCËù€ç4$¼Kh÷¿ğWë\Z£êZ…ÅÏú´w®ãÅ‡pÿ\0ßù+Ìä“Ì’½ü²—ºæ~?ÆØéN¬0½¹\'˜òıÿ\0¹ÿ\0¡ÔwXÇóÿ\0¯şc¨ä¸x¤òaıåÓÿ\0üóZìécÿ\0Mî¥ÿ\0¾ëè¹ÏËJ÷’Ëó¿î÷ıÔïÕx÷É\'’Ÿë?‹û‘Ô’o’ãÉ‡÷“¿Ş›ø´>Ï›g±?ïÓJçŒ9Í>\0Ñôyu-BŞÎÎ9$gØ¿üU{†Ÿû)Ëâ\r/ç’H/]7¬ßÀ]ÇìoğŸLÔ¤“^Öî#{’dÜş\\]Ûå¯Ñ	Éğÿ\0D³ÚxßgŞy,›ç®iÎÌkÉ?ågâ>ëõÉ4}nÎKK¤ûü/÷–°ãßü³ù+öÿ\0ãWÁO…|q¤j?gÓµùìuHíÙ&µ—ÿ\0f«_“Ÿşk¿ü_q ëÇ\'ñÚŞA&û{¨»HEIõ	óÃì_of—?<2yoR|öß%Ì~_ûÁRIf—?<?¸‹=Qã“ì×ÿ\0qÿ\0ºy\"eÎI»Û~úÛşø­Ïê‰,‘½eÉnúlr~òÕÿ\0ñÊ$ÿ\0F¸å>ãü’Õ¸r¢©ÏÙÔŒûj{rEXûg÷+K‘.tøßıŠ¹\'ú¿õŸr¾&t£(ŸÒ¸ZŞÚŒg©3S÷_óÓÌ£÷UŸiG–¿óÒ±ä;¹ü‹ÿ\0¦•\'˜•Oí˜õ±Ÿ9‡ãË+O?¾õÁÇş¶»IæÛÙÿ\0¿\\¿î¾îWÓeğıÒ?â¹óæ/Ñ—åıÏŞNõNòGO&Û÷—Oşµÿ\0çIypöÑÿ\0Óy~í\Z}Ÿ—\'“ş±şü¯^Œÿ\0”ùÆŸf–6ìı4jî>\rü/»ø«ãK{ıİŠ~úòçşyÅÿ\0×®N8şİq\Z$~b\'È©ü´fÿ\0\Zû³ö{ø/qàŸÆ÷‘ÿ\0ÄÓQıõ×ı3şì…pãqÂ—¹ÔèÀáıµ_cÖ<7§è^Òíì4Ûxã‚İ6VÇü$‘yŸêëM\rì~ÿ\0ı÷Uã·ÿ\0LØòWÊóÌúşHd~,·òşzóÿ\0ŒŸ\rôŒ~“M¹òã½‹ç³¼ş8%ÿ\0âMuŸğ§ğI•^K4²óÌùè„êÂ\\ñ3ä…HòHü·ñg†ï|/®^i·–şF£bû%†OãÛXò[Å©[××Ÿ¶Ã¿·YÛøÂÂßı*ß÷7_ñÅü-øWÇ~gön¡ò¨—ç¯¯Ãâ#^”e÷Ÿ)ˆÃÊ„ù~âÆ—q-´’YÍûÄş÷jHãò£¼³şâo_÷hÔ#ıßœŸ~h¸‘?w2}Çë§àù-ÎãÃ÷.‡fÿ\0ßJÜ°ôxŞÛG³‡ûˆ•¡opÿ\0r¾.´ùêËÔşˆË½Ì-(Ï¤Qb9*¹¹æõæ²ş6¤òÛşzTüå2£ßFú¯$ŸÜ \\æ_Œ-ŞçKó¿ç“ï®.I+zôˆşÓˆÿ\0qşJó½B7¶ó!ş4}•îåõ½×ò-Â~ş8æV+Ûÿ\0ÇÇœÿ\0økSOıäÿ\0_põ—ù|ÍŸÆşJ×Qá;8µ/izkıË‰Òÿ\0wøÿ\0ñÚõ\\ıœ9ä~~¡Ï>C¼øW§ÿ\0Â?ª[ø’m.Kø,~{X¾ßóÒ½ãOıµ,¬n<›Ë9-?¿şÅcê({›‰4¯YÛG¢l–k‰( _÷«Åüyo\ríÄuæ>ÿ\0¹›ÿ\0Zù™Õöóæ’>ŠaXÈú’Ïö Ğ¼AyËÏ3Ş­ËÏ‰–Q|ğÉÏá¯‹üg§ÜÜG\nGäOıÊúR?ƒw·>ó÷›<;}qO—œôaÍÈgø£ö¸·ğÿ\0Ú!‡Ì’¸µçöÿ\0µ‰|Sy\ZCîşy×ŸøòŞËMÔ$¶Kxäºş\'’	ø£ÃúmÇÙµ-BæÑşçú<êÿ\0\níŒıÏv\'áï{Ó±ïš>±¬jZ}Â?üL¬®döµ_%øóCşÄÖ5ÿ\0WïƒÌûû[‘_NxoX}7P·}7XR²¼’|’§ÔWûTxOì:†¯CoåÁv¯÷¾ğ­0Uy*òK©–/û®xô<>ÎO´ÛÆôivo}²}ÓşTôy?w\"qöWYàû?.ÎKŸãw}¿î×­‰«ÉK›©M‚úî24ºnÎ“ıl?ğT~g•\'ÉFÊ6WÌŸº%ebÇÚ<ÊÌ¢8èû3ÿ\0ÏZïS)<Ï2‰(=õÉø²ßË’;”û÷«¨’J§¨[¥íœÿ\0~·ÃÕö2æ<LÛõÜ,©uİ]œ~WÏüõêŸ³€î<[ãÉ/?å×Lƒ{?ı5~•åòFöÑÉııû\Z¾Èıôû+oùßÇwu+Êÿ\0î¶Ñü«ÚÆÖä¡ê~;…£%ˆäŸÙ)ø“á}½µäyæOjÿ\0~Ûø>nüW‹Ùü\'‹ÃúåÄß¼¿OŸÈ†Hÿ\0½ë_¢š™}g±ãó+—³øW£ı³ÎK-?¿üuó°œ {²¥ËHù/áŸÁ»Ù5ˆî^ŞHàßÿ\0-?å}É§èëÿ\0_Øÿ\0ƒÈÙ²¹ıbßOÓ|»k8ãº‹9?â›?Ø¬¹ùäÎOv\'Äÿ\0>êqk’_ÙÛùğoßı3®oOøWq©x‚=Jÿ\0Có/SgÏü·ûË_l[ŞC˜“GUÿ\0á´¹“í6ÑùÓ:Ö”ıŞ[™U¥o†ç—ø/á›ÜŞ}²şÎ?=şvšO¿W><xÓ_øW®Y¼¿Š´Áÿ\0LåO˜WªGqı›ï«Íş0xÂŞ/ë›$|62üŸï-n< áîHüçÑãóo.?şZô>Ïì6qÂŸÁ\\¿ƒôÿ\06âK—ûŸÃ]„rW¡Ÿ?,{IÂùw°§,T÷–ŞæyòÎš¥¨·×ŸÈ}äÃËòªO-ê?3Í¦SZJ$’¤ªòoş\n@¦RI¾–«İ$ÆñŸ™œŸÁ÷«Ú?f¿bxnM7ÌùÒéİàuårGûº<®bx’âÙäòÒo¸õÕÏÏK“±ğ9®41?X‡ÚÜığ¿ŠæÏç’®k4ŠÆßı¿áJğÿ\0	ëÇ¥ÛºIû½Ÿ~ºÍ?PÓ-¿âe¬^G|ê’W›ncÎç2üQñÓÃ\rÔ#³Ö.$Q¸ùÿ\0Õ¶Èër?ÚO¹’4†Hü„MŸğ\ZùÏãçÅMÄšÄ`Òã{O“íŸì×‘ÿ\0ÂQû¿ÜÇÿ\0l‚»£‡9ş·ì?ãÇ†¼[®I¢XGs%óïÚñÆÛ7}k¼ĞüY5·ú5çîİ?ç¥|7ğ¿âƒøKÄošŞ9?ƒı_Ï_HIñ³Ãšı¼oæys¿ñÿ\0Ï:Êx~O€PÅÆg¬x“\\Š[9øëå¿,–ûG¸¶ó6Ivÿ\0fo÷kĞ/<Yö>âçíùiüuó?Š5Çñ¹¿Ìÿ\0–”R‡<½\rWï\'wv$³·KkxáO¸•b9<ºe\'™Yş\'êÔáìáC¡cÌıİTqÉûº<Ç¦j	RÕo22ƒ.r:e\'ÏQÕ|ÔT~g—@}¡ëÄâ’Şñ?å‹ÖÇ™TõˆüÍ>OùiZÒ—¼x™´9ğÓ‘êø©·…äó¾ü?%pş(ø™}­É²k‰<áJàô{ÉbìŞg—¾¶,ü6òI¾o¸õÓÉKœü·u½Ã.óP–öMşóŞòë¨Óô{¿³Ç²ÎMû>Wòê9$Ó4I>xÿ\0ÿ\0LêOøY–ößrŞI?í¥œætQ…(_Ú³óGÔ,n7½¼‘§ı4ªÿ\0l¸¶’7ıäİ®’?E}\'üƒãÿ\0¶Ÿ=h\\Gı¥g½ãûô{YCì™û*Sø$eÙøòîÛG¸³ó>G¬=G¹Õ$™ë/\\ıÜ’\"}úØğ½»ıŸ—şëÖ’ø®_Í<d!ÙG˜•&SşzTeygìêeš*—ÉæÔ‘Ğä”QòÓ(TTÊO¨Ãœ<Ê$¥¨·ĞeÎ5lxOÂz‡üI§èšl~eÕóì_úgêß…uşøãâŒiĞt9$Ó¾çÛî?uoÿ\0}·Şü+ìÏÙ_öOÕ~k\Z¦½âK‹+»Û‹¶³KIüß}²ÀV°„ÏœÌó<=\ZS‡:r¶Çæ<7.¬\\lıä	;¢¿û­Š¹§ø%dßëöËJ÷\r?Ávş(ğŞ±asÚšN£ufÏ\'ßù%zñ?x>m6Iãòİåÿ\0vº}¬gîK¡ùß²œ#Ï¥}B?6?;Ìó7Ö?—™Tä¼¸¶ìÏTüÇÿ\0•Ñšs:.KOãıİhj,{k³[Iÿ\0®Ìyå¥nhz\\º•Äi=9Æ	Oìiz=ßˆ5ìí£’{«º•õ‡ğŸí?üI£ùqÉ¯xfÖ-z\'ƒï½«7—r¿û=sÿ\0ü6‘$w÷1Çö©]ß}}Aû\'ÛÅâ0ó£óôäğïØ%Oà“|¿2×jûirDõ¡Í‚åÄ=ÓGÃ}	ñƒö/ñï€<A¨>‰£Üx‡Ã^fû[Ëü¯î¼{p¯Õ4»İ\"òK;û;›¤ûĞİÆÑ?äÕÍ8Nê¸l~ÊœÓ)Éèùª?. é$¢Še.@\"¢ºü?ñÄMr=+Ãz]Æ¥zÿ\0Áo÷İÛî­}™ğoöÓü?ö}KÇ’G­]}ÿ\0ìÛy-#ÿ\0y¾ô•Ós76Ãà¿‰-{#äÿ\0…ÿ\0ügñzóÉğö—$–¨ÿ\0½¿¸ù-àú½}©ğÏö\'ğW,íîuèÿ\0á,ñßÿ\0Kù-#oh¿‹ş_Fi~±ÒtøììãÓN·M‹mi•kşê×7£ê–ú—Š.!‡îBŸ-vB” ~m˜gÕñ^ì=Èö6,ô9no,ìÓËÊÿ\0So\Z¢G·²×Yåşób~í(Òãòí÷ÿ\0~£“ş?+Cæ9Û?2üy|;ı§<q£¿îíu9şßüïU?xnßWGş:ôOÛÃÁïmâYÿ\0¯±Wÿ\0¦OÇş…^Wáÿ\0&¯gï>ıyX¸òK×åõ½¥.IOâO…÷2I³îWyà{»>OŞWÕ—ñ\\ÛüñüõÃŞx~/´oòüºT±s5«„„ÏÑü©ß^F_–Ÿß¯ <à;M\"8ÿ\0ÑşïÉRhz\\Q\\Gÿ\0,ë°¸¸Khê*â%PÒ0,\\jh–r:WĞ°^†ñÇ®ks¯Ô÷¿üxZùP¼¸ñävß¼áÒO÷š¿F?g¿\rÅámŞÂÚ?ø÷!ÿ\0¾k·GíVm[İP=‚8Ò[}gûµÃüDøWáOŠ:öoŠ´;}IıTÒGûØÿ\0Üuù–»M>á<Éøê=r?ô?9#ûŸ={\'ÎÂ´éûĞÑŸüdÿ\0‚êzD’^xPşÒƒïÿ\0ejr*\\Û9:?ã_#øƒÃú¯„µI4İcO¹Òu¿ÖÛ]ÆÈÿ\0­~Èk\Z„±iqÜÛ~ı7üÉ\'ü³®?ÅğgÅı/ì*Ğíõ$ûŠò­ƒıÇûË\\sÂEü\Zg—qEzæ+ß]úŸ’˜ùç_d|Xÿ\0‚{êv>eÿ\0ÃİSûZ×ïÿ\0ejr*\\\'û²}×¯™õO„8Ñu	ìo<ª¥ÔVEû¶Ôp~¢¸%BQv>ÿ\0›`ñPöÒŞ»Ÿ¯øwáÏ†ú\\z?†4{-&Õ?‚Ş?ıÙ¿Š¬\\i~e¾ÿ\03ËtûÕrŞO7X‘?²üq¬bir\"}÷¯Oü3ÛN¥ç9¾±ã{o2ÎŞ>ÊãşÈòj—“Mş¾gû•Ïÿ\0jKs¬oû?–ïÿ\0M+¨øooqÿ\0	D»ù+!Ù~Tq¢~î²ï6}³çşıhI¿Ìîë‹ø‘ñ3Ã¿¬ä¼×µí?+hşygÿ\0ukQHó´ñnŸygs™Üß5ù×o£İø;Äš†‰sæo´Ÿfÿ\0ùéé_\\xãöÄ»¾×,ÒÃÃqÁ¢K:y³\\I¾W_oáZåÿ\0h‡vš¼z|7Úô¹“ı*hÿ\0˜{}ÚâÄ~ò/Èõp3ä—$ºGg¨K¿ÏRIqÏÏ]Ÿ†ÒKxæşª÷x¤ù+Ä>®w‰ÇÉQøƒP±ìO¾õ¹§øNX¤ùã¨î4?´êÃåü”/Œ|çIû9ü?}[Æê·1ùiß?ıµo»_~|?·{häÙ—ıÚñ¿‚~Oø_OO/ı*íüæÿ\0ÙñÚ÷ÛËmå§ûuõaÉáñu}µSBŞáã¸’®[È’ÛÉUíãÿ\0H’‹;+Ìß]ÉÜj‰¤I$?Áæld®OÄ–ém$w–»G™+°ñdqGq½ÿ\0yüuËêŸg¹ÓãJ3¨ÑõG¹Ğã›øÓïV‚jŸ\"ı+‡ğŞ ‘Yı›Ìş:éVâ¢Ü·á;Ï·jÍıô®oâf©ÿ\0í¿ïª£àO¼:y+÷I.@ûµÍjšûİx’O8¿ûÀšç2™Jßı\ZóÎzô…v÷\Z·Š#wÿ\0Qní^Z÷7j²	Šoõ¯Hğÿ\0ìë¥Üÿ\0g¼YùKvÍ4Õ|@ñäZm½Ä:\'—=ìIÿ\0?~(şŸŞ¯…ş\"xPñN©&«q$ó»üÓ\\|õõsãôÿ\0{šòoh„ùˆùÙ¿ÔVR÷Ía3Æ5ÏÅ}¡Ç²?1Óî×IğÏâø94İbÏûKÃWëm¿\rÜ6Úêm´•6Ÿ8?‡æ5Vÿ\0Â6²ÚÇ#¹?‡ü+>CHL–ãÁv¶Ör_øzãûKAûû?å¬\nßŞ¬øô¸¤ÿ\0r·ôÿ\0Ogf“i×’Á½0BJUŠÿ\0´k_‚ãGŠÑ‘„Ÿ)Lgc~5ÅVÛôxo?¹66M.//ä»…ÿ\0\0ï|Iq±sÙ4½û×Ìûóÿ\0ö5oáO‡4—ÑŒ<cpaĞ`“ÚÄ…ŞgŞÛÛñ¯Sƒö¯øz-İ:ª`@–e0¿ÃÕÓ‡ÃÇã‘ÍÆËøT¾ójò;Oèú†±y\'—k§Æó7üzW—ü3ı­-ï®-í¼[¥Ç¦»ÿ\0Ëå‡Ïï)®ãGÆKÿ\0ŠÖIkcÑ´Û–!šSıéÎ~•å7Z,Gû·\rõc]¼ş÷ºx¼ï¾~éw–š¼qŞX\\[ßÚÌŸ-Í¼›ÒJ’Şßı\"Jø+á‹<CàmvŞãH»xU¿ÖG»17ûË‘šúsÂ´+_ŞG©¤¨}Ÿ5Í”…ñÖ­a(™ÊcãKt¶··wş:óıRDŠ8İ$¯A¾×ô_hş}„¯ò¿Ì$ˆ«~uÄë¶±Áo©WúŠ³)˜Ü$Wº~ºØµDò×÷«‰’Ye’1È›ëvÒ$û:qëüëS#ÿÙ','B002',0,0,0,'',''),(8,'1351754357','BSCB','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','B.Sc','','','','adqP/TmHrRHfQ','2352','52525','2012-10-31','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','B002',0,0,0,'',''),(9,'1351754962','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','','','','adA8PlmAlJAb.','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0±\'úª’9?«ùDr=|¡ıPhy”I%W·’‰?ÖPg÷êHäòªœ’%eë(·Ğ4ù&y>}Ÿ\"Qş:Õ!Jó•’65MbËH³’æşãÈ?¼ïÄŸ-ôØü*ÎK·wØ³\\|‰^WyâÍn[É.uë={¬2G¾/Ê¹}SÄ‰{æ\"G‰¿åHşJõa…şsò\\Ï‹jÎr†r®ç¨^|X×d¸ÿ\0I¸ÁÑ>X`ş÷ãQé5[o/í’G\'ûG^7qyw-¿Úf¸’MŸwøêÄ~ ·Ô¬äKŸŞ·ßİ]¿W¥ü§Êmãùùı«>˜Ñş0ZÜÿ\0Çı¿–ŸóÚ	7× iú…½õ¿\rÇ˜÷kâ»=Bhäßgqæ\'ñC?É]gƒş&jZEÄh’}Ïùc\'ñ×\\$~Éõyw×„ù1K™wê}Y\'ïj¼Ÿê«—ğŸÄÍ?Ä\\3I¥Óÿ\0ğ;WI%yÓ‡\'Ä~£†ÅÒÅÒö´¥tW’Oà©-äş\n¯$•%œ•™Ô\\·ıßÎõsÌªö÷ÁRË:#’Jæ¢âJÌ£‚Ÿ™ûº9<¨ê8äıİG”s–Xó<©*äw»¬ú“Ì —%{×Ç~8ø‘{©x¢òçËù!}‘yŸq}+Ú>2|H\rÛÿ\0e[yŸm¸Mìÿ\0óÍkÁü\'à}câoˆ?³l#óşyæşZô0ğä÷æ~]ÅXîyÇF[neÿ\0ÂA¬x¢óbGç¿ı3®ÃKø?â½^=ÿ\0cò÷×Øÿ\0e½@··ó£óçş\'’¾·øO¥i\Z\\s%¼{)Ï)ÿ\0	\r(İ³óOıœüg${<¹#OîV¥Ÿìâ^O?ü‡_¢\Z~‡§Ç÷ãû•¹§Çec÷#:ÊŠ³êi<=|>³ı‡õ9c.n$ÿ\0¿Që°ş§èÚ¤›Óî¼•ú!öË{Ÿ‘êå¼´çV¯ó(ÒŸÅòŸÆñ‡Â	?âegçÙ\räsş^à?Œ–š•œvz¯ú<èŸ,ßÁ\'Ö¾äñ‡Ã½3Å:]Åå¼rA*ld“îWçÅƒòøÄ\Z¦”’|öï2ËH?„ƒZR—Ö½ÉîwRÅÕÊ%íhKİ{¦{‡Û!¹Î†O1şyÕõóŸ€üq{¤I\Z<’o…ö42ËE¯ -ï[xßøç®|E/`~›“æĞÍ)sGI-Ñ±oqæÕÏ´V=¼oü³«µ‰ï“ÜHŸğ:}Wz¯‡ÿ\0”_ÌıŞÇ£}WD¢9*\0¹æ~î£’DŠ«ùXş8ÔIğ¾¡súôİhPIû8Jrè®|ïñCÅø·Æöˆä²·}‘yİ¯¨?e?Úi¸¹†?ßÜ>ù^¾3³¸ûMçÏıÿ\0™ëíÏÙŸPI<7³øëÕÄG’—)øqÅcgV{³èPM6¶/<Y,¶şJW\'å¼µrŞßÌÿ\0–•ã@ôgÊh[ë’ùŸ=\\şÓÿ\0VşeaÉ—BV‚7#Öø*ÇöÃÿ\0géñ¼µsìşoÜ‰±oª%Í|§ûrhfÓô}nÿ\0ìÓ¼İo»_JYÉûÍ•ãÿ\0µÅ¿ö—Â}A?Ö<;&Wÿ\0u«L<¹*£›zLøNŞßı2;”ıæÏ¿\r}à¹.$ĞìÒoİüŸøí|Ï¡ë¡ÿ\0÷%¯¥4{3K³Ùû´Ø•Ûè}O÷³‘Ö[ì¶ÿ\0–•cí‡gqüZgï+Î?Sç,I\'™Wó?é¥~î«ùV8î(ûBU8î1*\0Ğá?°üqÛ¼\'ªBŸ¼wşJ¹¾‰6IÏ÷)£\ZĞö”;£ã»9K‰şå~„|ğ›øKÀöi7ü}Lˆòÿ\0À«âû	Å¤|`Óì?ôY¯‘×ıÖjû£â\'ö…·„ä¶Ò¤ò\'›äßıÅ¯C>~Xw?§‡­XËx³sPø±áÏ\rÜ}šæò??ø«Ÿ¼ı¥</cş¦òÛe|¿ª|/Öï¤’i¯>GûÓIÿ\0-\Z¸?|?}6OŸP’ˆQ¡Üåœñ?öÆñÃDñÇ“my÷zï,õÈ¼½é_Ÿ~ğ¼±j–ï¡_^x~ßPşÃ<É>çÈõÍV„½ÓºŒå8ûÇYâŒ\ZO„£ÿ\0I¼:áíÿ\0k\rí›óËDşùé^GñƒÀ÷ÒH÷—Z\rxŞ—ğş+CÉK‹›‡ÿ\0¦uÓGÙrûÇ5_oÍîxxöœğ–¯q\ZMy{ÿ\0û•¹ñCGOü?Ö-­¤ó<ëWx?ãùx¯‹íş¼RG2\\I¿ğI_J|şØÒtûR’IàO×Ìùÿ\0\nÎ¬!ñEšRö¶å«Ôüÿ\0û<±j’\'÷æOö«éÿ\0£xOÿ\0®	^?ñ2Ş\'âÇ‰-’ßä{çÚŸï5{—¿Ùvèÿ\0}?ô\ZèÅOÜ‰ôœ%G÷µgÙ#bÎóÍù<ÊĞóÌÿ\0~¹¸ã3şyÖ¤~U·Îÿ\0¼¯4ıDÔóï½iÿ\0¦U_íIüóOïÕ³?üüS¿.€WóË¨üÄ¨ä“øÓø*9$y~ı 	/\"¤O2J§öx¢¢;‡ó7Óä2¿Œ>ÜY|@ğ¤ÿ\0f“íwÉyrote`ÛZ¾¨ñ¦ñYÉ²?3ä¯—ï#şÈø¹¥Í4’IÚÜSEıÏ™~õ}±§ÙÅ©G&øüÍôUŸ»òL¥<EYKvÏ”ä¼ñZ…ÂXYÛÏ«ìwY®ÿ\0ÕZ¯ğªïšğÿ\0íxÛÄŸcÖäÑ7¿Ÿ4–êˆŠµöçÄ‡÷w>gØãòßûñ×ƒë	õ¶¤ÜIóÿ\0~º)Uäèy³ÃóË›˜ó?è÷:çÙ’?åà’¿B<ğı#ğŸÎ‰^\'ğ¯àÚx~òŞòş?şêI_\\h~Wöh•Í9óÈÒöq>ı¥,åÒ5‹ˆ|¹?ÙJùïT·×¼?ö;›’o¼z\Zıø©ğ®ßÇRoxÿ\0ü5ó¡ğOPÓu%$’ŸşZ}Ê×W’!^—?Ú°xOÉàı=<IåêĞ_}è|½—v‹ü2q^ñğ¿Ã÷gŞñıÏã’²şü;Ôì¤ÎòöW¼[éñiºú¿.³«>p„9=ŞkŸ\røƒá^…/Ç\Zjºö¡ö+yâû/—üsÌ¿-cŞy¶W[.éÿ\0|×ª|DÓí5ÿ\0‹,Ò¼¿ôÙl¬¯âÿ\0¶RüßøëW•ø’ãş\'š£§ÜûT¿úk9óòúiÃç<cÜ§\'›,Ÿ<_ıs«?—òcÉqÿ\0M*å¼ÿ\0\0¥ñüÚš÷—Ç\'Éü5\'úWüô¬¸î*¹¹_æó:óYœÌ¨ä¸z¯æ=2µr´=Göóš¯¾£ó(Új»ñ·‚ô=WJÏÖ4MR-Ğÿ\0~äãş_TxT±ùÉüuã³=½¾¥£ø’¤ş8¼¨~ã§_Ş\nõÿ\0£[Ém7ß†}Ÿ÷ÍsÏ›—Ğü³0¥\ZxÊœ½YÜIç^ÛÆŸêÿ\0Û¬¸ü/im\'Úfûÿ\0ß­K{ÄŠ8ë\\ÕËÿ\0Y÷ë8iNâóû_X’şKxşg¯D³Õ\"Ólã‡Ìÿ\0z¾{ñeçˆü?§Ş\\è1Ç<ÿ\0}¡’¸;Œ\Zßú<:”EïüµHäşU§ sÂ~éôæ¹q-•ÇÚS÷\'ÎßîµGooe¯üóyr\'ğ×…øOÆ;ÕüQ%³ıš=î\r‹÷şïñW¤hhÒ$ò^O’´äsĞ,ìÿ\0²?ÔıÊXÕ?Ñäóª¾¡æÖ_‰/ìòW0%½Æ›ñÇ6¼·“ì¶úwØ4çşoãjñ9.?y&ÿ\0Şo¯¦> j\Z¿õ\'T¶{+l1ııŞhâ¾c“g™]<ÜçÜğıaBsîÈä‘?‚‹{Ï+äÿ\0¾j9$ó~OõoQù_Ü¤}9síæ«£æ£íŸi?ï¥Gö†ÿ\0•¨y‰D’U}õ™@s’I#ÿ\0W’Gó(’J¯$”\Zš~±{¤ÜyÖw’ZO÷7Ç&Ê÷ş0—RĞîæâIî­çùO¾êÕóœ’WYğßÅğø’=ò~âï÷2ÿ\0ìµœàx¹®ÛP”áV§Ö’x“ııgÜ®nãÆö7=ä•ÏÉâD¶ó7ÿ\0ßuåz§…õ?‰\ZÄ‰©&›§#şõãûïYÃã?6œxÿ\0„’+Øä{9<Èßç¯\'ñf‡q­ø’Şå-ş}ÿ\0~´-ü£è–qØ^kš¯ŸÇÂ¦úËÂ÷dŸØş,’ï%Æßç]°0ÿ\0Ş=CÂzƒéñı§ızä:¹yãK+›‰íï¯+ÁööÖò:xÂãí¿Â‘íÙº¸½cÃ~%ğş¹ı¤úÇÛí_ï\'Üòè™¥È}1¥ë,ë?àuŸñ#ÅŸÙ¾Ô.d_ï7ÅøÅfŸ÷ë“øÁ¬M&Ÿ§ÛyŸ¸•İÛşÿ\0ë®nCÖËé{jğ¥æyß™ü^â2’´úªVĞ§&ù(7–®y‰ß1äÿ\0–t¯oÜ©<¹jÇ—åT=ÈgÇ%Iæ\'ğUz¯ş®ƒ›œ¹$•^I*9$¨üÊœ±æ~ò¬y‰üŸöŠ>ÙN©=t¸“ÊÒô¹ŸıEÅª:¿ü¥G§ı¢(÷ÛIåÿ\0·V<^(øO¥»şóäxï†+\\œzåÇ„µ³\\ÇæAıúËü‹ñË“k‘øƒKñ¥&Èy¿äT®>ãáÿ\0ˆã¸Øşdoÿ\0]+Ñ,ş YXù“y‘ïş¬ûÏŠ‘\\Üly+¦Ğû\'<Œ½ÃzŞ‰qÿ\0}×aygw}o²æ²ãøi,qï“Ìt©/<hš—ÈŸq?³²hhöÿ\0aòáJËøÉû¹44ÿ\0¦ı+ ğÜosqç?îÓøk“øÑyo\'4}7Ìòßì.ÿ\0÷ÓUÒ¥í¥ËÖÀâ£‚«\ZóÚçŸÁV#“ËûŸ~³äß›?Õìù\Z3Ê¨µÕ¡Rğ¾æÇ™æıúí	Uã¸ócùê9$¤h\\ûG›QùŸôÒ«¥5Îgï_ùéG˜ŸóÓËª~eo çç,Iÿ\0]>J¯W’«ÿ\0ª­Œ¹Í-è7ûFÊÏóø>ıhYÈñÜIÒy“¤{Ù?çêìÃÑ”ä»q™ÒÂĞœ%/y§d{\'ì×âµ/Şhïş¿O¾•6²í½k ñg†íõ2ÿ\0€½|ßğŸÆàï‰—¿îíuÜ·ûßÃ_R\\\\%Í¾ôıâW.Î«??ÂÏÛÒ^GøƒÁ÷vRIû¿1+“¸³ò¤ùã’:úTÌÿ\0W\'yq§Å\'úe¿—²²…Y\ZN”fyş‡¡ŞßI“o\'ûòW¨xÁoû¹¯>ÿ\0ğÖ†ye,q¥œ~ZVÄš‚Eª¢jYùZlqÿ\0Ë4JùâgŒVøÙ$ŞgÈˆ¯û«^ÉâÏ}šÎM’|·¬\\<¾4ûKıúíËş>s‹0©ráª[¼‘Çyï7§ÍYrHñ¿W-äûoƒüèdıı¿Î¿ğ\ZÏÔ5–?¶[s{[Iı+ÚÄeşßŞƒ±İ–q\\°´ã‡Ä.h­/Ô±oxñT’\\=gÙŞ[ŞÛÆğÉå»ÿ\0•$‘ÍÉ7îÿ\0ë¥xÕpõh|Hı3	›aq°ıÄïåÔ±ö‡£íOÌòşJ7×9éó”ä¨üÇ¢OŞÿ\0ËJ-íŞçıÏâzP‡´ø6µhP‹iYÉ#ıú’KwŠßÎ¹“ÈOü~JĞûE¦‘÷ßûòV>©p÷>]ËşóİJöià¿œüë0âŠ–|É,ïÛÌ¹İ¤_ê“ı¯V¨ü#êVz†¥üO±?à5‡ãMAìt¸ìïË÷«cC¸·ğ·ƒãšòO\"ùÛıæ¯Kà÷aĞø:µ§^Ns•Û8¿G,z§ÚSï££¯ü¾Œø_ñ5½ßÎ“÷éò5|÷qâ\r?Ä—%·™¿fÿ\0ŞG[¼—H¸Óî?Ş¯\'K<ç«—Ï“Ü>¨“Ê¹ıúåõ+Ÿùgÿ\0©4=Qï´ÿ\0«ŞYÜKó¤•ó¼§Ñ‘éöécR^k\\\'îê¼š}Ç™óÖ>±ù{ïÖ÷ÍNOÄšƒßyŸí×•Énÿ\0ğ\\?÷e{æŸàyd·ûMÌ~Z\'ÎÏ\'ü³Zñl²³Õ5$“ä}şR}±^Öâô>o3¼ğ~¹e/úÛ-¼÷ù<Ÿ3çªñÙÿ\0ÇÅƒşógú¯ø\n×Ïv÷mqÉ\'–éó«×ĞŸlûu½çü·òÛşµôt§í«C—’ñ,dû4Şd{7×yg¨}§KïÓøéq~,³ó<ÇOööŸÂµ<xòéöûëNO{ßQÓ÷á¡±q¼±üŸ¸wş\nû.÷øcù{~óµ\Z†ÿ\02=ÿ\0çüæ¤Ş?‡îöúWL¾•KLúœ/c°ğä¿7¨işıßyû´şêÅÅºEüóOîU‹‰Ëÿ\0YX~,Õ>Å¥ìO¿7Éÿ\0­éaéP‡¸y†mŠÌeÍVZv9{Q5-b8|¿?ÿ\0@º\rB4“ìiÿ\0}ÿ\0ŸÆ¹ÿ\0Ù¤_¾¾ÿ\0ıjÜ¸ÿ\0F³¸¹ş4MŸû-DO6G¨Iı·âÏùè‘T/8ô½5>â\'œÕ\'„ãÿ\0‰¤“V?.>İâIşx¢BµÍ/„è‡Åèeø.ò+F÷2yp::7™^©á»x¤Ô>Ìÿ\0r_õ_ïWÉg[Ö.4Ù<—ıâı3®iÃ‡T\'É>sìèwÛÆ÷Ò»‰<7æ[ïòëƒøñ2×[Óã³¼’?íHSgıw__÷«Ú#÷Ÿ\'ú·¯™­Ftçï]Fq©hœ<~ş7«\Z?ÃímR4şùİë°’ÏìÒIç~óû©Yş0ñ‡ü ¾Ùîõ´Ùûİ«J4}¤ãu3ÄVJrèxŸíãH¼ËM“ìšE§Éy7ü÷—û¿îŠù/Äš£ëwŸôêŸ$IşÍzGÅÍSí7Ø\'ûí^w}7²ö1öQè|‡¶öüº˜ÿ\0gÿ\08¯\\ğ~©æ[ép¿üµƒìÍşò5yüz™qZš_›¦Ü[¿ğ$ÿ\0-tÑ÷$eWß‰Ük›ü¹+?O·–_	ı¦İ¼OóVÆ¹n’ÙÇ2}ÇDÿ\0¾¸ª~ıå¡fÿ\0ğ\Zí—Äq@ÔğŞ±ÿ\0	—±ÿ\0ãê›¿İâ£K¦DUô®_Ãúƒè$Ùÿ\0,»¹tø¼Æıçz¸óX·ñn.>Íg½ÿ\0wşOøW¨\\M­êŸì\rjø†êK‰¤‰C*ï™‰êÆ‰¤¬<•ÿ\0ïöéòs˜|o£¼qìOîñcúUÍcOÿ\0‰Ïïüÿ\0øğ?û5jZí{—ŸŸøÿ\0Şÿ\0ëµ6şò)¤’\0®›®~_»éYòÂr<ÇÃvşUÄŸçÚ£Õ<q{¨IrŸr_ŸûÕÑ}‰m¯ä‘\n‘ü(£½„ßüÿ\0xW7!ÓÏö\'¸ğûÛIDz;ù•ÛêKê¿•W·±÷o•ü¿Ú£ÙDèç1,ï.4Oô”IÑ>}‘É±ã÷ôÂ?Ú2Şæ8ôİVóÏO¸³IòKûõã¿f1IÂŸ•gk~‚úãíVÚ]{¸üñ\\Õ°şÚ<²:hâåCŞ‹>÷ûBıŸûJi?ÑQ7ïÿ\0g­|×ñSâCêZ…Æ«7úû,áÿ\0ezW%à‰ş-ğ÷ƒ5=Y¸k½\r\"ÌEˆitr¸m_X»×î¾×tşZ¿D-\nçÂaı‡4úô:1X¿­{½:™:…ÅÆ­y%åÏï\'–¤OıåX³‰e¼ùşçÿ\0®ºi-âÇÜMÿ\0O÷+¶ç÷Ï;›ÅĞô´ùÿ\0»OşÆ£ñ—ök“ø+ Óşçù÷¨õ8–XşóóWO!Ÿ9cÂ÷	«xogñÃ¾Û½¶¹p‰ü{ÿ\0ñêÀğuËi\ZÌ8f…ş÷9{Ğ×z–KäsDT{cæüëH|&Rø9×-Ş[9?ëwOñ£ÛÙÅIó(çëšîÏÚÜìßéXaöåzúV2Ü|çÿÙ','R001',0,0,0,'',''),(10,'1351755584','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','','','','adFTeyP.L9CJk','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(11,'1351755701','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','ad/b3suoGLZhY','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(12,'1351755841','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adl2ziABSYpnc','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(13,'1351755998','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adU7LswNU1hno','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(14,'1351758979','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','ad3eK33UBkz/w','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(15,'1351759105','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','ad3wFa46IZNak','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(16,'1351759164','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','ad3wFa46IZNak','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(17,'1351760349','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adKq7m4bEO6dg','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(18,'1351761674','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adzSGDrnsNu2A','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(19,'1351763706','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adp/U22FkgBgo','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(20,'1351763743','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adp/U22FkgBgo','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(21,'1351763791','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adp/U22FkgBgo','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(22,'1351764248','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adCB7yQL/EnI.','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(23,'1351764253','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adCB7yQL/EnI.','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(24,'1351764506','BPP','tyjytj','tjytj','tyjtj','ytjty','tyjtyj','tyjty','tyjyt','tyjty','808080','9649946160','nksingh@iitj.ac.in','2012-10-29','General','Male','INDIAN','Hindi','RA02','B.Sc','resize_1351754959.jpg','','','adfUuXJQuLNsY','2352','52525','2012-10-30','gfhfh','fghf','0','2012-11-01','0000-00-00','0','','R001',0,0,0,'',''),(25,'1351846725','BAH','ohoh','ohoh','hoho','ohh','ohoh','ohjoh','ohoh','ohoh','988766','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','hc','resize_1351846713.jpg','','','adrN3/PNPXckk','66666','666','2012-10-31','iuhih','huih','0','2012-11-02','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0òøã¡ê?2‰$¯”?«E§¥W©#’€ç.Q‰ßû•^KÄ=ï÷+ÎüQã	ndòa“÷¥*R™âæyµ,®—4µodw\Z‡4Ë/“Ìóİ?çsz‡ÅK{i?ãÎOûùó×ó}ù¿øŠÏ¸³ŠúOøø¯FJGæ8+Ìg?rÑ]¬v\Z‡Å‹yl÷Û¯“dŸòÎ¹¿øM.îdù.$ş¹Öü\"~oÜªòhwv2¬­!J”;ãñ_·¡Üh~0»–=“\\|éüuÒi~4I~I¤tÿ\0¾¼ÎÏßÿ\0W:}äş:$¼ó?éŸ÷^µ–\rpœCŒÂû—¿©î÷‘\\ÇçC\'˜QÉ%y¿…üHö7O1ïW¢IqæÇ^UZ^Àık)Í©f”¹£ºİÉ%Gæy´I%W’O.¹¹Ï[œ¹\\•s}eÛÉV#’€ç4<Ê‚¢ßEEVó*Ì–J\0±%Ç—GÛ?wóÕ9?u\\ÿ\0‰5ìİ>Dş7­!yòv;\r	U—Dgø“Å}$¤]ªW7&©üÇıúÏÔ5G¹“gú¿ö*Oéï­êÂŸq>õ{\\±§ğÌ^.¾;íe«d–ú^¡«É½#ûõéø\'ªêWÌñü•ë\nş½ÏÙînmşOáJúGğ]½ü³¯&®*_`ì£‚„>=Yã~ø\'oÉ£ó+ÅŸí%“g÷?¾ ·Òâş\nçõ?´>JççŸÅÌvrCáå>#ñ‡ÃûóäîyŞ¡g5´’~ïıÔ¯¸<qá8nc‘ŞßËG¯™ş x?û6óÉxşGû]¸|OØ™çb0Ÿn•Ép’Ç¿øÒ½#Á~ }JÏì×?}>ëÿ\0~¼ÿ\0TÓŞÆâDxÿ\0ü_ôÒ£ÓïÚâ9¡’½Âà<¯0WŠNQì’HgúºâO6©éú¤Z•œs\'ü\n®}¡\"¯Ö™û\ZĞ¯Îé•ã’®GIó½S’ó÷Ÿ¹Ì©#¸/ç¨±ö„şšThÿ\0¦uŸo¨EIı£ïAÑÎSwñÔ‘ÉQÉ\'›Qï«9ËI^wñóÍÔ#OàDû•ÜIp_Ï^?âQïµI»°÷œ‡â¼_&4¿™şE1å¸ù?y#ü‹_R|ø\',qÛßê_qşuOïû×‡üğ{ø“Ä–ûÿ\0y_;ÀkîÏ\rÿ\0Çº\'ğ\"W6:·üº‡Ìø<¾»ígò;\révúl{µ$ÙüOC³ycµ.-â¶Oüz¸ z3+ùU¿úº¯qoöØä/î}ß.¤³Ô\"¹MŸ¼Dù?àUbŞ8¼ÏO.µ28ıSKûL{?¿÷«Çş x5(ä…ÿ\0wtŸê&ÿ\0køkèbòÊ8ş.4¯/ñ†±áû›}yÿ\0ïÖ|“ææ4ç‡À|ãMí6l†?/‘“û•å÷yRyÉ÷?‰+êx=ìn//ÒOµéwß;MÏåµ|Ïã\r=ôRâÙÿ\0w³ÿ\0Ajöp“ç÷OG“ß¹à½aã¼û7™ò?İ®ÓÌJñ½>ñíµ7ÿ\0–ˆõë’«¬ñ÷¹Ñx_*˜WJe–<Ï.¤á+?æ©-äók„ûrçÉæÔeS“÷~]è4ç´=ê½bPf\Z„ŸèwßØõârIæÉ¾½¢Kúg^?¬Y¾›¨\\[?ğ?ËşízXO´~sÅp“öu{\\úsöwĞíôßÿ\0lM\'—öŸ|ŸİZï/>:YxnâG¶Ïµ‡øÿ\0ç£WğHµo…z=›ÉåÁºKÿ\0®Æš†™¡$6ÖñÎÿ\0ÜşıÚ¼îHûysk©àûŞÂ®Ú¹¥şØ\ZgÛ<››y Gş:ô‹?\ZV·oû›ÏÜ?Ş¯ƒõMR/´lÿ\0Bÿ\0r?ñ®£Âú§ï6C\'ÿ\0Ü®š´cËÏkÔg.n^dÏ³5Šš|Qì†HãÙş©?‚¸½cã„¶ÑÉ³ÿ\0!Ö_ƒşê$ÒíïŞãäzåüià¹|-æ~ïÌşíqBq=.CñÇÄOkò~ûPû¯ıtÙX~’/´o¹ñï÷’¹¿Gw{%Ãùh{x÷ì’µ>éw~1¼¼¶šO\" y•î,•âÜ¿Ã^¤!.MÏ\ZRµøn{Ç…ô·¶Óüí*ãÏÿ\0¶Ò|é\"×şÒM6âÎşÿ\0q*W |3ğßˆ4b9¦Óïm-wÿ\0©ù?\nØıª<6÷?\ríîR?ø÷ÿ\0İjä„ù*£Ğ«ĞgÆé÷ã¯dGŠ8÷ÿ\0r¹ÿ\0‡ï|m§É­ÜêZ.‘nèŸi»İó·¢â»\rcK¸Ñ5	,î|½ğÿ\0Ï?{]˜‰Ã›”÷øRÎ5$úÚÆ|’yµryRTgğ=FõÄ~\"Ä’<‘ü”|Õ½ç—ò?Ü©7Ğ~eG¾Šez5ƒ÷¾2ĞäÔ¬î,£½Dó¢¶’M’ÏûTrI^‘á=í?h¼ÿ\0VöúøŸı¯4ÑÏ*~ôOŸÍ¡\Z”%uÙßG–ûáıâyòôè¿÷È­É>ı‹T·Ô®n<øtš[?/ä}¿Ş®“ö{ÓÒ/éÿ\0ôñ¾oûé«Ú#ÑÒXÿ\0}˜•Ï)şõÌøˆÃ÷JÅÿ\0>¦¥ãËû;É#‚á÷ıËÿ\0WşÈ®ÃÀÿ\0Ş]Cí—6ş\\Ü¯£$ğİ¥ÍÇú5œq§÷üºĞ¸ÒşÍåÂ‘üõ¥\\D§Â–”\'î£CáıŸÙ´8áO¹sş(ğœ^$¸¸I¿à/vÊ³“Ü£P³ÿ\0Hù#ûõÅöQØ¾&|ïª~Îïä“%ÇÉÿ\0\\ë¤ğŸÂ÷¶òßí‘ìOàù«Ô#¼O´l¾ŸÁQÉo¿r?-ë§Ÿİ9¹=âK}ìÖû?ÖW/ñÃqx“Ãz†s÷.àtÿ\0v®ƒí’ÛGş³ä®o\\Õæãä“äD£œÖ0<á=šxƒÃÿ\0ğ^[Çé-„éüo­yÿ\0‹,Ş=/Kó¿ãößÍ°ŸşÙ7Ëÿ\0¡V¦‡q¬[x³\\¼³ÿ\0tÚ£¢¿ğn^µ¡ñ’?+T?ç–fÿ\0*Q(şôö²yKÚ¥êyœ›ä¦U¿-*?“ø+ ûB¼qÔ•\'—RPG!RŠŠŠëÑ<\'y,¾Ö<ŸõğÁ±¿İVİÿ\0³WœWoğ¿PxõK‹dûó&ôI?å¦Ş«ø­E_‡ĞóqĞö”¤vŸüXŸğ‰Çmæ~şÆyaoûë\"½óG×-å·ŞòyüUâ~$ÓôÏø’;Ëü·&Éáîn_»[Ô?y\Z$•Ã)ûÜİÏ‹Œ=ßCÜ-õxã’o3ïıÚãş\"|@\0iÿ\0Ú¯g%Şÿ\0‘R:’ãX´ŠŞ7¼“ËµO«ƒñ‡‹.<Qû›>	¾O&H÷Ö‡9œçìÿ\0i	±í÷ÙÉ`ûşd“øÿ\0*\\øéâ»é#›A·Ó¤?ÖÍwq³şùZãõO†úÄš|èñı«şxÇ\'ÏRiõÛÿ\0}qmïß[i$]û~•Ó\n1ø¬OùOpğ^¹qã;ûøü‹ªé$’_/cÉ^7gqâ¿	y›íüÄşıtø±e«yv×?¸º£“ùEíyş-\rMcT—÷ˆ’yr%ròjåÈï\'É[(Ô<É>zâä¸o³ÜLÿ\0À¶¸¾ÙĞhx/K·Ó|7qr]üóy·0Cÿ\0<åo›&¼¿â…ÃË¬YÃs\'™=¼¿újí½«¬Òş2i–^}¿úl)±R8ÿ\0ÖW‘ê\Z¥Æ¯¨\\^\\ÉæOpûÚºaÍÍÍ#ê2¬,á.y«X$Í¨ü´¢£’º°$ßEGæQæPeÎS¢-( çSéú„ºmå½ä2ysÄûÖ«ùtyo@¹Dñ\'Å¼Iš}H6NßïWQ¡Èñ\\[ïû^\'å×¶x>â/hñÍüiüí-qÕ„yO•ÌpÂJt¶añÄ\\‘Âÿ\0ê+ş…î¥z?ƒíşùoy>ï÷¿†ºiv÷¶öïæysıÊËÔ.I·,ã=ŸÁÉZBqå‰óÊ^Ô¯gğŸÇw2GyæGòüÿ\0ñûóştIğOÄRÉç_ê–Vÿ\0M$gÒ²äø©­èŸ\"YÉ%gÉñ3Ä(“ÉşË¸?‹ø+Ğƒ÷v:\'V‡Ás¬³Óügá/ÜÛx‚Ştÿ\0Ÿo1¥OÖ¹¿íMVÇ\\ß¬iñÀó?ÉözĞÒä½‹ıwîÒµ$×-/u8aÏ‘?JççşXœUy=H’Íîtû=ÿ\0bn¬?lÑ</y³÷#í®’ÎI¢·ß4q+Êş,k‰%½½œ>gÎÿ\07ü¸¡ñ•\n^Ú¬c§™Ñ²Š?åvŸ¤%ebH÷Ô’~ê«¥–ŠŠ™G8è¤ó*Jq”cÒÒy”\Z’y]„üPşÔ#ßÿ\0®ÿ\05s•>Ÿ§Üj×–övvò]İ\\?“1üï#7j\\M(Ö¥(Ëï=sÄŞéòl“çûë\\şqqı©nş_™­ó>åhx£Àúæ%·îç‰<›«9?å›/×™Şx¡ã“É¹ó#tûµ(Bq÷u?.ÅÊtæ{d—\Z=Í¾ù£{ü•Ÿo¦É$Éqóÿ\0WÉâÇ“Ìß$’lş\n§\'‹)?Ö|•ÛõsƒëG¼jšÆŸ$Jyq£¦ö®^òKKk‹y¡ıß”ûöW•ÇâK‰n#ÙæIşÄuÒYÇªê_~9 ÿ\0J9!LˆNu%±ìøÒ]oı\ZÛı{§ü?­rÿ\04´Ót½gï$w—sÿ\0ÏFâ¶<¥¦“oòG÷şvy+¸¸GÔ¯4k~\\v^!Ÿì^I÷ígÛ˜åğ*òy¿{îW«õYF­^‡Íûèó´ü_á‹ÿ\0øŸSĞµDÙ¨ió5¼ê?¼;­dy•Ğ~‹	ª°çD˜OùéEWz>ZÔÊO’–p÷H·Ñ¾£ó<Ê“}ÉKIæ%jxsÃ\Z¿Œ58ôíO¸Õoeû±ZG½è1œÕ?}™öñ½ÍÄpÃ’;¾ÄHşû³Wß?³\'ìÑÂ=ş_Åü$oøíäû–Kÿ\0Ç*_ÙSö@‡×ø§ÆQÛ\\x?ãÆÒ?-Ú?ôÒ½KöŒñ#i¼¶†O-î#Ù\\óŸ!ñÙ†gõ‰ı_·V|‡âQ<Aªj\Z’}Ë¹å™àM^_âÏÛê_;ÛÇ\'÷«¨ğçö—„íßû›ÓşùcEÄi$›¹ ı™Á5\Z‡ŞxŞÚI?wYÿ\0ğ¤_\"Gÿ\0\0¯PÕ,ß÷ŸóÏûõ‡%šK&úí†\"_hâf%?ø~/´oxşúg^‘g§ù–ûŞ?/ecévf’7®‚ß÷Vû+­SHQä,iòsîW/ûBjé¾Òï-¿w=¦£Ñ?ûµÒiº¸®ãÇü$—\Z~ï<ë¨“şúm´°ÿ\0ÇAˆş>¾øÑû.\\|xÒôhš…½½w¥Û¥åµÜmå]0^pû­Ú¾<ñ÷ÂŸü0»û7‰´K6?á¹ûöïşì‹ò×ëG‚ôä±ğ¦—iüZ¢/à´š¦•k4Z_ÛÇ}a/ÈğÏ\Zº~ ×q¶9­„²ø’?vS+ôsâgì9àoGqsáï3Âº›ıß²|Ö®ŞñŸ»ÿ\0¯~+~ÌŞ<øO,“jZ<š–’ŸóÓwKo·ı¯âşAö8|×ŠûV}™å›èªõ\'™Hô¹È÷ÕÍG½×õ{\r6Îæşöo’+h#gwü{WÀßÙÅ_M¾©}ğËüÿ\0n»÷³¯ı1Nÿ\0ï}ÚûCÀşğ?Á[wÓ|5¥Æ—¿r{éş{‡ÿ\0yÿ\0Â¢rög‰ˆÍiQ÷)ûÌù«á\'ì«kg¿ñÕßö5¯ßşË´Ú×N¿í·D¯²~ü/ğÿ\0€4ï±øG¶Òtôÿ\0qüóÿ\0´ïÕ«WÃ%õ¡öÿ\0è©ò\'ûuÓ…=ë>~sã±xêµß½!—s­µ¾ÿ\0îWÌŸ5‡Õ­î!şçÉÿ\0j÷ÏjŸf³‘¾Wø©yÿ\0½BåşäPK3ß5Í-ÌpğûGËÿ\0õÏ3KÔ,ßø.¥Ûÿ\0}WQy³Ì¯\'øoxöWÓZôÉ56:šğıáéRøâİ$Jæî7ÛIòVÄš‡•eÜ^$²Sf†—yæIóıúÜ¸¸Hã®nÎñ#«^<•”¾!šjŸaG¬„úøïã&ûÈ-\'ûcÀ:ãÕŸ¬j»Ù^Ñûø]îuMS[š?ùn–q?û¿3WnÜ¼,_òŸ¡ËÒìÓûˆ•oU‘-şwûŸÅPhßñçOª£Éhû>şÏ–µû\'‰ÿ\0/L¸äMÿ\0$›ÑêÄ®#¥sš|é’lûóÿ\0×:¹o¬4RImsûÇOûîˆ2<‡âŸìğûâ§Ú.a³ÿ\0„cZŸíúljŠíşÜu«ç\rCş	áãÛ{Ù£±×4{»5oİM eg^Ä§Û&¾íşĞ‹Ìÿ\0Y³û¾eIı¨ŸóÒ?ûùZó•f*Œya=\r?/Ìóßgğ*Wš\'‡^ñ\\§ú”ùçök°Ö$–æO&¿7È¾]t^Ğí<)¤~úH÷·Ï=Ãü™j\\œçˆë8maökxá†?.4ù*KÄ{h7½c]üTĞíç’I$¾‘?ç‡Üÿ\0¾y>¡û_h2\\\\YŞhº…¢\'ÉçFêÿ\0á\\s•(|R.Ey{7¼ixòÇ%|çñÃtüI2G÷àt_å^Áÿ\0	Æã»;G¼óÑ?Ö¤‘ìt®?Ç\Z_Ût¹-¼¿3Ş®nyCÉìà|áøÒ?/ıŠí<Äò÷ÕÏˆŸ\råğN±ÃüJîÿ\0Ô?÷şyÔz}›ËoúèŸó\n	NòJË’OŞWIy¥ùQì®~K?ŞVp4$·‘jÄ’~î©ÛÙ¼urâİü¸ÿ\0Û¦}Äi-}±û1øOşÿ\0‡úøÿ\0q¾ñ¿àıy?ÀÙî]n8üOâ/KOÎÎOùzoïö+İ> ø¢ïá¿ÂûcMòÓP‰â†2=é¹›Òº%î@ãş<¹#Üú/O?¹J·6LhÕñ??mØŞGˆôË=VËøÒ?*Tÿ\0ÙkìxÇMñ×‡mõM.ãÏµ—şúFşëQJ¬\'ğv/	W\r.iÄ£¿Ù¯î²õ‹8¯¾w“Ë>ëÇ[÷ñ¬wÿ\0¼•Î^Iû¹´ˆ¤î¢eù’ù~KÉæUÔ·ùéT­äód¡ï{}kNr9Kş%ñ4şŠImäş{I÷O÷kÆõ?ê^#¸‘ï®î.£Oº\'ÉùVçŠ59.u›ÈˆDåK(+»é\\¤‘$w?ìVMé(B77</—åËÿ\0qö×…ëš{É¬\\~ïï½}	£…\Z]ÆÊóCM_íI>Qÿ\0}\Zó1¹Ï_	W’L×ø£ı›G×?ë¼_ú	®³P³ûwü³¬ß†:Œ:túsDÁ¤›ÍNßºEvß¼ê¿•g…\ZN|ò‘ç¾(ğ=—‹t{*æ?õßuÿ\0ç›v5àñøN_ê\Zmü~]Õ»ìoñ¯®#ğıÄŸ>Ôı?Â¼óã?Î­¤.­nˆš¥‚í‘cÎ‡ĞñŠí‰ÂxV¡¡Å${ëŸÿ\0„oÍ“ı]u’HÒÇóÕ2³:Œxü.ŸË¯Xøğ!<®I©j¶ÿ\0ñ!²™?ç»Ï?ñ®{Áúÿ\0¼Ec£ZlY®$òË¹\nª¾¹ä×İşğÍ—„ô]+OŒ-¤	°pæş\"Hæ»a¶y¸ŠÜ‘äîfjšD_Ù{-­ü¸bMˆŸì×ƒşÓ’ËàİÁ?å­ëLÿ\0ğãÿ\0B¯¥uÿ\0Ñä¯—~6êRj>(ŠÄÚÛG¶5*³«*¾ıãÜÓ	/µØùçşÿ\0*Oõuëÿ\0\0>#Ü|3Ö$¶¹óE»ÿ\0_üóoùèµ“›¿}GıôjXü.ÂHöı?Â¼åSŸ¸{S”qäª}™©\\ÛêZdÖòG<-ó«§÷Mr:¥Çú?É\\—Â­CRÓt™¬7àÄX(·ñ!ë]5ÜFn²½ªSç?sæ%g.NÄVÿ\0ñï¿ûõJ[­’2úT²îıİSy{}kC>sÿÙ','B002',0,0,0,'',''),(26,'1351847434','BAH','ohoh','ohoh','hoho','ohh','ohoh','ohjoh','ohoh','ohoh','988766','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','hc','resize_1351846713.jpg','','','adP5781JqbF7c','66666','666','2012-10-31','iuhih','huih','0','2012-11-02','0000-00-00','0','','B002',0,0,0,'',''),(27,'1351848284','BAH','ohoh','ohoh','hoho','ohh','ohoh','ohjoh','ohoh','ohoh','988766','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','hc','resize_1351846713.jpg','','','adA2pWIEV8.aQ','66666','666','2012-10-31','iuhih','huih','0','2012-11-02','0000-00-00','0','','B002',0,0,0,'',''),(28,'1351848322','BAH','ohoh','ohoh','hoho','ohh','ohoh','ohjoh','ohoh','ohoh','988766','9649946160','nksingh@iitj.ac.in','2012-10-31','General','Male','INDIAN','Hindi','RA18','hc','resize_1351846713.jpg','','','adQANKoqyU3Ks','66666','666','2012-10-31','iuhih','huih','0','2012-11-02','0000-00-00','0','','B002',0,0,0,'',''),(29,'1351929124','BPP','Narendra Kumar Singh','Manni Lal','IIT Rajasthan','','','Jodhpur','Rajasthan','India','202020','9649946160','nksingh@iitj.ac.in','2012-10-30','General','Male','INDIAN','Hindi','RA18','B.Sc','resize_1351929121.jpg','','','adnhp8WRLkyOM','66666','666','2012-10-30','SBI','IIT Jodhpur','0','2012-11-03','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0øpç`‘HiÙ·4•ğM³úÃ•\'pÁ=éÊP0OZm9sÏ¥$-U=KU·Òà2Ìø\0ğªFsŒãQ‹“J*í˜Ö­<JÉ	ªÛØDí$ª¥xÁÎ3\\«ãæux­âF^ÎÀŒãñ¬\rnşKË×k‡‚	U‰øRyüÇzÇôï_K‡ÀB	JjìüS6âÌV&ngË¼Ù±\'Šõ	D²D~\'ÔcpLû»á°Ed0Gù4¹äŸJôU*v·)ñÏ0Å·Íí]ıNïÃş+[›¨bB¹Ï#§_ÏŠìãš)#u\'®×‰£!•ˆaĞŠ½c­ŞYÊ$IÜëÎkÌ¯—ªšÇÚå<[SgŠ:ïÔö,gŒ¡ğ=ÆkĞ<Xš”j“(Y€ù»zû×B²(e9¡¯Ÿ©Jt¤Ô‘úîC0¤ªP•×`UU$ª€}±N¢“ OÒ²=$´xê)‚qéHz¸ıh³A/ŞÜŒ’20}?*¼×òJw=ÄÅğç?Ö©c¸”tâ«›Ìä«‡…[]8 gœÑÏq@ç ÔÂ“ŠQì9¤ïŸZ¨s@²¬1³±ÀQ“^[â}hê·®TŸ)I\n¤şµØx·Tkm:p,J.9õ÷â¼Ìç>ä×ĞeÔN£?ãÖSœptİ’Õ“ˆ¢6æC6fÎAI8îIè?_Â’[qşZH³œcÎ2GlŒŸÊ»ü3ñ.ØéŞeº³‚‘óœ[°ÏJú‹ágì·§èj.µx£¿»r<$dgîƒ’>¼×­:Ñ†OÎ)áç;id|—¦ü;ñ«r[isÊ’©ÚG~:×Y¦şÎ¾.¿@ïj–ãÃ·?NZûæØ[Â@€(À\0\0]¶ÑaTØ#\0Ø®	bªtG£²gæ·‹>xƒÁÊP³\".O˜‡*>¾•ÎX4V×+$ÖËxˆ	0HÌªN0	 ƒ€H8gÏ5úoâO‡V^%°–Úêdp@$dàŠùkâ/ì¥yáñ}}§™/a9uP>lõßÎ¶¥‰æV†5°|ºÃT|Û\rÔ°\\€JÈ­?Ïµzo‡uT¿µÔğÀ¹è{Šóí¤±ã”<S£xÙHa\rw´6÷*G˜¥ĞÇ(?/#9ÿ\0Ê£IT¥ÍÕEÂØÚ˜lb¤’:Êaìõ§#n@}E!ÎÇJùS÷›ó$ÄºÒs´¾œó@Å¯ Qòÿ\0œÒsEdÀôÏj(Ç 8 çŠu°ÖœƒÍ#¨§S@Ï>ñíĞ3Çoœa™Ï•CğÇÂã_iZHRğË(i½<±ËøqøÔ~9‘ä×Îvr±…VcĞéÚ½·ö@ğs]kwúÔƒÄ‚8Ï$‚N_]EªxunÇó–lå‰Ìêót‘õ‡„¼+g¦ÛA\r¼Ã\0U@\0À•Û-¢Æ \0+?NÙ \0\0µ¬Y]9é\\ñZ]îÈnÍ%±\nÂ¬H\'œTZ&ì\0­0¤ÈOLõã=)\Zeˆ†$ù=*®Zm­Í­¢ Ï¦xª:®›ğ¸*¤cëš|\ZŒ\r&SÀŒçÒŸ%äLdúgš4wV)6Œüöı¬şËá?&¯ãNÔµqå¸ÎGĞsõ¯.ğ†¡,wëi!cSµO\0:ŸÀWÜµo‹ü,°ÏlâE`9ÈëùŒ×Ãº³Úøšó<Àw\0çÇ=}ë©ËšƒO¢#¥K0§(õhôX8…@ÿ\0<ÓÏCMˆ`útïNÉ$q_&÷?£!ğ¡¿NÂŠCÔúRÒ,(¢Š\0sÔôíLQ‚Gzy\'êàSW©ÉâŸC.¨wñÔd’GQAôœ…$cšEmãdQ¯6r¨$ÏëùœWÕ_®`ø{ğnÓSÌ™¸eA–rÍ…Ôğyü!¸ñæ‡.£¦–mB×y0‘$J$~nxÁö¯¥>\ZøbÚïá·‡`’2ÑCl½T’üz×ÓÂ¢•Û¡øe‡}nn®é™|\\×ìàšúM2y\"*°¡ ËÓ$şkŸĞş>ø—ÄºûÙ\"îÂÛY6Ry#©ñ]¾·ªëwŞ#‹DÒ­ã±…×ò`Dhyåˆç€óÔWŒK¡x®}oÄIâmNçMKHÏÙg…”Ç,¤ğ)$©íÎ@ë]q³ì|ä£8ÊÎW>³ğ­y[×Ë˜ü=ÍkøYN—0·M²œ…=9®àí½İ¶…eöË³0@Ã)Rã×¾:×¤ëyšk…ÈfH&¸[µÑêF/—sæoê-Ğ,t½ïu¼0	 Wc™=ˆëÅ\\ğF¥ñ3ÄRƒªØk}¿+¤€ºñÜyèÖ±<Kà¹ü]¦ø¢Éoocñ42«ZLX¢àJŒz’8½u~øeâø+F™5‰äÖ]É»É’8Æ\n1\0“ªAŒk®)r^ç\nƒæjÏÔêµ[^ğ†¹£êhõ-œÇ o8ÈõÈ¯‚´4™¼W™fH™²¸ôãŒdûäWé’XË}¦‰nP–ˆ£0	#ŸÖ¾\\Ò~Øè¾Öu}=%¾Ö.ç‚	×†#æîYz½rÊJ4åæ{ø\n>ÓG­™åÔ\0ì•˜”]‹œ…É8™ïJO ç WÍ¿GTˆğyÎih=\Z;ûĞP{b¤Æ;\n`ÏZw?äĞ&4ç½\"õ$ş´æ¦)«ŒØ –µC½1Å\0`@Ç‚A’x ®‡Ğ_³mœk¡ßŞ»•òåe8\'*ê~Ò¤µÒá·0˜™IÄ`ä($?#^/û;]Ky«£0Èån!v\\©Ç=òqŞ¾ŒÓXÇx©åÈTSØô#Ù¯r†°V?Ïâã‹•÷\Zş‚Vñ€ËÑ±Íaê_,õ»µ–h·ªœàŒ^†`Ç:œÔb[`\'kĞJÊÇÇ½]Ì½7IƒI…\"D#P\0­èJ\\Ä#t\00Àç¯½g•’áİ¶8­û{d©¸ÍaÊÛºGBi%vrZ§Ã«	¯N§,WDaØ¯­kYi1ˆ‚…%Àg§Ö®_ê&ÒEŠPAc€Hâ§°a.pzUí¢Ü”»™w:{¤a‰À8~ã;¸MCáÎ­–†óM3\rŒXqÇ}s^íªÊV\"	8À<s_>ütµO\røCRA1:¾¿pÑ˜m\0•_A€?\\Õ›Iö>‹\'‡>\"6ÜùY22Æ)H#¥“€4JğûZØ\näç<Ñ¶—ò\"\\\ZE	´rs‘OúR`ädş”à¼u0cMP\'æÁÏ\0R\0qœOãA/p\0Œ”c¯4¹¢£kÁş(¹ğ‡ˆ,µ8ñ¤I—¡ïÅ}Yá¯ŠÚ‹µHôéÚK“™*²W‡=Á¯k¯øS«Æz|¥‚DòØ’CqÏ•váë8Ú—Î²Êxºn­½ä¹ìîÁ·8$tëYÎá®D‚‹ÎsQé²	-«äc­fø‚õtËi.%YeHÀ%\"˜óÎ\0ë^êÔü^~ã}Èï¯õ8¥w)CRBsœ:Ÿ¯­k­a5M9­\'’eŠeÚşKlØƒ‘ø\Zã£ñR4ÆX¬e®2¡%½x*×‹]€`ÅnÛØå©  pçï[F>F	MûÇUei°Ú]Ì*$™‹6$õ8õ­›åÂó·Œô®\ZÏÄ‚áÖÓgI¾y1…^=ÿ\0•v–N^ÔHÇ’:zVSŠ[\ZÂM»3Ÿø…âû/im©ß—û4L¥‚\0IÉÀŞ¾;øÃñ2_ˆ¾&[È7Aal6ÛFÇærÇ	şB½»ö¬Ö–×Â¶ÖEó.§W\';Tdãñ\"¾Q\'q$×‹Š¨ÓäGë\\7¦¨,L—¼4€H  €qJy “Ïz	.@Ï#&¼ÛrŠzƒ’iÃÎ)¸*NM; àƒƒéL\0ØçôÅ;¯<ÓrFF\0«Qn¯Ê?_ğ¡&úİŠœwéH¹v¥ ÜÒc\'© b‘ŒæŠ:ñE\n’İİ\'FBC#¨ÇzºŸhâh5nx¼Û-ÔÜÊ€²1 *“îyü+|=9U¨£pc±ÂaåV£Ñ#ëê>fÎræ%$œ WA\"#¹ŞÅr>	˜ßø[L½Aƒ-ºIÇU}kY5A¤¸Á^0kéã,>bj©TrJÉ²ÅÜqiÒ5ÌP€;”€A÷Ç­TÓüF/n„	Gnã\0{ıjØ×mnW*Lw4ëKË$¸UCg“ŒcŞµM®§\"©­“ĞÖ†Ø[ r[’Hê}kJŞA ç9”ºÄr‚ˆ@PqÏZ-÷Äps\rCZ6Ù­9\'%cåÚ[U½Ô¼xĞÎ––ÑFg’sÜçùWzöÅ{§‰\":øç¯ø*é×mÄJÖLÃ&„`¨Ìx8õö¯Õ4»­PÎò&‚æ1º0ÁüÁ¯BP~ÓtÏÛ8{0£ŠÃª0ÒP*œsÆsíÒ“¶hÁôÍ.2	¯4úÄ0’p3‘IJTäàS¼³€Hâ€cW ƒÔzv«Kp¸ƒïÿ\0]V*Aà\ZMØàƒM6¶WÜ~9É¤8±JsßšAÆ	æ=694”ª0\n	=€ë[ğ£â}J;\r6ÆâşòB\0ŠÉï€{+Jt¥UòÅ]˜Ô«\ns¨ÒK¹Š‘—Ï Üœ¥}%áÿ\0„w?ğÉ2¸Kv\Z¦¬¦Uõ1Ç‚ zƒÉ÷¯MøûE¢][j>.H®u\r‚Hì8há®OŞİ½}7?„í®4ùôá-² A\Z¨iÀ÷™NS*«[FÖÇâ\\YÅTqPúİ_V|ğ\"ı5ß…ş¹BI©y£~•Õë\ZM—‹ä|rG¯­sğüŸ¾#x‡À÷Jc°iÍŞH;|§$€	<ã§ÔW¯É§,ÈH=«‚iÓ¨âú3æ9£Zœeäxµ÷‡uQ)xc“Ğ÷«\Zo†<Aq*S`¯ù5ëÙ›	È•^´³A\0=ª%Q˜GîršW„ŞvŞü]Dv+¹@ qÎ3ÇJ¾°à€3íÚ¡Õ/¡Ò´ùî§`‘D¥‰<tŸ=Ö§TR†ÇËVú·ß¶ÜÙÅ’ÜÎW„)\0Ÿ© ~»¯ÚÓösÖnµñâíJ›QÓµ[µ¶ÇvõÁ\0€yÎEu²G„_Åş*ñßÄ{ø/nŸbäpcŒåˆöÉğ5ö†§$Ú}²È›‘>£ùW»+ájisŸ	UÊñÎ­%{nÄ{Í:k9]$#¸==\rUÈÀÍ~º|Jıš|ñ9e:“7£!níÀŠQø¿kä?‹?°7‰¼3æ^xu¿·¬‰;Q0“¨ÆA ğß‡&¾_“Ö¢ïOT~Ç•ñhT|’}öûÏ‘ö·‚AïJNp@­McÃZ…y5µå¬°ÏÚñÊ…q‚?fA\0‚ìF¯\nQpvjÌû¨N3JQwOª‚p1ëFÀ}*Sâ”cš’Æ·RFM>ÚÚ[É–(”»·\0Wmğïá¿ñTŠÏK°šòáÏ(ªBÆ3ÉrF\0ï×ü+îß‚Ÿ²v‰ğÕí¯õ„ƒV×”V‘3¡§‚A=Oà+ØÁe•±rZZ\'Èg|I„Éé¾gyö>uøûk0’\rGÄF]I|0R¤O8ëòƒ÷Tç­}»áo„øo¡‹mL†Ğ¬d‰†v ’Ç’I×q&¶q	påHÈ\0Æ{U‰ YbS€X©P{àóŠûÌ&\r.Ev?æüEÍdı¤šd`iv6¤\'eÊ¬ GBH8®sâGÄ­á£ZK«P]‘ˆc.H\r‚O<‘Ï©¯AÓ!D€ÁÀÜ\\_2şÑWk¯üB¶ÓD‘ZZa×%É$cØ^§;”›Kcã\'7N	ßVjüsğÕ§¼¤xïC“Î{H³\"àÉnÄuXƒÓšÉğ~¸š¶›•‚Î gÜWMğZ+ûM&óÃZŠ³é2¦-÷r»[!—¡Ş¹}{À:·gyD2I`²K„\\vÎ:z×ÎfXiFJ¬VçÔeX¸Ô‡³“Õ’€FAíR$@\0ÀúqT´K“qj¤ä`rO&´œ¹\'®q_?¹ô[‘œ’8èkÈ~5ø†k½*]:Ì¬0Äw>ŸJô-U’8Ú4áR:ÕOü)—Ç\Z´WwÊñiP8‘ä#Rv®{g©­)S•i¨A\\ÊµHÒƒ”İYø?à¸>ü+Ğt(ã›{u2ãŒÊß3“ÿ\0\'ò¯_Ó¶:İ”†ƒAÎ+Ë>!x¼3à›ƒ©¹ºV‚=T6rÀ{ù‘\\·ì—âyÊk¾»¸šsúm¨™Ëa	ÚÊ	$€:•÷3§ÉME-…!J»Mî{İÕ‡•xe\nJ9RA=8?¥iÇ[b’Ê çè*i#F£\0’!_¼8 ó\\NWµÏF)ÆM£Éş\'ü\0ğ_Æ+S¯`‰t£ä¼€•	#¨ö9ñ_ÆØ7ÄşYnôHÇ‰ô¥‹AÅÄj9¯SéœúWéµGrsŒûàb¤³@ó°\0`(Èê\'ük“£ˆMµ©ôÙ_c²Æ£^=™ø[ªxróL¸’6†L£*ÊC €OÂ³2±Œ¬:‚+ö/ãìÅàß‹PË=ÍŠéº¾İ«©Ø W?Æ½ô<ú\ZùGTı€>\"ÛjX>©Y«‘Ó\\Ì‹Øííéjù<FSV›ıŞ¨ıÆX,L?{îÉw>ËøğÏ@ø}¥®™¡éñYÛ¡!˜\0^BVn¤šÓ»Ò™î‰\nBr3Æ	#==±[öğ´WR©‚ÁúıE3P‡oPr¬Çô&¾î3öm(èçjó©‰½J­¹y˜ñÆò§”ç%OˆÅZ‚Ô}š @Ê(Ï~ÜÔÆ4uG8•e!DIÈÈÁíD§ĞÆ4ïæs×wÉd²C,ÌØå›ŒúzòøK{­xÖïUÕÓd`9xÎqÀgïŠ÷]?H‚ÒâæpZYårLr@\0ô\0v©®`T|A\'Üõ«xVŒ4Ks–xgQ\'\'±ÄÉáÈ,cB‰° 8 cü«zŞ5;YcVH¤\\I†VÔö‰,@0\'Ş¨Ç§Om\"H\0mg“ÓŠ%UT¤T(ºS¼OñÏ‚Ç‚İÚ)“JvÂ2b\'¢ŸoC\\•¶¹ÄL\0°G\'šú>ëLÄ·hñ-İŒË¶{Y\0 ‡ò¯™>%ü5×~ø²Æ}&\'Õ<=«\\¬6Â ZHdcÄn@;7Lkçq˜7§M]3êp8èÔ^Î®^ğd,ÕB»2Z)\r4ƒ¨às^í§hPÙZÇ¶öÑ\0ª«À§âj¿„<5…´k{Y6µÓ\rÒ°Üädì:~Ó6– v	§Q^®\n‚ÃÁ6½æxøüCÄÍÅ?u—Š<	Ší\"IL`„ìW’2>¸¯3°øO®x/ÅÖÚ¶–ÄK	a¹F	RFTà×Ñ¶‚4\0œ{rI©Œnà‚N}xæ»Ö%¯u«cÁ©ZIÙ”4Mi/íĞJŸfº\0ò9öÏQZ›À˜H¥šÎ)¢pñ‡ñÏOZ|0GªÄ(9<b¸¦âõHô ¤´d¶Ê®ÄƒƒøUUŒZß8p@ì:Šµhé¸¢‚@<d`t¦j1Ÿİ8 cÆ9äQ¨&¶}‡Ïoçœ®Añ<Q¨F3îi®ãÈó0sŒãŞ¦ŒƒƒùÖvfšt1g_¸ÇÔr€-$çŸ ©®r|×ZGw·pé±z\0HÏNO¡;´\'¢e2Sí,FB±üZºŠBv\'5^(”A(ôëÈëV\"PpÏ=jæ·fTô°Ô$;ã€Ï¢–E;A dJ	ä `çN•K! „R[«•öXCFAè8â›\rÄÈ<{ñS\01€§j¬ìclƒäj£ï]\'k2;™DW¨ûÃ‘^?Âª[Ú$Ye Ãêgiõôı¦âéA\'±$qÜV˜²K… (È t#¦+¡¾D‘ËêIµĞ¡\r€½º‚SÄC%F1Û´b\n@\0”$b&‰@À\0€n*Vğ0¥a)·cªÔSîÈí×ƒNiÈÚTã#işb\næ5à“Í<G‰€x#Ö³OViÑp6€§F\0Iç j\n‚	8Æ)ğÄ d\nÅ/ˆX—l‡3ÓiePøİÓ\"ˆ†&`z©dPHÈÀÈÏçOf„õE[˜Â@dò\0?\\‹Zæ¡šb\0Œ@éïTæÔd†FDU8ëùÑ¬¶iåpèNyÁÅe_ÜÏms0JpŒîÜàƒ8=»uæ¯#í¾’3Üd{ıT—€:D¤à†\'ô¥kI!ssEŒ0° \0“ü©ë€ \01‡é@8Œ\0z\0)±±bC\0@¥½ÊŒmk\0ÎrN2)Òãi=8ëA_Ş7\0uæÆÇ8õ¡;°åÜUP\0$v=ªÑDvŒ«–8?*;÷{¹Ïá@$1\rÛÒœ[‹º¢šI™Zr†½ÁO?m@\0B¿=ë.Â&‹RvdØJÃ‚G<tàÖ´Cå$uÍkVWf4\"•Á²3“Œş\\T™%N@ñÍTç‚x§€;Ÿ¥btYj$#å9Œ~5!ûÀ‘Ó<úqMBÎ})Àe”íEõ\ZZ\0“lş4ôÆĞÎ}Jlm»>Ç­/–XnAèA8\"õ$\nªqƒ‚2iù;	 î9ëÖ’(Õv\0¡UG\0zbà`“ÏĞÕ|\"FG$ÔV{í•˜á˜–9÷&¬íV¯Q”-Ü1€§¨ö4&ú$™ÿÙ','B002',0,0,6,'','2'),(30,'1351929177','BPP','Narendra Kumar Singh','Manni Lal','IIT Rajasthan','','','Jodhpur','Rajasthan','India','202020','9649946160','nksingh@iitj.ac.in','2012-10-30','General','Male','INDIAN','Hindi','RA18','B.Sc','resize_1351929121.jpg','','','adnhp8WRLkyOM','66666','666','2012-10-30','SBI','IIT Jodhpur','0','2012-11-03','0000-00-00','0','','B002',0,0,2,'','1'),(31,'1351929438','BPP','Narendra Kumar Singh','Manni Lal','IIT Rajasthan','','','Jodhpur','Rajasthan','India','202020','9649946160','nksingh@iitj.ac.in','2012-10-30','General','Male','INDIAN','Hindi','RA18','B.Sc','resize_1351929121.jpg','','','ady6Eo3Ac4mHg','66666','666','2012-10-30','SBI','IIT Jodhpur','0','2012-11-03','0000-00-00','0','','B002',0,0,0,'',''),(32,'1352114353','BPP','Narendra Kumar Singh','Manni Lal','IIT Rajasthan','','','Jodhpur','Rajasthan','India','202020','9649946160','narendra34rs@gmail.com','2012-10-30','General','Male','INDIAN','Hindi','RA18','B.Sc','resize_1352114350.jpg','','','adSkbrTpk04Jc','66666','666','2012-10-30','SBI','IIT Jodhpur','0','2012-11-05','0000-00-00','0','ÿØÿà\0JFIF\0\0\0\0\0\0ÿş\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90\nÿÛ\0C\0\n\n\n\r\rÿÛ\0C		\r\rÿÀ\0\0¿\0›\"\0ÿÄ\0\0\0\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0\0}\0!1AQa\"q2‘¡#B±ÁRÑğ$3br‚	\n\Z%&\'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ\0\0\0\0\0\0\0\0	\nÿÄ\0µ\0\0w\0!1AQaq\"2B‘¡±Á	#3RğbrÑ\n$4á%ñ\Z&\'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ\0\0\0?\0Ç·“Ì«’GTãı×ÉW#ıìuÎB‘ÑBTòÖƒbJ’8ê7®_Å4ÿ\0Çÿ\0?w_ÃÖ´ÍˆÄRÂÒöµd¢²JäõÏˆZl’[CåÉtŸ{Ìû‘×‘øƒâÆ»¯Ç\"}£ì?İH>O—ıêäÿ\0´<¸şI$‘ÿ\0ë¦¿˜üû1âw“¾g°\\xòŞ_ß^j;?¹æy_ú\rs÷Æãeœ’Iÿ\0]$Ş•ÃÛÙ¥ÏÏ4•‡ªGW!’I?ë¥\\à|¤3lG?=Ï </ñSûKËK˜şwÿ\0€Wi©o/—ş‘Ï_-èúÇØ~çßtÙşİvš.ôß“ı}¯şYû.sè°œMVŒ*ê»ùú½õ×áÿ\0Esÿ\0ÒyìWiop—6ûÓîW<áìÏÑp˜ºXèóÒQE™Ü5IGBP”l¢Š\0ÏJĞJÇßZÉûº I$‰æRÔOQÉ%›ÅO?…´xí¬ÿ\0ä#wòEşÂ÷jğy/çç›÷ïüo%hxóÅ\râß\\\\§üz§îbÿ\0ukí	üù•ÙKÜ?Îó	ãqRW÷c¢#7i“{ıÊ“íŸÜ¨ü·“îIÿ\0~ëCKĞå¹“äµç>s,ã»¹“÷?¼­	<¨Koç<rWª|;ø~÷ß¹òşwz÷K…v–Ö{Ò?=6lòkHGœÒ^áğÅ›Ù\\|õ±oqû½é÷øëĞ>&|?{kÉ&Häç¯7¶·}7÷3Gò=g	„àliú£Û|ğÉåÿ\0u?Ú¯høâÈ¼AoäùŸé_òÖö–¾¸ßÉüi]\'‚õÇÒu‹9“÷{ÿ\0ç§ùïYU÷Ï&Ì\'‚¯ö^çÑ”Tv÷‰©YÛÜÃ÷&Mõ$ëkŒı­Tº¸I\\TrPdX«Ç%\\ó?é¥\0aÇ%\\Oã¬¿2®GqûºÄ’$•Ÿâ	ûPÙ÷ü‰ô\Z±æ~î²üAyömP›û;ÿ\0ã´WŸîåè|·¾¤÷Ÿ%A^ğoáıÇµÈÓËıÂ?ÌõÚ~-Ù\'‚üq©ys<~Z?İ¯\\ğÿ\0Ã³I\Z$~c×¸xoá~ YÆ—7‘ÆŸÜï×Yooáû)6$‘Òä—Ú\"ÁøÁÿ\0Ù?—óÿ\0zÆŸ¥¥Í¾Ê¯šg—çC$uŸÄD¸Ø÷×M/pÎ~ùÅüHø^÷6òL–ş}|—ñCÂÿ\0Ù1Èş_Î•öåçíàÉssqm¿üô¯?ø‰€¾&éò[[j–QŞ¿İıçÏYÎ÷4Ma8òrÈø^;6Hİÿ\0Üj±W˜gÎŸ:Ö§<{àcìÓ~ñ&ùàš?¹\"×/æ?ü³\ZßCê…÷}à{9Ÿø÷í®’9?yXşÒÓDğ~—gıÈÛıæù«RâDâ¸İğ‘”0´£-ÔUÂâGªòIR\\HÕ]è5œÉ#’´RGØ¼ö¬)7Ç%XûGùÍÎeù•b9?weÉ\'îêÆúùËeeø“dÔıgú+üŸğ\Z±¾£“ı^ÇûAO~‡sæ:÷ü@ÿ\0…oá»{\rÎ9õI“|÷2Gò|Ş•â÷š[Ûx‚KãK­‹ÿ\0}W¸xƒG\ré{Ò?ŞÉ]œçâ5){òc—ñÆ\ZêWt×Gÿ\0\\şJË³ø‘â9$ıö¡s¾«ë—rYÇs\rœ’@ÿ\0\'\'Îÿ\0÷ÏğÖ}¾q$vïïşòyrŸ<ÎnHáà?x£Å\Z|–pù—Á\\ÿ\04?h’Iı«æZ\'ğù’WÒ±ÿ\0ƒß@ğ½åıı¿ïî<¤“û«[µÂ¹|e§Çy¦Ûù“¢|Éó¬¹ıÓ²>’4¾Ô>{¿üuëøweŸöûÈïgµO½4roDÿ\0¾k—¼øOªÜÛıš9$x_{<qïÆ½£áÁ=n÷G³¶¶¸şÅ½…İå¼òÙŞuÿ\0F?»²´÷»™òy¿Æ„şoÃÿ\0íí*âK»[Oßl“şY¯zñ†z\\Z—4´¸ç7ü¿G?áYÅÃ½SD¹9X?w÷>e¯ƒşø[¹ø\"iº|—awûSÿ\0j¼rh÷¹}ã·£E)tæGº|’ÇşågÜ­«Ÿ?—³øÓä¬û‰+Î?o–Á$Ÿ»ª~bù•$’~î©É\'ï+Sœ±qşª©ı²´?ÖÇYooó·ÖKs?}ISó?wV<Ï2:Èäç$’J#ıì‘§ñ½G¾¬irÄÒÏÜß@§?rR2üAğÆæóGñn•ªG©Zıª$¾‡ËØñ¶êú’ßÀö^ Ó÷ı9çDù|Ï¹º¼^ÎÏOğßÁıAïíäQ¸¾ßÇşËW¾xXÿ\0‰}¿÷»a?„ü‡Í9Î]ÙÇë³¾•{å½çîßø’‘+CÃ\0ô-ı&kxö\'Î©^¹å”RFóIó¿ÉûÊÇñ‡‰-ôİ>áæÿ\0P‰óyİ®ƒÍ÷ƒÀşWï¹ü)v–ÿ\0f9Ÿî\'ğI_7èÿ\0´¦‰ı©q•o$hŸòÚHÙJî,ş<^ê^’k=ûZéıO˜±|«şÓW?<yyOFÜÇ¢^x_LÔ¤ó’Ş8çşü%hizzYIóÇÉü~]r~ñ…ß‰4{=Vm/û\'Íÿ\0–>fúê.5İï­9½Ó9ÇŞ65M=?³äzùŸÃş·Ô¼ñBÚÚ?³ºj2»<}ú6Ú÷‹?Øä‡ıŠùÿ\0áşŸq¢|XÖ-¾Ñ$é¨À÷3§ğnlñYÌé£û³Ô$òî#ÿ\0¦¨“ßKX÷ŸòÒµ<qpŸğ˜jÉş®Óe·ıòµy\'îëˆı>|<%äŠòIûº§$”I\'îêœ’V¦r™±Çîê:§dt|ô\Z˜{êHäòªú“Ì¬4¹ö„£ÏıïûuOÌ£şZĞk¹ë—š}¿şÛÛ%ÄpO¿ïÉ÷7×Yá7M³ÏÌó>Ï\Z#ÀkÆüãOøE¯$†oŞYMşµ?Ú¯`ğş©o«Ûı¾ÛıDßv·?5ÌğóÃU—»î½™èú‡Ù£ßıgğÕCP·Ïdß¼o½\\>¡¬=´q¿ğ\'Şùç^Gâ‹šİö©qg£éòNéò-äŸê£ÿ\0VĞ<›0øw¶÷agöšMêgúÆÿ\0dUƒ~Ö4ÛÉ&Õn-íÓÉŠ¹ş€×qàÿ\0ê^]çü$šuİÔ¿Çæ6øÿ\0\Z¹gà=wíiÖ<Y¥Fÿ\0sø®º9%ØÒÄ}§Ü%Ÿ“soå¦ÊĞ·’)#òRO“økå}/Âÿ\0âÒî?±<Iı—÷.ãoİÿ\0»^¹ğ¯\\Ôâ·û6±ÿ\0P§Ìõ4‰é¤^b%qw–¾\rÑõù£ò7Í,Ò}ùÿ\0»t’joÏş²¾Sø™ãO[Ö/4×¸ÿ\0‰u½ÓùPÇ÷>õrÏÜ=l»,Tùz-Îûb]KT¼¹›ïÜ;Ìÿ\0ï5hI\'îë›³“÷•©ö6:ƒõ\Z2´9î$ªşeU=ô9šÜythûÖ|’?ğT~cÏ:ùÊşe-Vó*Mô¼å‰$¨ä“÷u_Ì¨ä’€ç	$ıå{Â}q?á’Ùäùíßÿ\0jñÊÓğş¹6‰y½>ãıä¥	Va‡–*ƒŒwİÙ¨jiH¿Uã¼²Ót¹,şÇ÷ë›ÒüY¾^ÿ\0İ¿ğùŸòÑk´ÒõM3Ë“÷:WO!ùÔåìıÉG¬xOSÔµ	>Á›ø#«øOâ›ˆæû=Ìû>õzÆ±ã?DÓö[Gnõáÿ\0ŒmyóÉòVœ¿Ş2ö§yà½?XÓtøá{Üt‘éÿ\0ë&ÿ\0VõñCO¹³ÿ\0Y\\ÿ\0ˆ<x—7MŸïşï—Yò>×œ¹ã\ZCá½âo3÷èŸ/ûÕòıåÃË$ÿ\0}ß{½^±ñ2ÏÊğ~Ÿ4Òy—Ouó?ü¼ãıesÌûÌ’”aBUzÉ„ë*ärVzUõu‘ô‰*½I%AZ™L™åQóT~bG÷ÿ\0yGÛ?é\0P¤ó<º}G$”D›èßUèß@<ÏúiR[Ç-ÍÄp¤~dó>ÅOöš ¯ıŒşÿ\0ÂÃø™±y™¤x{eÌ¿Ü’ùeşÍD!Ï5,N\"8ZR«.…\Z|3ÿ\0„nßûÌóïtôMÓÓ]»ïªò»cPÓrÿ\0Á^áâOi|DñÄ/ş¾ßX•?à=«Ö<?i©y“?îŞ»%û¹8Ÿ™N~ÑóË®§“Şx‘îdÿ\0I“şşUxõˆ£“ä“ç­ÍsÂéæI³÷•OCğºIyş®³çC ğßö¥÷?v•éÒŞÇçŞOTü\'§ÅÉ]…ŸÙâ¼òSşDætB‘èğ™ãÿ\0ø¥uXãß©Ú¿Ùn	Õw+-|§âÿ\0^øO_Ô4F	 Ô,§xdGşğ¯¤>øÁõ/ÚCÃzm´Ÿ¸´µ¸š_ûçmz7íÕğAu½> é§Z\"¦ ‘ÿ\0]¤ÿ\0€Ö“=8ÖS˜{\nï?†[zŸÇ%Xó*›ÕˆäıİqŸ{	‘ÜIPSä’«ï Êd´TOQù”Só™QI%wş	ø×âlŸñ!Ğä’×ø¯î?uoÿ\0}·ô¡Bu>\rNÖ…8óNVGVô½>ïV¼ÎÎÎKû§û°ÛÆÎò~¾Èøwû\rèúLqÜøÏP“ZŸø¬ì?unŸVûÍ_Mø/áÇ…|§ù>Ñì´”ùáÎÿ\0ğ.­^¤0>Ş‡Îâ8‚„=ÊK™şÂÿ\0c?x¶HæÖãÂúwñ=ßÏqÿ\0ŒìÕ÷_Áƒú\'Á	Ç£èşdsı¦êæ¿;m®¤[ùŸîr¶ãòë²8zt>å1y|l}éYvGæGÆ‹wğ\'í9â‹gÿ\0]geä_ïw«—%·ıÏ—ó× ÁCş½´úlãıå£ıšwÿ\0e¹_üz¼OÂ~,MJŞ=õçâ£ÉQ¾ú—Kß‚,kšZy{Ò¹ıóı2Dòü·ã®óP¸·¹³Ù\\şŸgiÆÿ\02¸˜@ë4;t±³‘üÏøX¼ÖÆÎI¿ñúÇ¸×\"òö\'ı÷^ãÏ£ù)D\rg3Ø?c»y|IñÓXÖß÷‘ÚZù*ÿ\0í;õ«ô½líõì×‘Gqkq—$Oó+©¯†?aÿ\0ÿ\0dø>ßRxÿ\0Òµ7{–ö~êÿ\0*û¿GaöD_îŒW³Z” xR½>`ø‡ûxÄ³ÜO¦}£Â÷?ôçóÅÿ\0|5|ÿ\0ãOØOÇ¾’GÑ$²ñ-¯÷ “Ê—şùjıÖí<Ø·¯^Øµ¼òy¿¼¹¹a8óXõ(çÌ,¹yî¼ÏÇÏ|?ñ/‚n6kŞÔtŸöç·dOûëî×\'$•û?®Ii¨Ç%´ÑÇqıä=éú×†xãöGøoã¿´Mı—ı…zÿ\0vçLı×Íşçİ¬ş§öâ{Ø~&„ÿ\0Ş!o4~iÉ\"T~oı3¯¤>.~Ä~0ğÆ«£ÉŠ4ˆ~vû<{.ëŸñ~ó[±Gef‘ô>•Å*s‹±ô”q”1KÚS‡ßÿ\0b¿ü<ßRñŸ—â{ïı›ş] ÿ\0€ÿ\0ËOø{„—‘~îÚÚŞ8!O‘Sø}«sX|½ŸÇ\\ßú»ŠûL&º~/ˆÌjâ¥Í)\ZövküqêÍ§ú5üiüÃQÙşî´-ãûL›?şE¢¤»œĞ™sËó$û•¨ñÿ\0«©#°koùg\\—Ä‰\Z?Âï\rÜk\ZİÇ—ª¶ılíıÕ¯\'ŸŸcÑş\'¹›ı >ÛüDøo®hóGæ}¢ò¿Øeåñêü¨ğİÄºMä–Óìo÷–¾Ä·ı±üQâßY£Çm¤øyçØÖÇ½İÚ×‡ülø7wàOIrŸ¼Ò5—{ı:æ?¹µ›;OûK\\ø¨9ÁK±íaã*>ìŒxõÏ+÷>gÈõÛ)>I>J=[˜ãó£ùè“Á÷²É\ZCß¯(ì)Üj$’r¹=cO¸¾’Gş¯LÁw\ZoÉ7ïÿ\0ƒıªõO„ÿ\0³¤¿õÍ>˜ü½.ÒkÇşú¯>_ã]P¥ÎsÎ¬acé„:~•ğßÀ^MWP·Ó`ŠÖ(wÏ&Äİ¶½¯Â¾<ğ×ˆ—¥kú}ûÿ\0rŞå«ãÚoÅ‘k~\'AÑü¿ì%>Ì¾_ÜyŒÖÁ½=ô‹‰.½*¯ÚZ=zXNxûY;7©ú,ãxõ¬\rrá­ßb}÷¯/øsãmKO8f¸7p¿ğOüJõ+»›}gNûDCç–_âJç)P’¾¨âÄR1£bMï÷ë\\¸ûMÄh•§{qåÛï¬{\r’\\\\\\¿ğWµJ?lñfhYjey>gÉ³æ®/Ä³Âÿ\0ë7Z¥ÿ\0„¬ä¼ºo2WXøfÀÉ­‹…ÿ\0Hã®‹OÕe¸²†Oï-*øm¤iB¼â›æÜ£©Éş—T¢·ó¤;ä}õfÙ?y]ËÜ(¹ö’´ü0Š.äša±\"O¾õ\\tª¤²lŞ\"WŸ;Ô‹‰ÙF~ù­â?Áeg\'ØcûS¢}÷û•ñïÆÏíêŸlÔ®$ŸÈ¿ÜEöô†¹ú›?¼¯\\ğßö•½\r\nq÷O£ÂN:Èù>óÂrÙ^lxşOá¯ >éñ|ZøWyá-oÌ’÷N}öw’}ôô«’x-ZÏÉxşïÖ§Â\r=ü%ã?°jQùpß\'“çïá§\Z<‹É2­Ï4|ïo£ÜYx’ãD¿ÈÔmcCşÏğ²ÿ\0²kÔ4?	¥µù£{×º|`øeãxõ]*8ì<WbŸèwÿ\0Àÿ\0ôÊOö\rxß‡üIı¯ÅµärXj–/äŞXI÷ÒZñjáù46Ö9ÂÏÂq^ê–ğ¥¿Ÿ;¾È“ıêöhw^	øo¨XX~áÒŞÍo÷äfëV>	ø=“Ä71ü‰òZÿ\0ìÍ]_,å“D¼O/÷—\"¥wá#Ó©ÇícíW6Èù3Oğ_•Únxï]çƒü7öm?—÷ë ÿ\0„^_24š?.ºË=\r\"4®¿«‡ÖÃú{şïıŠô»{ycÍ¶“Ë›ûÿ\0ßú×)o\ZGÊí4¸ÿ\0âY¾•eÉÊÄLÆÖ_Ë·ùê\r.?/O¸ÿ\0n¤ñï>J’ËşAÛ+uü%êx‡\'yG$‰Z0‘\"ú(Zò?ôŠ’y¶ÊG ô¯F[!GcBŞ/İÕ‹xéègËRÛ×¦r—‹ßªXù$ÿ\0n¬\\\'˜‡mZÓía1şõ‰ü+—Ÿ“S¦‰ygö˜öV=¿…ñÿ\0,ë¿’Æ÷6ÿ\0ß5?¾iÇØìö¼Ÿ	æZ‡†şÍqòGYú‡‡âÔ­ü™£ÿ\0uëÕ.´Èfÿ\0Z¹ÿ\0\ZË¸ğü^gFı+²&\rrÈ=¬¡ï÷„ü_q¤Çı›­~òÿ\0UyşÏûUÅü`ø!/‹|gáı{ÃwÚj’ÎŞ<rx?¼ßJôK8‹Ó\"¯E5·4+CkÜ1Fû=±9ñ5Ë^1ZÓêtÂ¬j|;šZŞ»¥|4ğÜiåïHSeµ´}ö×	¡ë\Z‡‰\"“RÔ¤ıü¯òCÜ}aD×8ê—d3KÔ-ÙŠëô‹%XR8Šˆ¿…±Í<=gï°ÄrÑ.òê^ÓìşÓ\'ÏkŸÛÉ‡ÆÊŸO¶XÓªşU¥kYÖ¬ù´9¡>CŸÃéæ¬’º\rÏìÖ’Cş²¥òWûæ§´ÿ\0–•Ç:²œKçœÌ=Bİ%¸ùêŸ—åÛÈ‰[\Z‡úÊË“şZWL%îYÍÉ›q\\æ½u³U™}ütWWq·í5Áø›wöå×Õô^Ì:zÑêÿÙ','B002',0,0,0,'','');
+/*!40000 ALTER TABLE `student_registration` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `re_issue_certificate`
+--
+
+DROP TABLE IF EXISTS `re_issue_certificate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `re_issue_certificate` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `re_issue_certificate`
+--
+
+LOCK TABLES `re_issue_certificate` WRITE;
+/*!40000 ALTER TABLE `re_issue_certificate` DISABLE KEYS */;
+/*!40000 ALTER TABLE `re_issue_certificate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `re_issue_marksheet`
+--
+
+DROP TABLE IF EXISTS `re_issue_marksheet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `re_issue_marksheet` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `roll_no` int(10) NOT NULL DEFAULT '0',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `payment` varchar(10) NOT NULL DEFAULT '',
+  `rc-coordinator_approval` varchar(10) NOT NULL DEFAULT '',
+  `rc-coordinator_remark` varchar(40) NOT NULL DEFAULT '',
+  `rc_approval` varchar(10) NOT NULL DEFAULT '',
+  `rc_remark` varchar(40) NOT NULL DEFAULT '',
+  `head_office_approval` varchar(10) NOT NULL DEFAULT '',
+  `head_office_remark` varchar(40) NOT NULL DEFAULT '',
+  `re_issue_date` date NOT NULL DEFAULT '0000-00-00',
+  `re_issue` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `re_issue_marksheet`
+--
+
+LOCK TABLES `re_issue_marksheet` WRITE;
+/*!40000 ALTER TABLE `re_issue_marksheet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `re_issue_marksheet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `talkal`
+--
+
+DROP TABLE IF EXISTS `talkal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `talkal` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `roll_no` int(10) NOT NULL DEFAULT '0',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `payment` varchar(10) NOT NULL DEFAULT '',
+  `issue` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `talkal`
+--
+
+LOCK TABLES `talkal` WRITE;
+/*!40000 ALTER TABLE `talkal` DISABLE KEYS */;
+/*!40000 ALTER TABLE `talkal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `re_totaling`
+--
+
+DROP TABLE IF EXISTS `re_totaling`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `re_totaling` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `subject_code` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `post_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` enum('1','2','3','4') NOT NULL DEFAULT '1',
+  `myphoto` blob NOT NULL,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `session_year` int(4) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `re_totaling`
+--
+
+LOCK TABLES `re_totaling` WRITE;
+/*!40000 ALTER TABLE `re_totaling` DISABLE KEYS */;
+/*!40000 ALTER TABLE `re_totaling` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_examination`
+--
+
+DROP TABLE IF EXISTS `student_examination`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_examination` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `roll_no` int(10) NOT NULL DEFAULT '0',
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `sub_code` varchar(10) NOT NULL DEFAULT '',
+  `status` varchar(20) NOT NULL DEFAULT '',
+  `remark` varchar(40) NOT NULL DEFAULT '',
+  `marks_out_of` int(3) NOT NULL DEFAULT '0',
+  `marks` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `enrolment_no` (`enrolment_no`),
+  UNIQUE KEY `roll_no` (`roll_no`),
+  UNIQUE KEY `course_code` (`course_code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_examination`
+--
+
+LOCK TABLES `student_examination` WRITE;
+/*!40000 ALTER TABLE `student_examination` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_examination` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `faculty_section`
+--
+
+DROP TABLE IF EXISTS `faculty_section`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `faculty_section` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `faculty_code` varchar(20) NOT NULL,
+  `faculty_name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `status` enum('1','0') NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `faculty_section`
+--
+
+LOCK TABLES `faculty_section` WRITE;
+/*!40000 ALTER TABLE `faculty_section` DISABLE KEYS */;
+INSERT INTO `faculty_section` VALUES (2,'F0001','Dr Om Narayan Tiwari','Programme Co-ordinator MSc','1'),(3,'F0002','Dr MD Tripathi','Programme coordinator','1'),(4,'F0003','Mr Linendra Kumar soni','Programme Coordinator (Computer Science)','1'),(5,'F0004','Mr H Pandey','Programm Coordinator','1');
+/*!40000 ALTER TABLE `faculty_section` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `course_material`
+--
+
+DROP TABLE IF EXISTS `course_material`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `course_material` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `period_name` varchar(20) NOT NULL DEFAULT '',
+  `material_file` varchar(80) NOT NULL DEFAULT '',
+  `remark` text NOT NULL,
+  `delivered` varchar(5) NOT NULL DEFAULT '',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  `current_status` char(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course_material`
+--
+
+LOCK TABLES `course_material` WRITE;
+/*!40000 ALTER TABLE `course_material` DISABLE KEYS */;
+INSERT INTO `course_material` VALUES (2,'BAH','1','1352185258.docx','saefs sf sf s ','No','Active','0'),(3,'BAH','2','1352185537.docx','xcvx x x xvvcxcvxc  x','No','Active','0'),(4,'BAH','3','1352185609.docx','gfvjngf fghfgh fh g','No','Active','0'),(5,'BPP','1','1352373486.pdf','y4y4','Yes','Active','0');
+/*!40000 ALTER TABLE `course_material` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `calendar`
+--
+
+DROP TABLE IF EXISTS `calendar`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `calendar` (
+  `id` smallint(8) NOT NULL AUTO_INCREMENT,
+  `ev_dat` varchar(10) NOT NULL DEFAULT '',
+  `ev_title` varchar(40) NOT NULL DEFAULT '',
+  `ev_locn` varchar(40) NOT NULL DEFAULT '',
+  `ev_desc` text NOT NULL,
+  `hh` varchar(2) NOT NULL,
+  `mm` varchar(2) NOT NULL,
+  `am` varchar(2) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `calendar`
+--
+
+LOCK TABLES `calendar` WRITE;
+/*!40000 ALTER TABLE `calendar` DISABLE KEYS */;
+INSERT INTO `calendar` VALUES (1,'2012-10-16','TESTING...........','FGHFG HFG HFHF',' FHFFF FH FH FGH FH F','05','07','PM');
+/*!40000 ALTER TABLE `calendar` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examination_tbl`
+--
+
+DROP TABLE IF EXISTS `examination_tbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examination_tbl` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(30) NOT NULL DEFAULT '',
+  `subject_code` varchar(30) NOT NULL DEFAULT '',
+  `examination_date` date NOT NULL DEFAULT '0000-00-00',
+  `starting_time` varchar(10) NOT NULL DEFAULT '00:00:00',
+  `am_pm` char(2) NOT NULL DEFAULT '',
+  `ending_time` varchar(10) NOT NULL DEFAULT '00:00:00',
+  `am_pm1` char(2) NOT NULL DEFAULT '',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  `period_name` char(2) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `course_code` (`course_code`,`subject_code`,`period_name`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examination_tbl`
+--
+
+LOCK TABLES `examination_tbl` WRITE;
+/*!40000 ALTER TABLE `examination_tbl` DISABLE KEYS */;
+INSERT INTO `examination_tbl` VALUES (1,'MCA','MCA01','0000-00-00','00:00:00','','00:00:00','','','');
+/*!40000 ALTER TABLE `examination_tbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `bpp`
+--
+
+DROP TABLE IF EXISTS `bpp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `bpp` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `address` varchar(100) NOT NULL DEFAULT '',
+  `address1` varchar(100) NOT NULL DEFAULT '',
+  `address2` varchar(100) NOT NULL DEFAULT '',
+  `city` varchar(100) NOT NULL DEFAULT '',
+  `state` varchar(100) NOT NULL DEFAULT '',
+  `country` varchar(100) NOT NULL DEFAULT '',
+  `pin` varchar(100) NOT NULL DEFAULT '',
+  `mobile` varchar(10) NOT NULL DEFAULT '',
+  `email` varchar(30) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `category` varchar(20) NOT NULL DEFAULT '',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `medium` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `registration_date` date NOT NULL DEFAULT '0000-00-00',
+  `myphoto` blob NOT NULL,
+  `ex_center_1` varchar(30) NOT NULL,
+  `ex_center_2` varchar(30) NOT NULL,
+  `ex_center_3` varchar(30) NOT NULL,
+  `ex_center` varchar(30) NOT NULL,
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `status` enum('0','1','2') NOT NULL DEFAULT '0',
+  `remark` text NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `acknowledgement` (`acknowledgement`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bpp`
+--
+
+LOCK TABLES `bpp` WRITE;
+/*!40000 ALTER TABLE `bpp` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bpp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `semester_table`
+--
+
+DROP TABLE IF EXISTS `semester_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `semester_table` (
+  `course_code` varchar(20) NOT NULL DEFAULT '',
+  `semester_code` varchar(10) NOT NULL DEFAULT '',
+  `semester_detail` text NOT NULL,
+  UNIQUE KEY `course_code` (`course_code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `semester_table`
+--
+
+LOCK TABLES `semester_table` WRITE;
+/*!40000 ALTER TABLE `semester_table` DISABLE KEYS */;
+/*!40000 ALTER TABLE `semester_table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `role` (
+  `roleid` int(3) NOT NULL AUTO_INCREMENT,
+  `rolename` varchar(25) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `rolecode` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`roleid`),
+  UNIQUE KEY `rolename` (`rolename`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `role`
+--
+
+LOCK TABLES `role` WRITE;
+/*!40000 ALTER TABLE `role` DISABLE KEYS */;
+INSERT INTO `role` VALUES (10,'RC Coordinator','RC_Coordinator'),(11,'Regional Center','Regional_Center'),(12,'Head Office','Head_Office'),(15,'Study Center','Study_Center'),(16,'Education Section','Education_Section'),(20,'MIS_Department','MIS_Department'),(23,'Exam Section','Exam_Section'),(24,'Admission Department','Admission_Department'),(25,'Academic Section','Academic_Section'),(27,'Guide','Guide'),(28,'Asst. Coordinator','Asst_Coordinator'),(29,'Master','master'),(30,'Administrator','Administrator');
+/*!40000 ALTER TABLE `role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rolemenu`
+--
+
+DROP TABLE IF EXISTS `rolemenu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rolemenu` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `roleid` int(4) NOT NULL DEFAULT '0',
+  `menuid` int(4) NOT NULL DEFAULT '0',
+  `submenuid` int(4) NOT NULL DEFAULT '0',
+  `submenu2id` int(4) NOT NULL DEFAULT '0',
+  `submenu3id` int(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`),
+  KEY `roleid` (`roleid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rolemenu`
+--
+
+LOCK TABLES `rolemenu` WRITE;
+/*!40000 ALTER TABLE `rolemenu` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rolemenu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `faculty_assigned_course`
+--
+
+DROP TABLE IF EXISTS `faculty_assigned_course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `faculty_assigned_course` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `emp_code` varchar(10) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `faculty_assigned_course`
+--
+
+LOCK TABLES `faculty_assigned_course` WRITE;
+/*!40000 ALTER TABLE `faculty_assigned_course` DISABLE KEYS */;
+/*!40000 ALTER TABLE `faculty_assigned_course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `menu_hin`
+--
+
+DROP TABLE IF EXISTS `menu_hin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `menu_hin` (
+  `menuid` int(4) NOT NULL AUTO_INCREMENT,
+  `menuname` varchar(35) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(200) NOT NULL,
+  `sortorder` tinyint(2) NOT NULL DEFAULT '0',
+  `active` varchar(3) NOT NULL DEFAULT 'YES',
+  PRIMARY KEY (`menuid`),
+  UNIQUE KEY `menuname` (`menuname`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `menu_hin`
+--
+
+LOCK TABLES `menu_hin` WRITE;
+/*!40000 ALTER TABLE `menu_hin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `menu_hin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notice`
+--
+
+DROP TABLE IF EXISTS `notice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notice` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `notice_for` varchar(40) NOT NULL DEFAULT '',
+  `title` varchar(100) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `active_date` date NOT NULL DEFAULT '0000-00-00',
+  `expiry_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` varchar(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice`
+--
+
+LOCK TABLES `notice` WRITE;
+/*!40000 ALTER TABLE `notice` DISABLE KEYS */;
+INSERT INTO `notice` VALUES (2,'BAH','Announcement','Announcement Announcement\r\n\r\nAnnouncement Announcement','2012-10-18','2012-12-31','Active');
+/*!40000 ALTER TABLE `notice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(30) NOT NULL DEFAULT '',
+  `last_name` varchar(30) NOT NULL DEFAULT '',
+  `designation` varchar(50) NOT NULL DEFAULT '',
+  `email_address` varchar(50) NOT NULL DEFAULT '',
+  `mobile_no` varchar(15) NOT NULL DEFAULT '',
+  `loginid` varchar(50) NOT NULL DEFAULT '',
+  `passwd` varchar(10) NOT NULL DEFAULT '',
+  `image` varchar(30) NOT NULL DEFAULT '',
+  `status` enum('0','1') NOT NULL DEFAULT '1',
+  `role` varchar(50) NOT NULL,
+  `sex` varchar(15) NOT NULL DEFAULT '',
+  `country` varchar(25) NOT NULL DEFAULT '',
+  `address` varchar(250) NOT NULL DEFAULT '',
+  `zipcode` varchar(25) NOT NULL DEFAULT '',
+  `centre_code` varchar(30) NOT NULL,
+  `study_centre_code` varchar(30) NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `loginid` (`loginid`)
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Anil','Kumar','Testing','test@yahoo.com','9873664530','testing','testing','','1','Head_Office','Male','India','rrrrr','','',''),(5,'Anils','Kumars','Testing','test@yahoo.com','9873664530','exam_sec','testing','','1','Examnation_Center','Male','India','rrrrr','','',''),(6,'RC','Coordinator','RC Coordinator','testing@abc.com','9892828897','RC_Coordinator','testing','','1','RC_Coordinator','Male','India','','','',''),(7,'Regional','Center','Regional Center','testing@abcd.com','9892533456','Regional_Center','testing','','1','Regional_Center','Male','India','','','R001',''),(8,'Head','Office','Head Office','testing@abcde.com','9892533456','Head_Office','testing','','1','Head_Office','Male','India','','','',''),(9,'Invigilator','','Invigilator','testing1@abc.com','9892828897','Invigilator','testing','','1','Invigilator','Male','India','','','',''),(10,'Evaluator','','Evaluator','testing2@abc.com','9892533456','Evaluator','testing','','1','Evaluator','Male','India','','','',''),(11,'Study','Center','Study Center','testing3@abc.com','','Study_Center','testing','','1','Study_Center','Male','India','','','',''),(12,'Education ','Section','Education Section','test@abcdef.com','9818789129','Education_Section','testing','','1','Education_Section','Male','India','','','',''),(13,'Assistant','Coordinator','Asst Coordinator','abbds@cdef.com','','Asst_Coordinator','testing','','1','Asst_Coordinator','Male','India','','','R001','RA11'),(14,'Academic','Section','Academic Section','Academic_Section','9818789129','Academic_Section','testing','','1','Academic_Section','Male','India','','','',''),(15,'Admission','Department','Admission Department','Admission_Department','9892828897','Admission_Department','testing','','1','Admission_Department','Male','India','','','',''),(16,'Exam ','Section','Exam Section','Exam_Section','','Exam_Section','testing','','1','Exam_Section','Male','IN','','','',''),(17,'Local','Teachers','Local Teachers','Local_Teachers','','Local_Teachers','testing','','1','Local_Teachers','Male','IN','','','',''),(18,'School','','School','School','','School','testing','','1','School','Male','IN','','','',''),(19,'MIS','Department','MIS','MIS_Department','','MIS_Department','testing','','1','MIS_Department','Male','IN','','','',''),(20,'University','','University','University','','University','testing','','1','University','Male','IN','','','',''),(21,'Professor','','Professor','Professors','','Professors','testing','','1','Professors','Male','IN','','','',''),(22,'Agency','','Agency','Agency','','Agency','testing','','1','Agency','Male','IN','','','',''),(23,'Guide','','Guide','Guide','','Guide','testing','','1','Guide','Male','IN','','','',''),(24,'Rahul','Singh','Regional Head','test@rediff.com','9898989898','regionalcenter','testing','','1','Regional_Center','Male','India','C-1851 sushant lok','','R003',''),(25,'Deepak','','Administrator','test@rediff.com','9898989898','headoffice','testing','','1','Head_Office','Male','IN','C-1851 sushant lok','','',''),(27,'Ajay','','Study Center','test@rediff.com','9898989898','studycenter','testing','','1','Asst_Coordinator','Male','India','c-89 kanpur','','R001','RA11'),(28,'Administrator','','Administrator','admin@test.com','83248274237','administrator','testing','','1','Administrator','Male','IN','','','',''),(29,'Master','','Master','master@test.com','343253453','master','master','','1','master','Male','IN','','','',''),(30,'AD','GH','Prof','nksingh@iitj.ac.in','9649946160','nksingh','nksingh','','1','Guide','Male','India','tgege','','','');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notice_annoucement`
+--
+
+DROP TABLE IF EXISTS `notice_annoucement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notice_annoucement` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) NOT NULL DEFAULT '',
+  `details` text NOT NULL,
+  `posting_date` date NOT NULL DEFAULT '0000-00-00',
+  `display_start_date` date NOT NULL DEFAULT '0000-00-00',
+  `display_end_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice_annoucement`
+--
+
+LOCK TABLES `notice_annoucement` WRITE;
+/*!40000 ALTER TABLE `notice_annoucement` DISABLE KEYS */;
+/*!40000 ALTER TABLE `notice_annoucement` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_details`
+--
+
+DROP TABLE IF EXISTS `student_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_details` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `userid` varchar(30) NOT NULL DEFAULT '',
+  `passwd` varchar(20) NOT NULL DEFAULT '',
+  `enrolment_no` int(10) NOT NULL DEFAULT '0',
+  `first_name` varchar(20) NOT NULL DEFAULT '',
+  `middle_name` varchar(20) NOT NULL DEFAULT '',
+  `last_name` varchar(20) NOT NULL DEFAULT '',
+  `f_h_name` varchar(30) NOT NULL DEFAULT '',
+  `address1` varchar(40) NOT NULL DEFAULT '',
+  `address2` varchar(40) NOT NULL DEFAULT '',
+  `city` varchar(20) NOT NULL DEFAULT '',
+  `state` varchar(20) NOT NULL DEFAULT '',
+  `country` varchar(20) NOT NULL DEFAULT '',
+  `pin` int(10) NOT NULL DEFAULT '0',
+  `date_of_birth` date NOT NULL DEFAULT '0000-00-00',
+  `category` varchar(20) NOT NULL DEFAULT '',
+  `gender` varchar(10) NOT NULL DEFAULT '',
+  `nationality` varchar(20) NOT NULL DEFAULT '',
+  `last_exam_passed` varchar(20) NOT NULL DEFAULT '',
+  `registration_date` date NOT NULL DEFAULT '0000-00-00',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_details`
+--
+
+LOCK TABLES `student_details` WRITE;
+/*!40000 ALTER TABLE `student_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `phd_registration`
+--
+
+DROP TABLE IF EXISTS `phd_registration`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `phd_registration` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `name_father` varchar(100) NOT NULL DEFAULT '',
+  `address` varchar(100) NOT NULL DEFAULT '',
+  `address1` varchar(100) NOT NULL DEFAULT '',
+  `address2` varchar(100) NOT NULL DEFAULT '',
+  `city` varchar(100) NOT NULL DEFAULT '',
+  `state` varchar(100) NOT NULL DEFAULT '',
+  `country` varchar(100) NOT NULL DEFAULT '',
+  `pin` varchar(100) NOT NULL DEFAULT '',
+  `mobile` varchar(10) NOT NULL DEFAULT '',
+  `email` varchar(30) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `category` varchar(20) NOT NULL DEFAULT '',
+  `sex` varchar(20) NOT NULL DEFAULT '',
+  `nationality` varchar(100) NOT NULL DEFAULT '',
+  `medium` varchar(100) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `registration_no` varchar(30) NOT NULL DEFAULT '',
+  `passwd` varchar(15) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `registration_date` date NOT NULL DEFAULT '0000-00-00',
+  `activation_date` date NOT NULL DEFAULT '0000-00-00',
+  `status` enum('1','0') NOT NULL DEFAULT '0',
+  `myphoto` blob NOT NULL,
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remark` text NOT NULL,
+  `facul_login` varchar(30) NOT NULL,
+  `department_code` varchar(20) NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `acknowledgement` (`acknowledgement`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `phd_registration`
+--
+
+LOCK TABLES `phd_registration` WRITE;
+/*!40000 ALTER TABLE `phd_registration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `phd_registration` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_re_exam`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_re_exam`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_re_exam` (
+  `tblid` int(5) NOT NULL DEFAULT '0',
+  `ack_no` varchar(20) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `period_name` varchar(5) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail','Absent') NOT NULL DEFAULT 'Pass'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_re_exam`
+--
+
+LOCK TABLES `student_exam_marks_re_exam` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_re_exam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_re_exam` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `ack_no` varchar(20) NOT NULL,
+  `rollno` varchar(30) NOT NULL,
+  `period_name` varchar(5) NOT NULL,
+  `subject_code` varchar(20) NOT NULL,
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail','Absent') NOT NULL DEFAULT 'Pass',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `ack_no` (`ack_no`,`period_name`,`subject_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks`
+--
+
+LOCK TABLES `student_exam_marks` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `submenu`
+--
+
+DROP TABLE IF EXISTS `submenu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `submenu` (
+  `submenuid` int(4) NOT NULL AUTO_INCREMENT,
+  `submenuname` varchar(45) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `menuid` int(4) NOT NULL DEFAULT '0',
+  `path` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `active` varchar(3) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'YES',
+  `showleft` varchar(3) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'YES',
+  PRIMARY KEY (`submenuid`),
+  UNIQUE KEY `submenuname` (`submenuname`,`menuid`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `submenu`
+--
+
+LOCK TABLES `submenu` WRITE;
+/*!40000 ALTER TABLE `submenu` DISABLE KEYS */;
+INSERT INTO `submenu` VALUES (1,'Regional Center',1,'regional_centre.php','YES','YES'),(2,'Study Center',1,'study_centre.php','YES','YES'),(3,'Course Type',1,'program_type.php','YES','YES'),(4,'Courses',1,'program_course.php','YES','YES'),(5,'Upload course material',1,'program_course.php','YES','YES'),(6,'Faculties',1,'faculty.php','YES','YES'),(7,'Department',1,'department.php','YES','YES'),(8,'Faculty Section',1,'faculty_section.php','YES','YES'),(9,'Examination Center',1,'exam_centre.php','YES','YES'),(10,'Extend application date',1,'apply_last_date.php','YES','YES'),(11,'Notice & Announcement',1,'notice_announcement.php','YES','YES'),(12,'Event Calendar',1,'manage_calendar.php','YES','YES');
+/*!40000 ALTER TABLE `submenu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_re_evaluation`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_re_evaluation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_re_evaluation` (
+  `tblid` int(5) NOT NULL DEFAULT '0',
+  `ack_no` varchar(20) NOT NULL DEFAULT '',
+  `rollno` varchar(30) NOT NULL DEFAULT '',
+  `period_name` varchar(5) NOT NULL DEFAULT '',
+  `subject_code` varchar(20) NOT NULL DEFAULT '',
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail','Absent') NOT NULL DEFAULT 'Pass'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_re_evaluation`
+--
+
+LOCK TABLES `student_exam_marks_re_evaluation` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_re_evaluation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_re_evaluation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `country`
+--
+
+DROP TABLE IF EXISTS `country`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `country` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iso` char(2) NOT NULL DEFAULT '',
+  `name` varchar(80) NOT NULL DEFAULT '',
+  `printable_name` varchar(80) NOT NULL DEFAULT '',
+  `iso3` char(3) DEFAULT NULL,
+  `numcode` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `country`
+--
+
+LOCK TABLES `country` WRITE;
+/*!40000 ALTER TABLE `country` DISABLE KEYS */;
+INSERT INTO `country` VALUES (99,'IN','INDIA','India','IND',356);
+/*!40000 ALTER TABLE `country` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `migration_process`
+--
+
+DROP TABLE IF EXISTS `migration_process`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `migration_process` (
+  `tblid` int(15) NOT NULL AUTO_INCREMENT,
+  `acknowledgement` varchar(20) NOT NULL DEFAULT '',
+  `course_code` varchar(10) NOT NULL DEFAULT '',
+  `draft_no` varchar(10) NOT NULL DEFAULT '',
+  `draft_amount` varchar(10) NOT NULL DEFAULT '',
+  `draft_date` date NOT NULL DEFAULT '0000-00-00',
+  `draft_bank_name` varchar(30) NOT NULL DEFAULT '',
+  `draft_bank_branch` varchar(50) NOT NULL DEFAULT '',
+  `apply_date` date NOT NULL DEFAULT '0000-00-00',
+  `current_status` int(2) NOT NULL DEFAULT '0',
+  `remark` varchar(250) NOT NULL DEFAULT '',
+  `tatkal` varchar(10) NOT NULL DEFAULT 'Normal',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `acknowledgement` (`acknowledgement`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `migration_process`
+--
+
+LOCK TABLES `migration_process` WRITE;
+/*!40000 ALTER TABLE `migration_process` DISABLE KEYS */;
+/*!40000 ALTER TABLE `migration_process` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `departments`
+--
+
+DROP TABLE IF EXISTS `departments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `departments` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `department_code` varchar(20) NOT NULL,
+  `department_name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `faculty_code` varchar(20) NOT NULL,
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `department_code` (`department_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `departments`
+--
+
+LOCK TABLES `departments` WRITE;
+/*!40000 ALTER TABLE `departments` DISABLE KEYS */;
+INSERT INTO `departments` VALUES (2,'IP','Indian Philosophy','Indian Philosophy- Jyotish & Yogic Science','F0001'),(3,'COM','Commerce','B.Com. Ph.D.','F0002');
+/*!40000 ALTER TABLE `departments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `download_forms`
+--
+
+DROP TABLE IF EXISTS `download_forms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `download_forms` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `form_name` varchar(40) NOT NULL DEFAULT '',
+  `form_file` varchar(150) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `download_forms`
+--
+
+LOCK TABLES `download_forms` WRITE;
+/*!40000 ALTER TABLE `download_forms` DISABLE KEYS */;
+INSERT INTO `download_forms` VALUES (1,'turur','1351663666.pdf'),(2,'fhfgjf','1352366045.doc');
+/*!40000 ALTER TABLE `download_forms` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_marks_assignment`
+--
+
+DROP TABLE IF EXISTS `student_exam_marks_assignment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_marks_assignment` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `ack_no` varchar(20) NOT NULL,
+  `rollno` varchar(30) NOT NULL,
+  `period_name` varchar(5) NOT NULL,
+  `subject_code` varchar(20) NOT NULL,
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `sub_result` enum('Pass','Fail') NOT NULL DEFAULT 'Pass',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `ack_no` (`ack_no`,`period_name`,`subject_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_marks_assignment`
+--
+
+LOCK TABLES `student_exam_marks_assignment` WRITE;
+/*!40000 ALTER TABLE `student_exam_marks_assignment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_marks_assignment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_exam_result`
+--
+
+DROP TABLE IF EXISTS `student_exam_result`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_exam_result` (
+  `tblid` int(5) NOT NULL AUTO_INCREMENT,
+  `ack_no` varchar(20) NOT NULL,
+  `rollno` varchar(30) NOT NULL,
+  `period_name` varchar(5) NOT NULL,
+  `course_code` varchar(10) NOT NULL,
+  `subject_code` varchar(10) NOT NULL,
+  `student_name` varchar(100) NOT NULL,
+  `father_name` varchar(100) NOT NULL,
+  `max_marks` int(5) NOT NULL DEFAULT '0',
+  `total_marks` int(5) NOT NULL DEFAULT '0',
+  `remarks` text NOT NULL,
+  `marks` int(5) NOT NULL DEFAULT '0',
+  `result` enum('0','1','2') NOT NULL DEFAULT '0',
+  `division` enum('0','1','2','3','4') NOT NULL DEFAULT '0',
+  `year_1` varchar(4) NOT NULL,
+  `year_2` varchar(4) NOT NULL,
+  PRIMARY KEY (`tblid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_exam_result`
+--
+
+LOCK TABLES `student_exam_result` WRITE;
+/*!40000 ALTER TABLE `student_exam_result` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student_exam_result` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_course_type`
+--
+
+DROP TABLE IF EXISTS `master_course_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_course_type` (
+  `tblid` int(10) NOT NULL AUTO_INCREMENT,
+  `ctype_code` int(10) NOT NULL DEFAULT '0',
+  `ctype_name` varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tblid`),
+  UNIQUE KEY `ctype_code` (`ctype_code`),
+  UNIQUE KEY `ctype_code_2` (`ctype_code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_course_type`
+--
+
+LOCK TABLES `master_course_type` WRITE;
+/*!40000 ALTER TABLE `master_course_type` DISABLE KEYS */;
+/*!40000 ALTER TABLE `master_course_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `role_menu`
+--
+
+DROP TABLE IF EXISTS `role_menu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `role_menu` (
+  `menuid` int(10) NOT NULL AUTO_INCREMENT,
+  `menu_name` varchar(60) NOT NULL DEFAULT '',
+  `menu_path` varchar(150) NOT NULL DEFAULT '',
+  `sort_order` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`menuid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `role_menu`
+--
+
+LOCK TABLES `role_menu` WRITE;
+/*!40000 ALTER TABLE `role_menu` DISABLE KEYS */;
+INSERT INTO `role_menu` VALUES (1,'ABCD','ABCD',13),(2,'ABCD','ABCD',13);
+/*!40000 ALTER TABLE `role_menu` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-11-19 16:16:44
